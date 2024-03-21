@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calcular Gasto energético</title>
+        <style>
+            table, th, td {
+                border:1px solid black;
+            }
+        </style>
+    </head>
+    <header>
+        <div>
+            <h1>Dica de dieta</h1>
+        </div>
+        <div>
+            <a href="diet1.html" class="link">Início</a>
+            <a href="diet2.html" class="link">Dieta</a>
+        </div>
+    </header>
+    <body>
+    <main>
+        <button onclick="criarTabela()">Criar</button>
+        <table id="tbDieta" style="width:100%">
+            <thead>
+            <tr>
+                <th>Tipo de Refeição</th> 
+                <th>Nome do alimento</th> 
+                <th>Quantidade</th>
+                <th>Carboidratos (g)</th> 
+                <th>Proteínas (g)</th> 
+                <th>Lipídios (g)</th> 
+                <th>Calorias (kcal)</th> 
+            </tr>
+            </thead>
+        </table>
+        <p>Escolha as opções de cardápio para podermos calcular as quantidades de caboidratos, proteínas, lipídios e o total de calorias:</p>
+
+
+
+        <table id="tbDieta2" style="width:100%">
+            <thead>
+            <tr>
+                <th colspan="2">Café da manhã</th> 
+                <th colspan="2">Lanche da manhã</th> 
+                <th colspan="2">Pré-treino</th> 
+                <th colspan="2">Pós-treno</th> 
+                <th colspan="2">Almoço</th>
+                <th colspan="2">Lanche da tarde</th>
+                <th colspan="2">Jantar</th>
+                <th colspan="2">Ceia</th>
+            </tr>
+            <tr>
+                <td>Alimento</td> <td>Quantidade</td>
+                <td>Alimento</td> <td>Quantidade</td>
+                <td>Alimento</td> <td>Quantidade</td>
+                <td>Alimento</td> <td>Quantidade</td>
+                <td>Alimento</td> <td>Quantidade</td>
+                <td>Alimento</td> <td>Quantidade</td>
+                <td>Alimento</td> <td>Quantidade</td>
+                <td>Alimento</td> <td>Quantidade</td>
+            <tr>
+            </thead>
+        </table>
+
+
+
+
+
+
+
+
+
+        
+        
+        
+        
+        <p>Café da manhã</p>
+        <input type="checkbox" id="paoItegral">Pão integral
+        <input type="checkbox" id="tapioca">Tapioca
+        <br>
+        <input type="checkbox" id="acucar">Açúcar
+        <br>
+        <input type="checkbox" id="ovoGrande">Ovo grande
+        <br>
+        <input type="checkbox" id="queijoRicota">Queijo ricota
+        <br>
+        <input type="checkbox" id="leiteDesnatado">Leite desnatado
+        <br>
+
+
+
+        <p>Lanche da manhã</p>
+        <input type="checkbox" id="bananaNanica">Banana nanica
+        <br>
+        <input type="checkbox" id="aveia">Aveia
+        <br>
+        <input type="checkbox" id="pastaDeAmendoim">Pasta de amendoim
+        <br>
+        <input type="checkbox" id="yakult">Yakult
+        <input type="checkbox" id="iogurteNatural">Iogurte natural
+        <br>
+
+
+
+        <p>Pré treino</p>
+        <input type="checkbox" id="batataDoce">Batata doce
+        <br>
+
+
+
+        <p>Pós treino</p>
+        <input type="checkbox" id="wheyConcentrado">Whey concentrado
+
+
+
+        <P>Almoço</P>
+        <input type="checkbox" id="arrozIntegral">Arroz integral
+        <input type="checkbox" id="mandioca">Mandioca
+        <br>
+        <input type="checkbox" id="fileDeFrango">Filé de frango
+        <input type="checkbox" id="fileDeTilapia">Filé de tilápia
+        <input type="checkbox" id="bistecaSuina">Bisteca suína
+        <br>
+        <input type="checkbox" id="feijao">Feijão
+        <br>
+        <input type="checkbox" id="tomate">Tomate
+        <br>
+        <input type="checkbox" id="repolho">Repolho
+        <br>
+        <input type="checkbox" id="cenoura">Cenoura
+        <br>
+
+       
+
+
+
+
+
+        <p>Lanche da tarde</p>
+        <input type="checkbox" id="maca">Maçã
+        <br>
+        <input type="checkbox" id="mangaPalmer">Manga palmer
+        <input type="checkbox" id="caqui">Caqui
+        <input type="checkbox" id="carambola">Carambola
+        <br>
+        <input type="checkbox" id="laranjaPera">Laranja Pêra
+        <br>
+
+
+
+
+
+        <p>Jantar</p>
+        <input type="checkbox" id="bifeBovino">Bife bovino
+        <br>
+        <input type="checkbox" id="figadoDefrango">Fígado de frango
+        <input type="checkbox" id="sardinhaEnlatada">Sardinha enlatada
+        <br>
+        <input type="checkbox" id="cuscuz">Cuscuz
+        <br>
+        <input type="checkbox" id="alface">Alface
+        <br>
+        <input type="checkbox" id="pepino">Pepino
+        <br>
+        <input type="checkbox" id="beterraba">Beterraba
+        <br>
+        <input type="checkbox" id="azeite">Azeite
+        <br>
+
+
+
+
+        <P>Ceia</P>
+        <input type="checkbox" id="abacate">Abacate
+        <br>
+        <br>
+
+
+
+    <script src = "diet2.js"></script>  
+    </main>
+    </body>
+</html>
