@@ -1,45 +1,18 @@
+const input = document.querySelectorAll(["input"]);
+let loseWeight = input.loseWeight
+if(loseWeight === true){
+	console.log(2 + 2);
+}
 
 
-let acucar = document.getElementById("acucar");
-let paoItegral = document.getElementById("paoItegral");
-let ovoGrande = document.getElementById("ovoGrande");
-let queijoRicota = document.getElementById("tapioca");
-let leiteDesnatado = document.getElementById("leiteDesnatado");
 
-let yakult = document.getElementById("yakult");
-let aveia = document.getElementById("aveia");
-let bananaNanica = document.getElementById("bananaNanica");
-let pastaDeAmendoim = document.getElementById("pastaDeAmendoim");
-let iorguteNatural = document.getElementById("iorguteNatural");
 
-let abacate = document.getElementById("abacate");
-let batataDoce = document.getElementById("batataDoce");
 
-let wheyConcentrado = document.getElementById("wheyConcentrado");
 
-let mandioca = document.getElementById("mandioca");
-let feijao = document.getElementById("feijao");
-let alface = document.getElementById("alface");
-let pepino = document.getElementById("pepino");
-let beterraba = document.getElementById("beterraba");
-let tomate = document.getElementById("tomate");
-let cenoura = document.getElementById("cenoura");
-let fileDeFrango = document.getElementById("fileDeFrango");
-let sardinhaEnlatada = document.getElementById("sardinhaEnlatada");
-let arrozItegral = document.getElementById("arrozIntegral");
-let bifeBovino = document.getElementById("BifeBovino");
-let repolho = document.getElementById("repolho");
-let bistecaSuina = document.getElementById("BistecaSuina");
-let figadoDeFrango = document.getElementById("figadoDeFrango");
-let tilapia = document.getElementById("tilapia");
-let azeite = document.getElementById("azeite");
-let cuscuz = document.getElementById("cuscuz");
 
-let maca = document.getElementById("maca");
-let mangaPalmer = document.getElementById("mangaPalmer");
-let caqui = document.getElementById("caqui");
-let laranjaPera = document.getElementById("laranjapera");
-let carambola = document.getElementById("carambola");
+
+
+
 
 
 let foods = [
@@ -134,183 +107,26 @@ i-=35
 
 
 for( i = 0; i < foods.length; i++){
-	let tb = document.getElementById("tbDieta");
-	let quantidadeLinhas = tb.rows.length;
-	let linha = tb.insertRow(quantidadeLinhas);
+	let tb = document.getElementById("tbDiet");
+	let numberOfLines = tb.rows.length;
+	let line = tb.insertRow(numberOfLines);
 
-	let cellRefeicoes = linha.insertCell(0);
-	let cellAlimentos = linha.insertCell(1);
-	let cellPorcoes = linha.insertCell(2);
-	let cellCarboidratos = linha.insertCell(3);
-	let cellProteinas = linha.insertCell(4);
-	let cellLipidios = linha.insertCell(5);
-	let cellCalorrias = linha.insertCell(6);
+	let cellTypeMeal = line.insertCell(0);
+	let cellFood = line.insertCell(1);
+	let cellQuantity = line.insertCell(2);
+	let cellCarbohydrate = line.insertCell(3);
+	let cellProtein = line.insertCell(4);
+	let cellFat = line.insertCell(5);
+	let cellCalories = line.insertCell(6);
 	
 
-	cellRefeicoes.innerHTML = foods[i].typeMeal;
-	cellAlimentos.innerHTML = foods[i].name;
-	cellPorcoes.innerHTML = `${foods[i].quantity} ${foods[i].unitOfMeasure}`;
-	cellCarboidratos.innerHTML = foods[i].carbohydrate;
-	cellProteinas.innerHTML = foods[i].protein;
-	cellLipidios.innerHTML = foods[i].fat;
-	cellCalorrias.innerHTML = foods[i].calories;
+	cellTypeMeal.innerHTML = foods[i].typeMeal;
+	cellFood.innerHTML = foods[i].name;
+	cellQuantity.innerHTML = `${foods[i].quantity} ${foods[i].unitOfMeasure}`;
+	cellCarbohydrate.innerHTML = foods[i].carbohydrate;
+	cellProtein.innerHTML = foods[i].protein;
+	cellFat.innerHTML = foods[i].fat;
+	cellCalories.innerHTML = foods[i].calories;
 
 }
 
-/*
-
-for( i = 0; i < 9; i++){
-	let tb = document.getElementById("tbDieta2");
-	let quantidadeLinhas = tb.rows.length;
-	let linha = tb.insertRow(quantidadeLinhas);
-
-	let cellAlimento1 = linha.insertCell(0);
-	let cellQuantidade1 = linha.insertCell(1);
-	let cellAlimento2 = linha.insertCell(2);
-	let cellQuantidade2 = linha.insertCell(3)
-	let cellAlimento3 = linha.insertCell(4);
-	let cellQuantidade3 = linha.insertCell(5);
-	let cellAlimento4 = linha.insertCell(6);
-	let cellQuantidade4 = linha.insertCell(7);
-	let cellAlimento5 = linha.insertCell(8);
-	let cellQuantidade5 = linha.insertCell(9);
-	let cellAlimento6 = linha.insertCell(10);
-	let cellQuantidade6 = linha.insertCell(11)
-	let cellAlimento7 = linha.insertCell(12);
-	let cellQuantidade7 = linha.insertCell(13);
-	let cellAlimento8 = linha.insertCell(14);
-	let cellQuantidade8 = linha.insertCell(15);
-
-	if (i < cafe.length){
-	cellAlimento1.innerHTML = cafe[i].name;
-	cellQuantidade1.innerHTML = `${cafe[i].quantity} ${cafe[i].unitOfMeasure}`;
-	}
-	 if(i < lanM.length){
-	cellAlimento2.innerHTML = lanM[i].name;
-	cellQuantidade2.innerHTML = lanM[i].quantity;
-	}
-	if(i < pre.length){
-	cellAlimento3.innerHTML = pre[i].name;
-	cellQuantidade3.innerHTML = pre[i].quantity;
-	}
-	 if(i < pos.length){
-	cellAlimento4.innerHTML = pos[i].name;
-	cellQuantidade4.innerHTML = pos[i].quantity;
-	}
-	 if(i < almoco.length){
-	cellAlimento5.innerHTML = almoco[i].name;
-	cellQuantidade5.innerHTML = almoco[i].quantity;
-	}
-	 if(i < lant.length){
-	cellAlimento6.innerHTML = lant[i].name;
-	cellQuantidade6.innerHTML = lant[i].quantity;
-	}
-	if(i < jantar.length){
-	cellAlimento7.innerHTML = jantar[i].name;
-	cellQuantidade7.innerHTML = jantar[i].quantity;
-	}
-	 if(i < ceia.length){
-	cellAlimento8.innerHTML = ceia[i].name;
-	cellQuantidade8.innerHTML = ceia[i].quantity;
-	}
-
-}
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-let teste = [
-	{typeMeal: "Lanche da tarde", name: "Yakult", unidades: 1, carboidratos: 11, proteinas: 1.6, lipidios: 0, calories: 51},
-   	{typeMeal: "Lanche da tarde", name: "Aveia", unidades: 1,  carboidratos: 8.55, proteinas: 2.18, lipidios: 1.18, calories: 53},
-	{typeMeal: "Lanche da tarde", name: "Banana nanica", unidades: 1, carboidratos: 23.8, proteinas: 1.4, lipidios: 0.1, calories: 92},
-	{typeMeal: "Lanche da tarde", name: "Pasta de amendoim", unidades: 1, carboidratos: 2.99, proteinas: 3.67, lipidios: 7.48, calories: 88},
-	{typeMeal: "Lanche da tarde", name: "Iogurte natural", unidades: 1, carboidratos: 10, proteinas: 6.8, lipidios: 3.6, calories: 88},
-	{typeMeal: "Lanche da tarde", name: "Yakult", unidades: 1, carboidratos: 11, proteinas: 1.6, lipidios: 0, calories: 51},
-   	{typeMeal: "Lanche da tarde", name: "Aveia", unidades: 1,  carboidratos: 8.55, proteinas: 2.18, lipidios: 1.18, calories: 53},
-	{typeMeal: "Lanche da tarde", name: "Banana nanica", unidades: 1, carboidratos: 23.8, proteinas: 1.4, lipidios: 0.1, calories: 92},
-	{typeMeal: "Lanche da tarde", name: "Pasta de amendoim", unidades: 1, carboidratos: 2.99, proteinas: 3.67, lipidios: 7.48, calories: 88},
-	{typeMeal: "Lanche da tarde", name: "Iogurte natural", unidades: 1, carboidratos: 10, proteinas: 6.8, lipidios: 3.6, calories: 88}
-];
-
-teste.forEach((testes) => {
-
-	let tb = document.getElementById("tbDieta");
-	let quantidadeLinhas = tb.rows.length;
-	let linha = tb.insertRow(quantidadeLinhas);
-
-	let cellRefeicoes = linha.insertCell(0);
-	let cellAlimentos = linha.insertCell(1);
-	let cellPorcoes = linha.insertCell(2);
-	let cellCarboidratos = linha.insertCell(3);
-	let cellProteinas = linha.insertCell(4);
-	let cellLipidios = linha.insertCell(5);
-	let cellCalorrias = linha.insertCell(6);
-	
-
-	cellRefeicoes.innerHTML = testes.typeMeal;
-	cellAlimentos.innerHTML = testes.name;
-	cellPorcoes.innerHTML = testes.unidades;
-	cellCarboidratos.innerHTML = testes.carboidratos;
-	cellProteinas.innerHTML = testes.proteinas;
-	cellLipidios.innerHTML = testes.lipidios;
-	cellCalorrias.innerHTML = testes.calories;
-
-
-
-
-
-
-
-
-	testes = {typeMeal: "Lanche da tarde", name: "Iogurte natural", unidades: 1, carboidratos: 10, proteinas: 6.8, lipidios: 3.6, calories: 88}
-	console.log(testes)
-//criarTabela(testes[0].typeMeal, testes[0].name, testes[0].unidades, testes[0].carboidratos, testes[0].proteinas, testes[0].lipidios, testes[0].calories)
-})
-
-
-
-for( let i = 0; i < teste.length; i++){
-
-	let tb = document.getElementById("tbDieta");
-	let quantidadeLinhas = tb.rows.length;
-	let linha = tb.insertRow(quantidadeLinhas);
-
-	let cellRefeicoes = linha.insertCell(0);
-	let cellAlimentos = linha.insertCell(1);
-	let cellPorcoes = linha.insertCell(2);
-	let cellCarboidratos = linha.insertCell(3);
-	let cellProteinas = linha.insertCell(4);
-	let cellLipidios = linha.insertCell(5);
-	let cellCalorrias = linha.insertCell(6);
-	
-
-	cellRefeicoes.innerHTML = teste[i].typeMeal;
-	cellAlimentos.innerHTML = teste[i].name;
-	cellPorcoes.innerHTML = teste[i].unidades;
-	cellCarboidratos.innerHTML = teste[i].carboidratos;
-	cellProteinas.innerHTML = teste[i].proteinas;
-	cellLipidios.innerHTML = teste[i].lipidios;
-	cellCalorrias.innerHTML = teste[i].calories;
-
-
-}
-*/
