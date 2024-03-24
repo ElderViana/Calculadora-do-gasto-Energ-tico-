@@ -8,13 +8,122 @@ const gainMuscleMass = document.getElementById("gainMuscleMass")
 
 
 const chooseMenu = () => {
-	for(let i = 0; i < input.length; i++){															//console.log(input[0].checked)
+
+
+
+	for( i = 0; i < 9; i++){
+		let tb = document.getElementById("tbDiet2");
+		let numberOfLines = tb.rows.length;
+		let line = tb.insertRow(numberOfLines);
+	
+		let cellBreakfast = line.insertCell(0);
+		let cellMorningSnack = line.insertCell(1);
+		let cellPreWorkout = line.insertCell(2);
+		let cellPostWorkout = line.insertCell(3)
+		let cellLunch = line.insertCell(4);
+		let cellAfternoonSnack = line.insertCell(5);
+		let cellDinner = line.insertCell(6);
+		let cellSupper = line.insertCell(7);
+
 		if(loseWeight.checked === true){
-			if(input[0].checked || input[1].checked === true){
-				console.log("hello");
-			}
+			input.forEach(ipt => {
+				if(ipt.checked === true){
+		
+		if(i < 6 && foods[i].typeMeal === "Café da manhã"){
+			cellBreakfast.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;	 
+		}	
+		i+=6
+		if(i < 11 && foods[i].typeMeal === "Lanche da manhã"){
+			cellMorningSnack.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;	
 		}
-console.log("oi");
+		i+=5
+		if(i < 12 && foods[i].typeMeal === "Pré-treino"){
+			cellPreWorkout.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;	
+		}
+		i++
+		if(i < 13 && foods[i].typeMeal === "Pós-treino"){
+			cellPostWorkout.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;	
+		}
+		i++
+		if(i < 22 && foods[i].typeMeal === "Almoço"){
+			cellLunch.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
+		}
+		i+=9
+		if( i < 27 && foods[i].typeMeal === "Lanche da tarde"){
+			cellAfternoonSnack.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
+		}
+		i+=5
+		if(i < 35 && foods[i].typeMeal === "Jantar"){
+			cellDinner.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
+		}
+		i+=8
+		if(i < 36 && foods[i].typeMeal === "Ceia"){
+			cellSupper.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
+		}
+		i-=35
+	}
+}
+			)
+}
+
+
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	for(let i = 0; i < input.length; i++){
+
+		let tb = document.getElementById("tbDiet");
+		let numberOfLines = tb.rows.length;
+
+		if(loseWeight.checked === true){
+			input.forEach(ipt => {
+				if(ipt.checked === true){
+					if(ipt.name === foods[i].name){
+						let line = tb.insertRow(numberOfLines);
+						let cellTypeMeal = line.insertCell(0);
+						let cellFood = line.insertCell(1);
+						let cellQuantity = line.insertCell(2);
+						let cellCarbohydrate = line.insertCell(3);
+						let cellProtein = line.insertCell(4);
+						let cellFat = line.insertCell(5);
+						let cellCalories = line.insertCell(6);
+						cellTypeMeal.innerHTML = foods[i].typeMeal;
+						cellFood.innerHTML = foods[i].name;
+						cellQuantity.innerHTML = `${foods[i].quantity} ${foods[i].unitOfMeasure}`;
+						cellCarbohydrate.innerHTML = foods[i].carbohydrate;
+						cellProtein.innerHTML = foods[i].protein;
+						cellFat.innerHTML = foods[i].fat;
+						cellCalories.innerHTML = foods[i].calories;
+					}
+				}
+			})
+		}
 	}
 };
 
@@ -25,7 +134,7 @@ let foods = [
 	{typeMeal: "Café da manhã", name: "Pão integral", quantity: 1, unitOfMeasure: "Fatia(as)", carbohydrate: 12.27, protein: 2.37, fat: 1.07, calories: 68},
 	{typeMeal: "Café da manhã", name: "Tapioca", quantity: 30, quantity: 1, unitOfMeasure: "g", carbohydrate: 27.93, protein: 0, fat: 0, calories: 114.6},
 	{typeMeal: "Café da manhã", name: "Açúcar", quantity: 1, unitOfMeasure: "Colher(es) de sopa", carbohydrate: 4.2, protein: 0, fat: 0, calories: 16},
-	{typeMeal: "Café da manhã", name: "Ovo grande", quantity: 1, unitOfMeasure: "Unidade(s)", carbohydrate: 0.38, protein: 6.29, fat: 4.97, calories: 74},
+	{typeMeal: "Café da manhã", name: "Ovo", quantity: 1, unitOfMeasure: "Unidade(s)", carbohydrate: 0.38, protein: 6.29, fat: 4.97, calories: 74},
 	{typeMeal: "Café da manhã", name: "Queijo ricota", quantity: 30, unitOfMeasure: "g", carbohydrate: 11.23, protein: 0.40, fat: 0.61, calories: 11.23}, 
 	{typeMeal: "Café da manhã", name: "Leite desnatado", quantity: 100, unitOfMeasure: "ml", carbohydrate: 10, protein: 6, fat: 0.7, calories: 7},
 	{typeMeal: "Lanche da manhã", name: "Banana nanica", quantity: 100, unitOfMeasure: "g", carbohydrate: 23.8, protein: 1.4, fat: 0.1, calories: 92},
@@ -110,7 +219,7 @@ i-=35
 }
 
 
-
+/*
 
 for( i = 0; i < foods.length; i++){
 	let tb = document.getElementById("tbDiet");
@@ -135,7 +244,7 @@ for( i = 0; i < foods.length; i++){
 	cellCalories.innerHTML = foods[i].calories;
 
 }
-
+*/
 
 /*
 
@@ -188,3 +297,11 @@ let oliveOil = input.id === "input-oliveOil"&& input.cheched === true;
 let avocado = input.id === "input-avocado"&& input.cheched === true;
 
 */
+/*	for(let i = 0; i < input.length; i++){															//console.log(input[0].checked)
+		if(loseWeight.checked === true){
+			if(input[0].checked || input[1].checked === true){
+				console.log("hello");
+			}
+		}
+console.log("oi");
+	} */
