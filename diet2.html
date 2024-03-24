@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
-    <head>
-        <meta charset="UTF-8">
-        <title>Calcular Gasto energético</title>
-        <style>
-            table, th, td {
-                border:1px solid black;
-            }
-        </style>
-    </head>
-    <header>
-        <div>
-            <h1>Dica de dieta</h1>
-        </div>
-        <div>
-            <a href="diet1.html" class="link">Início</a>
-        </div>
-    </header>
-    <body>
-    <main>
-  
-    <div>
-    <div>
+<head>
+    <meta charset="UTF-8">
+    <title>Calcular Gasto energético</title>
+    <style>
+        table, th, td {
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <section class="section" id="first-section"></section>
+        <header>
+            <div class="div-form">
+                <h1>Dica de dieta</h1>
+            </div>
+            <div class="div-form">
+                <a href="diet1.html" class="link">Início</a>
+            </div>
+        </header>
+    </section>
+
+
+    
+    <section class="section" id="second-section">
+    <div class="div-form">
         <p>Qual é o seu objetivo?</p>
-    </div>
         <input type="checkbox" id="loseWeight">Perder peso
         <input type="checkbox" id="keepMuscleMass">Manter massa muscular
         <input type="checkbox" id="gainMuscleMass">Ganhar massa muscular
-    <div>
+    </div>
+    <div class="div-form">
         <p>Selecione os alimentos que você gostaria de incluir na sua dieta:</p>
     </div>
+    <div class="div-form">
         <p>Café da manhã:</p>
         <input type="checkbox" id="input-wholemealBread" input class="input" name="Pão integral">Pão integral
         <input type="checkbox" id="input-tapioca" input class="input" name="Tapioca">Tapioca
@@ -59,7 +63,7 @@
         <input type="checkbox" id="input-whey" input class="input" name="Whey concentrado">Whey concentrado
         <P>Almoço:</P>
         <input type="checkbox" id="input-wholegrainRice" input class="input" name="Arroz integral">Arroz integral
-        <input type="checkbox" id="input-cassava" name="Mandioca">Mandioca
+        <input type="checkbox" id="input-cassava" input class="input" name="Mandioca">Mandioca
         <br>
         <input type="checkbox" id="input-chickenFillet" input class="input" name="Filé de frango">Filé de frango
         <input type="checkbox" id="input-tilapiaFillet" input class="input" name="Filé de tilápia">Filé de tilápia
@@ -102,52 +106,51 @@
         <input type="checkbox" id="input-avocado" input class="input" name="Abacate">Abacate
         <br>
         <br>
-    <div>
+    </div>
+    <div class="div-form">
         <button onclick="chooseMenu()">Enviar</button>
     </div>
-    </div>
-    <div>
-        <P>Cardápio com as refeições diárias:</P>
-    </div>
-    <div>
-        <table id="tbDiet2" style="width:100%">
-        <thead>
-        <tr>
-            <th>Café da manhã</th> 
-            <th>Lanche da manhã</th> 
-            <th>Pré-treino</th> 
-            <th>Pós-treino</th> 
-            <th>Almoço</th>
-            <th>Lanche da tarde</th>
-            <th>Jantar</th>
-            <th>Ceia</th>
-        </tr>
-        </thead>
-        </table>
-    </div>
-    <div>
+    </section>
+    <div class="div-form">
         <p>Tabela com as quantidades de caboidratos, proteínas, lipídios e calorias:</p>
     </div>
-    <div>
-        <table id="tbDiet" style="width:100%">
-            <thead>
-            <tr>
-                <th>Tipo de Refeição</th> 
-                <th>Nome do alimento</th> 
-                <th>Quantidade</th>
-                <th>Carboidratos (g)</th> 
-                <th>Proteínas (g)</th> 
-                <th>Lipídios (g)</th> 
-                <th>Calorias (kcal)</th> 
-            </tr>
-            </thead>
-        </table>
-    </div>
+
+
+
+
+
+    <section class="section" id="third-section">
+        <div class="total">
+            <h1>Total proteínas</h1>
+            <span id="carbohydrate">0</span>
+            <h1>Total carboidratos</h1>
+            <span id="protein">0</span>
+            <h1>Total lipídios</h1>
+            <span id="fat">0</span>
+            <h1>Total calorias</h1>
+            <span id="calories">0</span>
+        </div>
+        <div class="div-table">
+            <table id="tbDiet" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Tipo de Refeição</th> 
+                        <th>Nome do alimento</th> 
+                        <th>Quantidade</th>
+                        <th>Carboidratos (g)</th> 
+                        <th>Proteínas (g)</th> 
+                        <th>Lipídios (g)</th> 
+                        <th>Calorias (kcal)</th> 
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </section>   
     <div id="div-links">
         <a href="diet2.html" class="link">Dieta</a>
     </div>
-    </div>
-    <script src = "diet2.js"></script>  
-    </main>
-    </body>
+</div>
+<script src = "diet2.js"></script>  
+</main>
+</body>
 </html>

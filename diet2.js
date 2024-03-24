@@ -9,94 +9,7 @@ const gainMuscleMass = document.getElementById("gainMuscleMass")
 
 const chooseMenu = () => {
 
-
-
-	for( i = 0; i < 9; i++){
-		let tb = document.getElementById("tbDiet2");
-		let numberOfLines = tb.rows.length;
-		let line = tb.insertRow(numberOfLines);
-	
-		let cellBreakfast = line.insertCell(0);
-		let cellMorningSnack = line.insertCell(1);
-		let cellPreWorkout = line.insertCell(2);
-		let cellPostWorkout = line.insertCell(3)
-		let cellLunch = line.insertCell(4);
-		let cellAfternoonSnack = line.insertCell(5);
-		let cellDinner = line.insertCell(6);
-		let cellSupper = line.insertCell(7);
-
-		if(loseWeight.checked === true){
-			input.forEach(ipt => {
-				if(ipt.checked === true){
-		
-		if(i < 6 && foods[i].typeMeal === "Café da manhã"){
-			cellBreakfast.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;	 
-		}	
-		i+=6
-		if(i < 11 && foods[i].typeMeal === "Lanche da manhã"){
-			cellMorningSnack.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;	
-		}
-		i+=5
-		if(i < 12 && foods[i].typeMeal === "Pré-treino"){
-			cellPreWorkout.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;	
-		}
-		i++
-		if(i < 13 && foods[i].typeMeal === "Pós-treino"){
-			cellPostWorkout.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;	
-		}
-		i++
-		if(i < 22 && foods[i].typeMeal === "Almoço"){
-			cellLunch.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
-		}
-		i+=9
-		if( i < 27 && foods[i].typeMeal === "Lanche da tarde"){
-			cellAfternoonSnack.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
-		}
-		i+=5
-		if(i < 35 && foods[i].typeMeal === "Jantar"){
-			cellDinner.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
-		}
-		i+=8
-		if(i < 36 && foods[i].typeMeal === "Ceia"){
-			cellSupper.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
-		}
-		i-=35
-	}
-}
-			)
-}
-
-
-
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	for(let i = 0; i < input.length; i++){
+	for( i = 0; i < input.length; i++){
 
 		let tb = document.getElementById("tbDiet");
 		let numberOfLines = tb.rows.length;
@@ -125,9 +38,7 @@ const chooseMenu = () => {
 			})
 		}
 	}
-};
-
-
+}
 
 
 let foods = [
@@ -146,7 +57,7 @@ let foods = [
 	{typeMeal: "Pós-treino", name: "Whey concentrado", quantity: 30, unitOfMeasure: "g", carbohydrate: 5, protein: 24, fat: 0, calories: 116},
 	{typeMeal: "Almoço", name: "Arroz integral", quantity: 1, unitOfMeasure: "Colher(es) de sopa", carbohydrate: 1.72, protein: 0.17, fat: 0.06, calories: 8.33},
 	{typeMeal: "Almoço", name: "Mandioca", quantity: 100, unitOfMeasure: "g", carbohydrate: 37.46, protein: 1.34, fat: 2.04, calories: 173},
-	{typeMeal: "Almoço", name: "Filé de frango ", quantity: 100, unitOfMeasure: "g", carbohydrate: 0, protein: 31.02, fat: 3.57, calories: 165},
+	{typeMeal: "Almoço", name: "Filé de frango", quantity: 100, unitOfMeasure: "g", carbohydrate: 0, protein: 31.02, fat: 3.57, calories: 165},
 	{typeMeal: "Almoço", name: "Filé de tilápia", quantity: 100, unitOfMeasure: "g", carbohydrate: 0, protein: 20.08, fat: 1.7, calories: 96},
 	{typeMeal: "Almoço", name: "Bisteca suína", quantity: 100, unitOfMeasure: "g", carbohydrate: 0, protein: 24, fat: 5.4, calories: 146},
 	{typeMeal: "Almoço", name: "Feijão", quantity: 1, unitOfMeasure: "Colher(es) de sopa", carbohydrate: 4.5, protein: 1.45, fat: 0.125, calories: 25},
@@ -170,6 +81,43 @@ let foods = [
 ];
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 for( i = 0; i < 9; i++){
 	let tb = document.getElementById("tbDiet2");
 	let numberOfLines = tb.rows.length;
@@ -217,7 +165,7 @@ if(i < 36 && foods[i].typeMeal === "Ceia"){
 }
 i-=35
 }
-
+*/
 
 /*
 
@@ -305,3 +253,122 @@ let avocado = input.id === "input-avocado"&& input.cheched === true;
 		}
 console.log("oi");
 	} */
+
+/*
+
+	let breakfast = [0];
+	let morningSnack = [0];
+	let preWorkout = [0];
+	let postWorkout = [0];
+	let lunch = [0];
+	let afternoonSnack = [0];
+	let dinner = [0];
+	let supper = [0];
+	let t = [0];
+
+console.log(t)
+
+	for( i = 0; i < input.length; i++){
+
+		let tb2 = document.getElementById("tbDiet2");
+		let numberOfLines2 = tb2.rows.length;
+		let line2 = tb2.insertRow(numberOfLines2);
+	
+		let cellBreakfast = line2.insertCell(0);
+		let cellMorningSnack = line2.insertCell(1);
+		let cellPreWorkout = line2.insertCell(2);
+		let cellPostWorkout = line2.insertCell(3)
+		let cellLunch = line2.insertCell(4);
+		let cellAfternoonSnack = line2.insertCell(5);
+		let cellDinner = line2.insertCell(6);
+		let cellSupper = line2.insertCell(7);
+
+		if(loseWeight.checked === true){
+			if(input[i].checked === true){
+				t.push(input[i].name);
+				if(i < breakfast.length && input[i].name === foods[i].name && foods[i].typeMeal === "Café da manhã"){
+					cellBreakfast.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;	
+					breakfast.push(input[i].name);
+				}
+				i += breakfast.length
+				if(i < (breakfast.length + morningSnack.length) && input[i].name === foods[i].name && foods[i].typeMeal === "Lanche da manhã"){
+					cellMorningSnack.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
+					morningSnack.push(input[i].name);
+				}
+				i+= morningSnack.length
+				if(i < (breakfast.length + morningSnack.length + preWorkout.length) && input[i].name === foods[i].name && foods[i].typeMeal === "Pré-treino"){
+					cellPreWorkout.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
+					preWorkout.push(input[i].name);
+				}
+				i+= preWorkout.length
+				if(i < (breakfast.length + morningSnack.length + preWorkout.length + postWorkout.length) && input[i].name === foods[i].name && foods[i].typeMeal === "Pós-treino"){
+					cellPostWorkout.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;	
+					postWorkout.push(input[i].name);
+				}
+				i+= postWorkout.length
+				if(i < (breakfast.length + morningSnack.length + preWorkout.length + postWorkout.length + lunch.length) && input[i].name === foods[i].name && foods[i].typeMeal === "Almoço"){
+					cellLunch.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
+					lunch.push(input[i].name);
+				}
+				i+= lunch.length
+				if(i < (breakfast.length + morningSnack.length + preWorkout.length + postWorkout.length + lunch.length + afternoonSnack.length) && input[i].name === foods[i].name && foods[i].typeMeal === "Lanche da tarde"){
+					cellAfternoonSnack.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
+					afternoonSnack.push(input[i].name);
+				}
+				i+= afternoonSnack.length
+				if(i < (breakfast.length + morningSnack.length + preWorkout.length + postWorkout.length + lunch.length + afternoonSnack.length + dinner.length) && input[i].name === foods[i].name && foods[i].typeMeal === "Jantar"){
+					cellDinner.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
+					dinner.push(input[i].name);
+				}
+				i+= dinner.length
+				if(i < (breakfast.length + morningSnack.length + preWorkout.length + postWorkout.length + lunch.length + afternoonSnack.length + dinner.length + supper.length) &&input[i].name === foods[i].name && foods[i].typeMeal === "Ceia"){
+					cellSupper.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
+					supper.push(input[i].name);
+				}
+				i-=
+				
+
+
+
+				/*
+				input.forEach(ipt1 => {
+				
+		
+					if(ipt1.name === foods[i].name && foods[i].typeMeal === "Café da manhã"){
+						cellBreakfast.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;	 
+					}
+					
+					if(ipt1.name === foods[i].name && foods[i].typeMeal === "Lanche da manhã"){
+						cellMorningSnack.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;	
+					}
+				
+					if(  ipt1.name === foods[i].name && foods[i].typeMeal === "Pré-treino"){
+						cellPreWorkout.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;	
+					}
+					
+					if( ipt1.name === foods[i].name && foods[i].typeMeal === "Pós-treino"){
+						cellPostWorkout.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;	
+					}
+				
+					if(  ipt1.name === foods[i].name && foods[i].typeMeal === "Almoço"){
+						cellLunch.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
+					}
+					
+					if( ipt1.name === foods[i].name && foods[i].typeMeal === "Lanche da tarde"){
+						cellAfternoonSnack.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
+					}
+				
+					if(ipt1.name === foods[i].name && foods[i].typeMeal === "Jantar"){
+						cellDinner.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
+					}
+				
+					if(ipt1.name === foods[i].name && foods[i].typeMeal === "Ceia"){
+						cellSupper.innerHTML =  ` ${foods[i].quantity} ${foods[i].unitOfMeasure} de ${foods[i].name}`;
+					}
+				
+				
+			})	
+		}
+		}
+	}
+	*/
