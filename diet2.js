@@ -4,7 +4,8 @@ const keepMuscleMass = document.getElementById("keepMuscleMass")
 const gainMuscleMass = document.getElementById("gainMuscleMass")
 
 
-
+let name = document.createElement("input");
+gainMuscleMass.appendChild(name);
 
 
 const chooseMenu = () => {
@@ -39,6 +40,28 @@ const chooseMenu = () => {
 		}
 	}
 }
+
+
+
+let div = document.getElementById("div")
+let alimento = document.createElement("alimento")
+alimento.innerHTML = `<input type="checkbox" <p>Banana</P>`
+
+div.appendChild(alimento)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 let foods = [
