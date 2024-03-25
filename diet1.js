@@ -8,6 +8,7 @@ let basalMetabolicRateResult = document.getElementById("basalMetabolicRateResult
 //hello
 
 const calculateBasalMetabolicRate = () => {
+	//.
 
 	let basalMetabolicRate = "";
 	let male = maleGender.checked;
