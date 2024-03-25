@@ -44,11 +44,15 @@ const chooseMenu = () => {
 
 
 let div = document.getElementById("div")
-let alimento = document.createElement("alimento")
-alimento.innerHTML = `<input type="checkbox" <p>Banana</P>`
+let p = document.getElementById("p")
+let input1 = document.createElement("input")
+input1.type = "checkbox" 
+input1.name = "Abacate"
+let li = document.createElement("p")
+p.textContent = "Abacate" 
 
-div.appendChild(alimento)
-
+div.appendChild(input1) 
+input1.appendChild(li)
 
 
 
