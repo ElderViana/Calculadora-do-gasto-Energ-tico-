@@ -43,16 +43,25 @@ const chooseMenu = () => {
 
 
 
-let div = document.getElementById("div")
-let p = document.getElementById("p")
-let input1 = document.createElement("input")
-input1.type = "checkbox" 
-input1.name = "Abacate"
-let li = document.createElement("p")
-p.textContent = "Abacate" 
+let div = document.getElementById("div");
+let input1 = document.createElement("input");
+let input2 = document.createElement("input");
+input1.type = "checkbox";
+input2.type = "checkbox";
+let label = document.createElement("label");
+let label2 = document.createElement("label2");
+let p = document.createElement("p");
+label.innerHTML = "Abacate" 
+label2.innerHTML = "Abacate" 
+p.innerHTML = ""
 
-div.appendChild(input1) 
-input1.appendChild(li)
+div.appendChild(input1); 
+div.appendChild(label);
+div.appendChild(p); 
+div.appendChild(input2); 
+div.appendChild(label2);
+
+
 
 
 
@@ -106,6 +115,34 @@ let foods = [
 	{typeMeal: "Jantar", name: "Azeite", quantity: 1, unitOfMeasure: "Colher(es) de sopa", carbohydrate: 0, protein: 0, fat: 13.5, calories: 119},
 	{typeMeal: "Ceia", name: "Abacate", quantity: 100, unitOfMeasure: "g", carbohydrate: 8.53, protein: 2, fat: 14.66, calories: 160}
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
