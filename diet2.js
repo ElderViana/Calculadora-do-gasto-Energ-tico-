@@ -65,6 +65,7 @@ const createFood = ( input, label, nameFood) => {
 	label.textContent = nameFood;
 	meal1.appendChild(input);
 	meal1.appendChild(label);
+	//ç
 
 	
 	
