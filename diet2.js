@@ -28,164 +28,18 @@ const foods = [
  	{typeMeal: "Lanche da tarde", name: "Caqui", quantity: 100, unitOfMeasure: "g", carbohydrate: 19.3, protein: 0.4, fat: 0, calories: 71},
  	{typeMeal: "Lanche da tarde", name: "Carambola", quantity: 100, unitOfMeasure: "g", carbohydrate: 6.73, protein: 1.04, fat: 0.33, calories: 31},
 	{typeMeal: "Lanche da tarde", name: "Laranja pêra", quantity: 100, unitOfMeasure: "g", carbohydrate: 9.73, protein: 0.61, fat: 0.11, calories: 37},
+	{typeMeal: "Jantar", name: "Cuscuz", quantity: 100, unitOfMeasure: "g", carbohydrate: 23.22, protein: 3.79, fat: 0.16, calories: 112},
 	{typeMeal: "Jantar", name: "Bife bovino", quantity: 100, unitOfMeasure: "g", carbohydrate: 0, protein: 27.29, fat: 15.01, calories: 252},
 	{typeMeal: "Jantar", name: "Fígado de frango", quantity: 100, unitOfMeasure: "g", carbohydrate: 0.87, protein: 24.46, fat: 6.51, calories: 167},
 	{typeMeal: "Jantar", name: "Sardinha enlatada", quantity: 1, unitOfMeasure: "Lata(s)", carbohydrate: 0, protein: 22.65, fat: 10.53, calories: 191},
-	{typeMeal: "Jantar", name: "Cuscuz", quantity: 100, unitOfMeasure: "g", carbohydrate: 23.22, protein: 3.79, fat: 0.16, calories: 112},
 	{typeMeal: "Jantar", name: "Alface", quantity: 100, unitOfMeasure: "g", carbohydrate: 2.97, protein: 0.9, fat: 0.14, calories: 14},
 	{typeMeal: "Jantar", name: "Pepino", quantity: 100, unitOfMeasure: "g", carbohydrate: 3.6, protein: 0.7, fat: 0.1, calories: 16},
 	{typeMeal: "Jantar", name: "Beterraba", quantity: 100, unitOfMeasure: "g", carbohydrate: 9.9, protein: 1.67, fat: 0.18, calories: 44},
 	{typeMeal: "Jantar", name: "Azeite", quantity: 1, unitOfMeasure: "Colher(es) de sopa", carbohydrate: 0, protein: 0, fat: 13.5, calories: 119},
 	{typeMeal: "Ceia", name: "Abacate", quantity: 100, unitOfMeasure: "g", carbohydrate: 8.53, protein: 2, fat: 14.66, calories: 160}
 ];
-
+console.log(foods)
 const foods2 = structuredClone(foods);
-
-
-let meal1 = document.getElementById("meal1");
-let meal2 = document.getElementById("meal2");
-let meal3 = document.getElementById("meal3");
-let meal4 = document.getElementById("meal4");
-let meal5 = document.getElementById("meal5");
-let meal6 = document.getElementById("meal6");
-let meal7 = document.getElementById("meal7");
-let meal8 = document.getElementById("meal8");
-
-
-
-
-const createFood = ( input, label, nameFood) => {
-	p1 = document.createElement("p");
-	p1.textContent = "Café";
-	meal1.appendChild(p1);
-
-	input = document.createElement("input");
-	input.type = "checkbox" ;
-	label = document.createElement("label");
-	label.textContent = nameFood;
-	meal1.appendChild(input);
-	meal1.appendChild(label);
-	//ç
-
-	
-	
-	/*
-	if(foods2[i].name !== foods2[0].name || foods[i].name !== foods2[1].name){
-	br = document.createElement("br")
-	meal1.appendChild(br);
-	}
-	
-*/
-}
-
-for (i = 0; i < foods2.length; i++){
-	if(foods2[i].typeMeal === "Café da manhã"){
-		if(foods2[i].name === foods2[0].name || foods[i].name === foods2[1].name){
-			createFood(foods2.length, foods2.length, foods2[i].name);
-		}else{
-			br = document.createElement("br")
-			meal1.appendChild(br);
-			createFood(foods2.length, foods2.length, foods2[i].name);
-			}
-	if(foods2[i].typeMeal === "lanche da manhã"){
-		createFood(foods2.length, foods2.length, foods2[i].name);
-	}
-	}	
-}
-
-/*
-foods2.forEach(input => {
-
-	if(input[0].name === foods2[0].name && input[1].name === foods2[1].name){
-
-		let input1 = document.createElement("input")
-		input1.type = "checkbox" 
-		input1.innerHTML = "Abacate"
-		let li = document.createElement("p")
-		p.textContent = "Abacate" 
-
-		meal1.appendChild(input1) 
-		input1.appendChild(li)
-
-	}
-})
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 const input = document.querySelectorAll("[input]");
@@ -194,11 +48,221 @@ const keepMuscleMass = document.getElementById("keepMuscleMass")
 const gainMuscleMass = document.getElementById("gainMuscleMass")
 
 
-let name1 = document.createElement("input");
-gainMuscleMass.appendChild(name1);
+
+
 
 
 const chooseMenu = () => {
+	let foodsCheckeds = [];
+	let carbohydrate = 0;
+	let protein = 0;
+	let fat = 0;
+	let calories = 0;
+
+console.log(foodsCheckeds)
+	input.forEach(ipt => {
+		if(ipt.checked === true){
+			foodsCheckeds.push(ipt.checked);
+		}
+	});
+
+	for (i = 0; i < input.length; i++){
+		if(loseWeight.checked === true){                //Caso o usuário deseje perder peso;
+			if(input[i].checked === true){         
+				carbohydrate += foods2[i].carbohydrate; 
+				protein += foods2[i].protein; 
+				fat += foods2[i].fat; 
+				calories += foods2[i].calories; 
+			}
+		}
+	}
+	
+	if(loseWeight.checked === true){
+		if(calories <= 2520 && input[0].checked === true){
+			carbohydrate += foods2[0].carbohydrate; 
+			protein += foods2[0].protein; 
+			fat += foods2[0].fat; 
+			calories += foods2[0].calories;
+
+			foods2[0].quantity = (2 * foods2[0].quantity);
+			foods2[0].carbohydrate = (2 * foods2[0].carbohydrate);
+			foods2[0].protein = (2 * foods2[0].protein);
+			foods2[0].fat = (2 * foods2[0].fat);
+			foods2[0].calories = (2 * foods2[0].calories);
+		} else if(calories < 2514.61 && input[1].checked === true){
+					carbohydrate += foods2[1].carbohydrate; 
+					protein += foods2[1].protein; 
+					fat += foods2[1].fat;
+					calories += foods2[1].calories;
+
+					foods2[1].quantity = (2 * foods2[1].quantity);
+					foods2[1].carbohydrate = (2 * foods2[1].carbohydrate);
+					foods2[1].protein = (2 * foods2[1].protein);
+					foods2[1].fat = (2 * foods2[1].fat);
+					foods2[1].calories = (2 * foods2[1].calories);
+				}
+
+		if(calories <= 2520 && input[3].checked === true){
+			carbohydrate += (2 * foods2[3].carbohydrate); 
+			protein += (2 * foods2[3].protein); 
+			fat += (2 * foods2[3].fat); 
+			calories += (2 * foods2[3].calories);
+
+			foods2[3].quantity = (3 * foods2[3].quantity);
+			foods2[3].carbohydrate = (3 * foods2[3].carbohydrate);
+			foods2[3].protein = (3 * foods2[3].protein);
+			foods2[3].fat = (3 * foods2[3].fat);
+			foods2[3].calories = (3 * foods2[3].calories);
+		}
+
+		if(calories <= 2520 && input[7].checked === true){
+			carbohydrate += (3 * foods2[7].carbohydrate); 
+			protein += (3 * foods2[7].protein); 
+			fat += (3 * foods2[7].fat); 
+			calories += (3 * foods2[7].calories);
+
+			foods2[7].quantity = (4 * foods2[7].quantity);
+			foods2[7].carbohydrate = (4 * foods2[7].carbohydrate);
+			foods2[7].protein = (4 * foods2[7].protein);
+			foods2[7].fat = (4 * foods2[7].fat);
+			foods2[7].calories = (4 * foods2[7].calories);
+		}
+
+		if(calories <= 2520 && input[13].checked === true){
+			carbohydrate += (3 * foods2[13].carbohydrate); 
+			protein += (3 * foods2[13].protein); 
+			fat += (3 * foods2[13].fat); 
+			calories += (3 * foods2[13].calories);
+
+			foods2[13].quantity = (4 * foods2[13].quantity);
+			foods2[13].carbohydrate = (4 * foods2[13].carbohydrate);
+			foods2[13].protein = (4 * foods2[13].protein);
+			foods2[13].fat = (4 * foods2[13].fat);
+			foods2[13].calories = (4 * foods2[13].calories);
+		}
+
+		if(calories <= 2520 && input[15].checked === true){
+			carbohydrate += foods2[15].carbohydrate; 
+			protein += foods2[15].protein; 
+			fat += foods2[15].fat; 
+			calories += foods2[15].calories;
+	
+			foods2[15].quantity = (2 * foods2[15].quantity);
+			foods2[15].carbohydrate = (2 * foods2[15].carbohydrate);
+			foods2[15].protein = (2 * foods2[15].protein);
+			foods2[15].fat = (2 * foods2[15].fat);
+			foods2[15].calories = (2 * foods2[15].calories);
+		} else if(calories < 2514.61 && input[16].checked === true){
+					carbohydrate += (2 * foods2[16].carbohydrate); 
+					protein += (2 * foods2[16].protein); 
+					fat += (2 * foods2[16].fat); 
+					calories += (2 * foods2[16].calories);
+	
+					foods2[16].quantity = (3 * foods2[16].quantity);
+					foods2[16].carbohydrate = (3 * foods2[16].carbohydrate);
+					foods2[16].protein = (3 * foods2[16].protein);
+					foods2[16].fat = (3 * foods2[16].fat);
+					foods2[16].calories = (3 * foods2[16].calories);
+				} else if(calories < 2514.61 && input[17].checked === true){
+							carbohydrate += foods2[17].carbohydrate; 
+							protein += foods2[17].protein; 
+							fat += foods2[17].fat; 
+							calories += foods2[17].calories;
+			
+							foods2[17].quantity = (2 * foods2[17].quantity);
+							foods2[17].carbohydrate = (2 * foods2[17].carbohydrate);
+							foods2[17].protein = (2 * foods2[17].protein);
+							foods2[17].fat = (2 * foods2[17].fat);
+							foods2[17].calories = (2 * foods2[17].calories);
+						}
+	
+		if(calories <= 2520 && input[18].checked === true){
+				carbohydrate += (3 * foods2[18].carbohydrate); 
+				protein += (3 * foods2[18].protein); 
+				fat += (3 * foods2[18].fat); 
+				calories += (3 * foods2[18].calories);
+	
+				foods2[18].quantity = (4 * foods2[18].quantity);
+				foods2[18].carbohydrate = (4 * foods2[18].carbohydrate);
+				foods2[18].protein = (4 * foods2[18].protein);
+				foods2[18].fat = (4 * foods2[18].fat);
+				foods2[18].calories = (4 * foods2[18].calories);
+		}
+
+		if(calories < 2514.61 && input[27].checked === true){
+			carbohydrate += foods2[27].carbohydrate; 
+			protein += foods2[27].protein; 
+			fat += foods2[27].fat; 
+			calories += foods2[27].calories;
+	
+			foods2[27].quantity = (2 * foods2[27].quantity);
+			foods2[27].carbohydrate = (2 * foods2[27].carbohydrate);
+			foods2[27].protein = (2 * foods2[27].protein);
+			foods2[27].fat = (2 * foods2[27].fat);
+			foods2[27].calories = (2 * foods2[27].calories);
+		}
+
+		if(calories < 2514.61 && input[28].checked === true){
+			carbohydrate += foods2[28].carbohydrate; 
+			protein += foods2[28].protein; 
+			fat += foods2[28].fat; 
+			calories += foods2[28].calories;
+	
+			foods2[28].quantity = (2 * foods2[28].quantity);
+			foods2[28].carbohydrate = (2 * foods2[28].carbohydrate);
+			foods2[28].protein = (2 * foods2[28].protein);
+			foods2[28].fat = (2 * foods2[28].fat);
+			foods2[28].calories = (2 * foods2[28].calories);
+		} else if(calories < 2514.61 && input[29].checked === true){
+					carbohydrate += (2 * foods2[29].carbohydrate); 
+					protein += (2 * foods2[29].protein); 
+					fat += (2 * foods2[29].fat); 
+					calories += (2 * foods2[29].calories);
+	
+					foods2[29].quantity = (3 * foods2[29].quantity);
+					foods2[29].carbohydrate = (3 * foods2[29].carbohydrate);
+					foods2[29].protein = (3 * foods2[29].protein);
+					foods2[29].fat = (3 * foods2[29].fat);
+					foods2[29].calories = (3 * foods2[29].calories);
+				}else if(calories < 2514.61 && input[30].checked === true){
+							carbohydrate += (2 * foods2[30].carbohydrate); 
+							protein += (2 * foods2[30].protein); 
+							fat += (2 * foods2[30].fat); 
+							calories += (2 * foods2[30].calories);
+			
+							foods2[30].quantity = (3 * foods2[30].quantity);
+							foods2[30].carbohydrate = (3 * foods2[30].carbohydrate);
+							foods2[30].protein = (3 * foods2[30].protein);
+							foods2[30].fat = (3 * foods2[30].fat);
+							foods2[30].calories = (3 * foods2[30].calories);
+				}
+	}		
+
+
+
+	console.log(foods2[0])
+
+
+
+
+
+console.log(calories)
+console.log(foodsCheckeds)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	for( i = 0; i < input.length; i++){
 
@@ -208,7 +272,7 @@ const chooseMenu = () => {
 		if(loseWeight.checked === true){
 			input.forEach(ipt => {
 				if(ipt.checked === true){
-					if(ipt.name === foods[i].name){
+					if(ipt.name === foods2[i].name){
 						let line = tb.insertRow(numberOfLines);
 						let cellTypeMeal = line.insertCell(0);
 						let cellFood = line.insertCell(1);
@@ -217,21 +281,25 @@ const chooseMenu = () => {
 						let cellProtein = line.insertCell(4);
 						let cellFat = line.insertCell(5);
 						let cellCalories = line.insertCell(6);
-						cellTypeMeal.innerHTML = foods[i].typeMeal;
-						cellFood.innerHTML = foods[i].name;
-						cellQuantity.innerHTML = `${foods[i].quantity} ${foods[i].unitOfMeasure}`;
-						cellCarbohydrate.innerHTML = foods[i].carbohydrate;
-						cellProtein.innerHTML = foods[i].protein;
-						cellFat.innerHTML = foods[i].fat;
-						cellCalories.innerHTML = foods[i].calories;
+						cellTypeMeal.innerHTML = foods2[i].typeMeal;
+						cellFood.innerHTML = foods2[i].name;
+						cellQuantity.innerHTML = `${foods2[i].quantity} ${foods2[i].unitOfMeasure}`;
+						cellCarbohydrate.innerHTML = foods2[i].carbohydrate.toFixed(2);
+						cellProtein.innerHTML = foods2[i].protein.toFixed(2);
+						cellFat.innerHTML = foods2[i].fat.toFixed(2);
+						cellCalories.innerHTML = foods2[i].calories.toFixed(2);
+
 					}
+					
 				}
 			})
 		}
 	}
+	
+
 }
 
-
+/*
 
 let div = document.getElementById("div")
 let p = document.getElementById("p")
@@ -246,9 +314,9 @@ div.appendChild(label);
 div.appendChild(p); 
 div.appendChild(input2); 
 div.appendChild(label2);
+*/
 
-
-
+console.log(input.checked)
 
 
 
@@ -554,3 +622,229 @@ console.log(t)
 		}
 	}
 	*/
+	
+/*
+console.log(foods2[0].name)
+let meal1 = document.getElementById("meal1");
+let meal2 = document.getElementById("meal2");
+let meal3 = document.getElementById("meal3");
+let meal4 = document.getElementById("meal4");
+let meal5 = document.getElementById("meal5");
+let meal6 = document.getElementById("meal6");
+let meal7 = document.getElementById("meal7");
+let meal8 = document.getElementById("meal8");
+let inputs = [];
+let inputsN = [];
+
+
+ for (i = 0; i < foods2.length; i++){
+	br =  document.createElement("br");
+	meal2.appendChild(br);
+	if (foods2[i].typeMeal === "Café da manhã"){
+		
+			ipt =  document.createElement("input");
+			ipt.type = "checkbox";
+		
+	
+			ipt.id = `input-${i}`
+			ipt.name = foods2[i].name
+			ipt.class = "input"
+			meal1.appendChild(ipt);
+			label = document.createElement("label");
+			label.textContent = foods2[i].name;
+			meal1.appendChild(label);
+			inputs.push(ipt.id);
+			inputsN.push(ipt.name);
+		
+	}
+	if(foods2[i].typeMeal === "Lanche da manhã"){
+		if(foods2[i].name !== "Yakult" && foods2[i].name !== "Iogurte natural"){
+			ipt2 =  document.createElement("input");
+			ipt2.type = "checkbox";
+			ipt2.id = `input-${i}`
+			ipt2.name = foods2[i].name
+			ipt2.class = "input"
+			meal2.appendChild(ipt2);
+			label = document.createElement("label");
+			label.textContent = foods2[i].name;
+			meal2.appendChild(label);
+			inputs.push(ipt2.id);
+			inputsN.push(ipt2.name);
+
+			br =  document.createElement("br");
+			meal2.appendChild(br);
+		}else{
+			ipt3 =  document.createElement("input");
+			ipt3.type = "checkbox";
+			ipt3.id = `input-${i}`
+			ipt3.name = foods2[i].name
+			ipt3.class = "input"
+			meal2.appendChild(ipt3);
+			label = document.createElement("label");
+			label.textContent = foods2[i].name;
+			meal2.appendChild(label);
+			inputs.push(ipt3.id);
+			inputsN.push(ipt3.name);
+
+		}
+			/*
+			if(foods2[i].name !== foods2[9].name || foods2[i].name !== foods[10].name){
+		
+			
+			ipt3 =  document.createElement("input");
+			ipt3.type = "checkbox";
+			ipt3.id = `input-${i}`
+			ipt3.name = foods2[i].name
+			ipt3.class = "input"
+			meal3.appendChild(ipt3);
+			label = document.createElement("label");
+			label.textContent = foods2[i].name;
+			meal2.appendChild(label);
+			inputs.push(ipt3.id);
+			inputsN.push(ipt3.name);
+
+		}
+		
+	}
+ }
+
+console.log(inputsN)
+ 
+
+
+*/
+
+/*
+const createFood = (input, label, nameFood, id) => {
+	//p1 = document.createElement("p");
+	//p1.textContent = "Café da manhã" ;
+	//meal1.appendChild(p1);
+	
+	let inputs = [];
+
+	input = document.createElement("input");
+	input.type = "checkbox";
+	input.id = id;
+	label = document.createElement("label");
+	label.textContent = nameFood;
+	meal1.appendChild(input);
+	meal1.appendChild(label);
+	//ç
+inputs.push(input.id);
+console.log(inputs)
+
+	
+	
+	
+	if(foods2[i].name !== foods2[0].name || foods[i].name !== foods2[1].name){
+	br = document.createElement("br")
+	meal1.appendChild(br);
+	}
+	
+
+}
+
+for (i = 0; i < foods2.length; i++){
+	if(foods2[i].typeMeal === "Café da manhã"){
+		if(foods2[i].name === foods2[0].name || foods[i].name === foods2[1].name){
+			createFood(foods2.length, foods2.length, foods2[i].name, `input-${[i]}`);
+		}else{
+			br = document.createElement("br")
+			meal1.appendChild(br);
+			createFood(foods2.length, foods2.length, foods2[i].name, `input-${[i]}`);
+			}
+	if(foods2[i].typeMeal === "lanche da manhã"){
+		createFood(foods2.length, foods2.length, foods2[i].name);
+	}
+	}	
+}
+*/
+
+/*
+foods2.forEach(input => {
+
+	if(input[0].name === foods2[0].name && input[1].name === foods2[1].name){
+
+		let input1 = document.createElement("input")
+		input1.type = "checkbox" 
+		input1.innerHTML = "Abacate"
+		let li = document.createElement("p")
+		p.textContent = "Abacate" 
+
+		meal1.appendChild(input1) 
+		input1.appendChild(li)
+
+	}
+})
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
