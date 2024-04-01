@@ -2,10 +2,10 @@
 
 const foods = [
 	{typeMeal: "Café da manhã", name: "Pão integral", quantity: 2, unitOfMeasure: "Fatia(as)", carbohydrate: 24.54, protein: 4.74, fat: 2.14, calories: 136},
-	{typeMeal: "Café da manhã", name: "Tapioca", quantity: 30, quantity: 1, unitOfMeasure: "g", carbohydrate: 27.93, protein: 0, fat: 0, calories: 114.6},
+	{typeMeal: "Café da manhã", name: "Tapioca", quantity: 30, quantity: 1, unitOfMeasure: "g", carbohydrate: 27.93, protein: 0, fat: 0, calories: 114},
 	{typeMeal: "Café da manhã", name: "Açúcar", quantity: 1, unitOfMeasure: "Colher(es) de sopa", carbohydrate: 4.2, protein: 0, fat: 0, calories: 16},
-	{typeMeal: "Café da manhã", name: "Ovo", quantity: 2, unitOfMeasure: "Unidade(s)", carbohydrate: 0.76, protein: 12.58, fat: 9.94, calories: 148},
-	{typeMeal: "Café da manhã", name: "Queijo ricota", quantity: 30, unitOfMeasure: "g", carbohydrate: 11.23, protein: 0.40, fat: 0.61, calories: 11.23}, 
+	{typeMeal: "Café da manhã", name: "Ovo", quantity: 1, unitOfMeasure: "Unidade(s)", carbohydrate: 0.38, protein: 6.29, fat: 4.97, calories: 74},
+	{typeMeal: "Café da manhã", name: "Queijo ricota", quantity: 30, unitOfMeasure: "g", carbohydrate: 11.23, protein: 0.40, fat: 0.61, calories: 11}, 
 	{typeMeal: "Café da manhã", name: "Leite desnatado", quantity: 100, unitOfMeasure: "ml", carbohydrate: 10, protein: 6, fat: 0.7, calories: 7},
 	{typeMeal: "Lanche da manhã", name: "Banana nanica", quantity: 100, unitOfMeasure: "g", carbohydrate: 23.8, protein: 1.4, fat: 0.1, calories: 92},
 	{typeMeal: "Lanche da manhã", name: "Aveia", quantity: 4, unitOfMeasure: "Colher(es) de sopa", carbohydrate: 34.2, protein: 8.72, fat: 4.72, calories: 212},
@@ -14,7 +14,7 @@ const foods = [
 	{typeMeal: "Lanche da manhã", name: "Iogurte natural", quantity: 150, unitOfMeasure: "g", carbohydrate: 10, protein: 6.8, fat: 3.6, calories: 88},
 	{typeMeal: "Pré-treino", name: "Batata doce", quantity: 100, unitOfMeasure: "g", carbohydrate: 25.88, protein: 2.48, fat: 0.13, calories: 112},
 	{typeMeal: "Pós-treino", name: "Whey concentrado", quantity: 30, unitOfMeasure: "g", carbohydrate: 5, protein: 24, fat: 0, calories: 116},
-	{typeMeal: "Almoço", name: "Arroz integral", quantity: 4, unitOfMeasure: "Colher(es) de sopa", carbohydrate: 6.88, protein: 0.68, fat: 0.24, calories: 33.32},
+	{typeMeal: "Almoço", name: "Arroz integral", quantity: 4, unitOfMeasure: "Colher(es) de sopa", carbohydrate: 6.88, protein: 0.68, fat: 0.24, calories: 33},
 	{typeMeal: "Almoço", name: "Mandioca", quantity: 100, unitOfMeasure: "g", carbohydrate: 37.46, protein: 1.34, fat: 2.04, calories: 173},
 	{typeMeal: "Almoço", name: "Filé de frango", quantity: 100, unitOfMeasure: "g", carbohydrate: 0, protein: 31.02, fat: 3.57, calories: 165},
 	{typeMeal: "Almoço", name: "Filé de tilápia", quantity: 100, unitOfMeasure: "g", carbohydrate: 0, protein: 20.08, fat: 1.7, calories: 96},
@@ -52,7 +52,7 @@ const gainMuscleMass = document.getElementById("gainMuscleMass")
 
 
 
-
+console.log(input)
 
 
 const chooseMenu = () => {

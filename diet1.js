@@ -5,23 +5,30 @@ let age = document.getElementById("age");
 let tall = document.getElementById("tall");
 let weight = document.getElementById("weight");
 let basalMetabolicRateResult = document.getElementById("basalMetabolicRateResult");
+const input2 = document.querySelectorAll("[input]");
+console.log(input2)
+
 
 
 const calculateBasalMetabolicRate = () => {
 	
 
 	let basalMetabolicRate = "";
-	let male = maleGender.checked;
-	let female = femaleGender.checked;
+	let totalDailyEnergyExpenditure = "";
 
-	if(male === true){
+	if(male.checked === true){
 		basalMetabolicRate = 66 + (13.7 * (parseFloat(weight.value))) + (5 * (parseFloat(tall.value))) - (6.8 * (parseInt(age.value)));
 	}
-	if(female === true){
+	if(female.checked === true){
 		basalMetabolicRate = 655 + (9.6 * (parseFloat(weight.value))) + (1.8 * (parseFloat(tall.value))) - (4.7 * (parseInt(age.value)));
 	}
-	basalMetabolicRateResult.textContent = `A sua taxa metabólica basal é de ${basalMetabolicRate.toFixed(2)} kcal.`
-	return basalMetabolicRate;	
+
+	if(sedentary.checked === true){
+		totalDailyEnergyExpenditure = (totalDailyEnergyExpenditure * 1.2);
+ 	}
+
+
+
 }
 
 const unSelectInput = (input) => {
@@ -40,12 +47,13 @@ female.addEventListener("click", () => {
 	unSelectInput(female);
 });
 
-
+/*
 let sedentary = document.getElementById("sedentary");
 let slightlyActive = document.getElementById("slightlyActive");
 let moderatelyActive = document.getElementById("moderatelyActive");
 let highlyActive = document.getElementById("highlyActive");
 let extremelyActive =  document.getElementById("extremelyActive");
+*/
 let resultTotalDailyEnergyExpenditure = document.getElementById("resultTotalDailyEnergyExpenditure");
 
 
@@ -77,7 +85,7 @@ const calculateTotalDailyEnergyExpenditure = () => {
 	
 	resultTotalDailyEnergyExpenditure.textContent = `O seu gasto energético é de ${totalDailyEnergyExpenditure.toFixed(2)} kcal.`
 }
-
+/*
 const unSelectInput2 = (input) => {
 
 	if(input === sedentary){
@@ -135,7 +143,7 @@ let keepWeight = document.getElementById("keepWeight");
 let gainWeight = document.getElementById("gainWeight");
 
 
-
+*/
 
 
 
