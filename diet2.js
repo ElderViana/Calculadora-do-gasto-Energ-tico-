@@ -42,7 +42,7 @@ console.log(foods)
 const foods2 = structuredClone(foods);
 
 
-console.log(foods2[0])
+console.log(foods2[3])
 
 
 const input = document.querySelectorAll("[input]");
@@ -52,7 +52,7 @@ const gainMuscleMass = document.getElementById("gainMuscleMass")
 
 
 
-console.log(input)
+
 
 
 const chooseMenu = () => {
@@ -61,6 +61,7 @@ const chooseMenu = () => {
 	let protein = 0;
 	let fat = 0;
 	let calories = 0;
+	
 
 console.log(foodsCheckeds)
 	input.forEach(ipt => {
@@ -95,6 +96,7 @@ console.log(foodsCheckeds)
 //Caso o usuário deseje perder peso;
 	if(loseWeight.checked === true){
 		if(calories <= 2520 && input[0].checked === true){
+			
 			carbohydrate += foods2[0].carbohydrate; 
 			protein += foods2[0].protein; 
 			fat += foods2[0].fat; 
@@ -117,6 +119,9 @@ console.log(foodsCheckeds)
 					foods2[1].fat = (2 * foods2[1].fat);
 					foods2[1].calories = (2 * foods2[1].calories);
 				}
+			}
+			
+		
 
 		if(calories <= 2520 && input[3].checked === true){
 			carbohydrate += (2 * foods2[3].carbohydrate); 
@@ -130,8 +135,10 @@ console.log(foodsCheckeds)
 			foods2[3].fat = (3 * foods2[3].fat);
 			foods2[3].calories = (3 * foods2[3].calories);
 		}
-
-
+		console.log(calories);
+		
+	}
+/*
 		if(calories <= 2520 && input[15].checked === true){
 			carbohydrate += foods2[15].carbohydrate; 
 			protein += foods2[15].protein; 
@@ -165,9 +172,9 @@ console.log(foodsCheckeds)
 							foods2[17].protein = (2 * foods2[17].protein);
 							foods2[17].fat = (2 * foods2[17].fat);
 							foods2[17].calories = (2 * foods2[17].calories);
-						}
+					}
 		//Para pessoas altas ou extremamente ativas
-	/*
+	
 		if(calories <= 3285.18 && input[27].checked === true){
 			carbohydrate += foods2[27].carbohydrate; 
 			protein += foods2[27].protein; 
@@ -217,7 +224,6 @@ console.log(foodsCheckeds)
 				}
 	}	
 	
-*/
 
 	
 	if(keepMuscleMass.checked === true){                      //Caso o usuário deseje manter a sua massa muscular
@@ -395,7 +401,7 @@ console.log(foodsCheckeds)
 	}
 
 	//calorias adicionais para pessoas altas ou extremamente ativas
-/*
+
 	if(calories <= 4285.18 && input[0].checked === true){   
 		carbohydrate += foods2[0].carbohydrate; 
 		protein += foods2[0].protein; 
@@ -418,7 +424,7 @@ console.log(foodsCheckeds)
 				foods2[1].protein = (2 * foods2[1].protein);
 				foods2[1].fat = (2 * foods2[1].fat);
 				foods2[1].calories = (2 * foods2[1].calories);
-			*/	}
+				}
 							
 											
 
@@ -656,7 +662,6 @@ console.log(foodsCheckeds)
 
 }
 
-/*
 
 let div = document.getElementById("div")
 let p = document.getElementById("p")
@@ -671,9 +676,6 @@ div.appendChild(label);
 div.appendChild(p); 
 div.appendChild(input2); 
 div.appendChild(label2);
-*/
-
-console.log(input.checked)
 
 
 
@@ -724,7 +726,7 @@ console.log(input.checked)
 
 
 
-/*
+
 for( i = 0; i < 9; i++){
 	let tb = document.getElementById("tbDiet2");
 	let numberOfLines = tb.rows.length;
@@ -772,9 +774,8 @@ if(i < 36 && foods[i].typeMeal === "Ceia"){
 }
 i-=35
 }
-*/
 
-/*
+
 
 for( i = 0; i < foods.length; i++){
 	let tb = document.getElementById("tbDiet");
@@ -799,9 +800,9 @@ for( i = 0; i < foods.length; i++){
 	cellCalories.innerHTML = foods[i].calories;
 
 }
-*/
 
-/*
+
+
 
 let loseWeight = input.id === "input-loseWeight" && input.checked === true;
 let keepWeight = input.id === "input-keepWeight" && input.checked === true;
@@ -851,17 +852,17 @@ let oliveOil = input.id === "input-oliveOil"&& input.cheched === true;
 
 let avocado = input.id === "input-avocado"&& input.cheched === true;
 
-*/
-/*	for(let i = 0; i < input.length; i++){															//console.log(input[0].checked)
+
+	for(let i = 0; i < input.length; i++){															//console.log(input[0].checked)
 		if(loseWeight.checked === true){
 			if(input[0].checked || input[1].checked === true){
 				console.log("hello");
 			}
 		}
 console.log("oi");
-	} */
+	} 
 
-/*
+
 
 	let breakfast = [0];
 	let morningSnack = [0];
@@ -937,7 +938,7 @@ console.log(t)
 
 
 
-				/*
+				
 				input.forEach(ipt1 => {
 				
 		
@@ -978,9 +979,9 @@ console.log(t)
 		}
 		}
 	}
-	*/
 	
-/*
+	
+
 console.log(foods2[0].name)
 let meal1 = document.getElementById("meal1");
 let meal2 = document.getElementById("meal2");
@@ -1044,7 +1045,7 @@ let inputsN = [];
 			inputsN.push(ipt3.name);
 
 		}
-			/*
+			
 			if(foods2[i].name !== foods2[9].name || foods2[i].name !== foods[10].name){
 		
 			
@@ -1069,9 +1070,7 @@ console.log(inputsN)
  
 
 
-*/
 
-/*
 const createFood = (input, label, nameFood, id) => {
 	//p1 = document.createElement("p");
 	//p1.textContent = "Café da manhã" ;
@@ -1115,9 +1114,9 @@ for (i = 0; i < foods2.length; i++){
 	}
 	}	
 }
-*/
 
-/*
+
+
 foods2.forEach(input => {
 
 	if(input[0].name === foods2[0].name && input[1].name === foods2[1].name){
@@ -1135,73 +1134,3 @@ foods2.forEach(input => {
 })
 
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
