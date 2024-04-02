@@ -1,21 +1,20 @@
-let name = document.getElementById("name");
-let maleGender = document.getElementById("male");
-let femaleGender = document.getElementById("female");
-let age = document.getElementById("age");
-let tall = document.getElementById("tall");
-let weight = document.getElementById("weight");
-let basalMetabolicRateResult = document.getElementById("basalMetabolicRateResult");
-const input2 = document.querySelectorAll("[input]");
-console.log(input2)
+
+const name = document.getElementById("name");
+const maleGender = document.getElementById("male");
+const femaleGender = document.getElementById("female");
+const age = document.getElementById("age");
+const tall = document.getElementById("tall");
+const weight = document.getElementById("weight");
+const input = document.querySelectorAll("[input]")
+console.log(input.id)
+const totalDailyEnergyExpenditure = document.getElementById("totalDailyEnergyExpenditureResult");
 
 
-
-const calculateBasalMetabolicRate = () => {
-	
+const calculateTDEE = () => { //Total Daily Energy Expenditure 
 
 	let basalMetabolicRate = "";
 	let totalDailyEnergyExpenditure = "";
-
+	
 	if(male.checked === true){
 		basalMetabolicRate = 66 + (13.7 * (parseFloat(weight.value))) + (5 * (parseFloat(tall.value))) - (6.8 * (parseInt(age.value)));
 	}
@@ -23,13 +22,42 @@ const calculateBasalMetabolicRate = () => {
 		basalMetabolicRate = 655 + (9.6 * (parseFloat(weight.value))) + (1.8 * (parseFloat(tall.value))) - (4.7 * (parseInt(age.value)));
 	}
 
-	if(sedentary.checked === true){
-		totalDailyEnergyExpenditure = (totalDailyEnergyExpenditure * 1.2);
- 	}
+	//Physical activity level
+	if(input[0].checked === true){
+		totalDailyEnergyExpenditure = (basalMetabolicRate * 1.2); //sedentary
+	}
 
+	if(input[1].checked === true){
+		totalDailyEnergyExpenditure = (basalMetabolicRate * 1.375); //slightlyActive
+	}
 
+	if(input[2].checked === true){
+		totalDailyEnergyExpenditure = (basalMetabolicRate * 1.55); //moderatelyActive
+	}
 
+	if(input[3].checked === true){
+		totalDailyEnergyExpenditure = (basalMetabolicRate  * 1.725); //highlyActive
+	}
+
+	if(input[4].checked === true){
+		totalDailyEnergyExpenditure = (basalMetabolicRate * 1.9); //extremelyActive
+	}
+	
+	totalDailyEnergyExpenditureResult.textContent = `A sua taxa metabólica basal é de ${basalMetabolicRate.toFixed(2)} kcal e O seu gasto energético é de ${totalDailyEnergyExpenditure.toFixed(2)} kcal.`
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const unSelectInput = (input) => {
 	if(input === male){
@@ -47,45 +75,71 @@ female.addEventListener("click", () => {
 	unSelectInput(female);
 });
 
+
 /*
-let sedentary = document.getElementById("sedentary");
-let slightlyActive = document.getElementById("slightlyActive");
-let moderatelyActive = document.getElementById("moderatelyActive");
-let highlyActive = document.getElementById("highlyActive");
-let extremelyActive =  document.getElementById("extremelyActive");
-*/
-let resultTotalDailyEnergyExpenditure = document.getElementById("resultTotalDailyEnergyExpenditure");
+const sedentary = document.getElementById("sedentary");
+const slightlyActive = document.getElementById("slightlyActive");
+const moderatelyActive = document.getElementById("moderatelyActive");
+const highlyActive = document.getElementById("highlyActive");
+const extremelyActive =  document.getElementById("extremelyActive");
+const resultTotalDailyEnergyExpenditure = document.getElementById("resultTotalDailyEnergyExpenditure");
 
 
-const calculateTotalDailyEnergyExpenditure = () => {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
-	let totalDailyEnergyExpenditure = "";   //sedentario: 1.2,levementeAtivo: 1.375,moderadamenteAtivo: 1.55,altamenteAtivo: 1.725,extremamenteAtivo: 1.9
-	let se = sedentary.checked;
-	let s = slightlyActive.checked;
-	let m = moderatelyActive.checked;
-	let h = highlyActive.checked;
-	let e = extremelyActive.checked;
-
+	
+	const se = sedentary.checked;
+	const s = slightlyActive.checked;
+	const m = moderatelyActive.checked;
+	const h = highlyActive.checked;
+	const e = extremelyActive.checked;
+console.log(calculateBasalMetabolicRate())
 	if(se === true){
-		totalDailyEnergyExpenditure = (calculateBasalMetabolicRate() * 1.2);
+		totalDailyEnergyExpenditure = (2 * 1.2);
  	}
 	
 	if(s === true){
-		totalDailyEnergyExpenditure = ( calculateBasalMetabolicRate() * 1.375);
+		totalDailyEnergyExpenditure = ( 2 * 1.375);
 	}
 	if(m === true){
-		totalDailyEnergyExpenditure = (calculateBasalMetabolicRate() * 1.55);
+		totalDailyEnergyExpenditure = (2 * 1.55);
 	}
 	if(h === true){
-		totalDailyEnergyExpenditure = (calculateBasalMetabolicRate() * 1.725);
+		totalDailyEnergyExpenditure = (2  * 1.725);
 	}
 	if(e === true){
-		totalDailyEnergyExpenditure = (calculateBasalMetabolicRate() * 1.9);
+		totalDailyEnergyExpenditure = (2 * 1.9);
 	}
 	
 	resultTotalDailyEnergyExpenditure.textContent = `O seu gasto energético é de ${totalDailyEnergyExpenditure.toFixed(2)} kcal.`
 }
-/*
+
 const unSelectInput2 = (input) => {
 
 	if(input === sedentary){
@@ -120,7 +174,8 @@ const unSelectInput2 = (input) => {
 		highlyActive.checked =false;	
 	}
 	
-}
+	
+
 
 sedentary.addEventListener("click", () => {
 	unSelectInput2(sedentary);
@@ -138,10 +193,9 @@ extremelyActive.addEventListener("click", () => {
 	unSelectInput2(extremelyActive);
 });
 
-let loseWeight = document.getElementById("loseWeight");
-let keepWeight = document.getElementById("keepWeight");
-let gainWeight = document.getElementById("gainWeight");
-
+const loseWeight = document.getElementById("loseWeight");
+const keepWeight = document.getElementById("keepMuscleMass");
+const gainMuscleMass = document.getElementById("gainMuscleMass");
 
 */
 
