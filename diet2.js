@@ -108,10 +108,10 @@ console.log(foodsCheckeds)
 			foods2[0].fat = (2 * foods2[0].fat);
 			foods2[0].calories = (2 * foods2[0].calories);
 		} else if(calories <= 2520 && input[1].checked === true){
-					carbohydrate += foods2[1].carbohydrate; 
-					protein += foods2[1].protein; 
-					fat += foods2[1].fat;
-					calories += foods2[1].calories;
+					carbohydrate += (2 * foods2[1].carbohydrate); 
+					protein += (2 * foods2[1].protein); 
+					fat += (2 * foods2[1].fat);
+					calories += (2 * foods2[1].calories);
 
 					foods2[1].quantity = (2 * foods2[1].quantity);
 					foods2[1].carbohydrate = (2 * foods2[1].carbohydrate);
@@ -124,10 +124,10 @@ console.log(foodsCheckeds)
 		
 
 		if(calories <= 2520 && input[3].checked === true){
-			carbohydrate += (2 * foods2[3].carbohydrate); 
-			protein += (2 * foods2[3].protein); 
-			fat += (2 * foods2[3].fat); 
-			calories += (2 * foods2[3].calories);
+			carbohydrate += (3 * foods2[3].carbohydrate); 
+			protein += (3 * foods2[3].protein); 
+			fat += (3 * foods2[3].fat); 
+			calories += (3 * foods2[3].calories);
 
 			foods2[3].quantity = (3 * foods2[3].quantity);
 			foods2[3].carbohydrate = (3 * foods2[3].carbohydrate);
@@ -135,9 +135,34 @@ console.log(foodsCheckeds)
 			foods2[3].fat = (3 * foods2[3].fat);
 			foods2[3].calories = (3 * foods2[3].calories);
 		}
+
+		if(calories <= 2520 && input[15].checked === true){
+			carbohydrate += (2 * foods2[15].carbohydrate); 
+			protein += (2 * foods2[15].protein); 
+			fat += (2 * foods2[15].fat); 
+			calories += (2 * foods2[15].calories);
+
+			foods2[15].quantity = (2 * foods2[15].quantity);
+			foods2[15].carbohydrate = (2 * foods2[15].carbohydrate);
+			foods2[15].protein = (2 * foods2[15].protein);
+			foods2[15].fat = (2 * foods2[15].fat);
+			foods2[15].calories = (2 * foods2[15].calories);
+		} else if(calories <= 2520 && input[16].checked === true){
+			carbohydrate += (3 * foods2[16].carbohydrate); 
+			protein += (3 * foods2[16].protein); 
+			fat += (3 * foods2[16].fat); 
+			calories += (3 * foods2[16].calories);
+
+			foods2[16].quantity = (3 * foods2[16].quantity);
+			foods2[16].carbohydrate = (3 * foods2[16].carbohydrate);
+			foods2[16].protein = (3 * foods2[16].protein);
+			foods2[16].fat = (3 * foods2[16].fat);
+			foods2[16].calories = (3 * foods2[16].calories);
 		console.log(calories);
+		console.log(foods2[16]);
 		
 	}
+}
 /*
 		if(calories <= 2520 && input[15].checked === true){
 			carbohydrate += foods2[15].carbohydrate; 
