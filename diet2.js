@@ -42,8 +42,6 @@ console.log(foods)
 const foods2 = structuredClone(foods);
 
 
-console.log(foods2[3])
-
 
 const input = document.querySelectorAll("[input]");
 const loseWeight = document.getElementById("loseWeight")
@@ -70,33 +68,38 @@ console.log(foodsCheckeds)
 		}
 	});
 
-	for (i = 0; i < foodsCheckeds.length; i++){
-		if(loseWeight.checked === true){                
-			if(input[i].checked === true){         
+	for (i = 0; i < foods2.length; i++){
+		if(loseWeight.checked === true){  
+			if(input[i].checked === true){
 				carbohydrate += foods2[i].carbohydrate; 
 				protein += foods2[i].protein; 
 				fat += foods2[i].fat; 
-				calories += foods2[i].calories; 
-			}
+				calories += foods2[i].calories;	
+				}	
+			
 		}
 		if(keepMuscleMass.checked === true){
-			carbohydrate += foods2[i].carbohydrate; 
-			protein += foods2[i].protein; 
-			fat += foods2[i].fat; 
-			calories += foods2[i].calories; 
+			if(input[i].checked === true){
+				carbohydrate += foods2[i].carbohydrate; 
+				protein += foods2[i].protein; 
+				fat += foods2[i].fat; 
+				calories += foods2[i].calories;	
+				}	
 		}
 		if(gainMuscleMass.checked === true){
-			carbohydrate += foods2[i].carbohydrate; 
-			protein += foods2[i].protein; 
-			fat += foods2[i].fat; 
-			calories += foods2[i].calories; 
+			if(input[i].checked === true){
+				carbohydrate += foods2[i].carbohydrate; 
+				protein += foods2[i].protein; 
+				fat += foods2[i].fat; 
+				calories += foods2[i].calories;	
+				}	
 		}
 	}
+	
 	
 //Caso o usuário deseje perder peso;
 	if(loseWeight.checked === true){
 		if(calories <= 2520 && input[0].checked === true){
-			
 			carbohydrate += foods2[0].carbohydrate; 
 			protein += foods2[0].protein; 
 			fat += foods2[0].fat; 
@@ -108,162 +111,6 @@ console.log(foodsCheckeds)
 			foods2[0].fat = (2 * foods2[0].fat);
 			foods2[0].calories = (2 * foods2[0].calories);
 		} else if(calories <= 2520 && input[1].checked === true){
-					carbohydrate += (2 * foods2[1].carbohydrate); 
-					protein += (2 * foods2[1].protein); 
-					fat += (2 * foods2[1].fat);
-					calories += (2 * foods2[1].calories);
-
-					foods2[1].quantity = (2 * foods2[1].quantity);
-					foods2[1].carbohydrate = (2 * foods2[1].carbohydrate);
-					foods2[1].protein = (2 * foods2[1].protein);
-					foods2[1].fat = (2 * foods2[1].fat);
-					foods2[1].calories = (2 * foods2[1].calories);
-				}
-			}
-			
-		
-
-		if(calories <= 2520 && input[3].checked === true){
-			carbohydrate += (3 * foods2[3].carbohydrate); 
-			protein += (3 * foods2[3].protein); 
-			fat += (3 * foods2[3].fat); 
-			calories += (3 * foods2[3].calories);
-
-			foods2[3].quantity = (3 * foods2[3].quantity);
-			foods2[3].carbohydrate = (3 * foods2[3].carbohydrate);
-			foods2[3].protein = (3 * foods2[3].protein);
-			foods2[3].fat = (3 * foods2[3].fat);
-			foods2[3].calories = (3 * foods2[3].calories);
-		}
-
-		if(calories <= 2520 && input[15].checked === true){
-			carbohydrate += (2 * foods2[15].carbohydrate); 
-			protein += (2 * foods2[15].protein); 
-			fat += (2 * foods2[15].fat); 
-			calories += (2 * foods2[15].calories);
-
-			foods2[15].quantity = (2 * foods2[15].quantity);
-			foods2[15].carbohydrate = (2 * foods2[15].carbohydrate);
-			foods2[15].protein = (2 * foods2[15].protein);
-			foods2[15].fat = (2 * foods2[15].fat);
-			foods2[15].calories = (2 * foods2[15].calories);
-		} else if(calories <= 2520 && input[16].checked === true){
-			carbohydrate += (3 * foods2[16].carbohydrate); 
-			protein += (3 * foods2[16].protein); 
-			fat += (3 * foods2[16].fat); 
-			calories += (3 * foods2[16].calories);
-
-			foods2[16].quantity = (3 * foods2[16].quantity);
-			foods2[16].carbohydrate = (3 * foods2[16].carbohydrate);
-			foods2[16].protein = (3 * foods2[16].protein);
-			foods2[16].fat = (3 * foods2[16].fat);
-			foods2[16].calories = (3 * foods2[16].calories);
-		console.log(calories);
-		console.log(foods2[16]);
-		
-	}
-}
-/*
-		if(calories <= 2520 && input[15].checked === true){
-			carbohydrate += foods2[15].carbohydrate; 
-			protein += foods2[15].protein; 
-			fat += foods2[15].fat; 
-			calories += foods2[15].calories;
-	
-			foods2[15].quantity = (2 * foods2[15].quantity);
-			foods2[15].carbohydrate = (2 * foods2[15].carbohydrate);
-			foods2[15].protein = (2 * foods2[15].protein);
-			foods2[15].fat = (2 * foods2[15].fat);
-			foods2[15].calories = (2 * foods2[15].calories);
-		} else if(calories <= 2520 && input[16].checked === true){
-					carbohydrate += (2 * foods2[16].carbohydrate); 
-					protein += (2 * foods2[16].protein); 
-					fat += (2 * foods2[16].fat); 
-					calories += (2 * foods2[16].calories);
-	
-					foods2[16].quantity = (3 * foods2[16].quantity);
-					foods2[16].carbohydrate = (3 * foods2[16].carbohydrate);
-					foods2[16].protein = (3 * foods2[16].protein);
-					foods2[16].fat = (3 * foods2[16].fat);
-					foods2[16].calories = (3 * foods2[16].calories);
-				} else if(calories <= 2520 && input[17].checked === true){
-							carbohydrate += foods2[17].carbohydrate; 
-							protein += foods2[17].protein; 
-							fat += foods2[17].fat; 
-							calories += foods2[17].calories;
-			
-							foods2[17].quantity = (2 * foods2[17].quantity);
-							foods2[17].carbohydrate = (2 * foods2[17].carbohydrate);
-							foods2[17].protein = (2 * foods2[17].protein);
-							foods2[17].fat = (2 * foods2[17].fat);
-							foods2[17].calories = (2 * foods2[17].calories);
-					}
-		//Para pessoas altas ou extremamente ativas
-	
-		if(calories <= 3285.18 && input[27].checked === true){
-			carbohydrate += foods2[27].carbohydrate; 
-			protein += foods2[27].protein; 
-			fat += foods2[27].fat; 
-			calories += foods2[27].calories;
-	
-			foods2[27].quantity = (2 * foods2[27].quantity);
-			foods2[27].carbohydrate = (2 * foods2[27].carbohydrate);
-			foods2[27].protein = (2 * foods2[27].protein);
-			foods2[27].fat = (2 * foods2[27].fat);
-			foods2[27].calories = (2 * foods2[27].calories);
-		}
-
-		if(calories <= 3285.18 && input[28].checked === true){
-			carbohydrate += foods2[28].carbohydrate; 
-			protein += foods2[28].protein; 
-			fat += foods2[28].fat; 
-			calories += foods2[28].calories;
-	
-			foods2[28].quantity = (2 * foods2[28].quantity);
-			foods2[28].carbohydrate = (2 * foods2[28].carbohydrate);
-			foods2[28].protein = (2 * foods2[28].protein);
-			foods2[28].fat = (2 * foods2[28].fat);
-			foods2[28].calories = (2 * foods2[28].calories);
-		} else if(calories <= 3285.18 && input[29].checked === true){
-					carbohydrate += (2 * foods2[29].carbohydrate); 
-					protein += (2 * foods2[29].protein); 
-					fat += (2 * foods2[29].fat); 
-					calories += (2 * foods2[29].calories);
-	
-					foods2[29].quantity = (3 * foods2[29].quantity);
-					foods2[29].carbohydrate = (3 * foods2[29].carbohydrate);
-					foods2[29].protein = (3 * foods2[29].protein);
-					foods2[29].fat = (3 * foods2[29].fat);
-					foods2[29].calories = (3 * foods2[29].calories);
-				}else if(calories <= 3285.18 && input[30].checked === true){
-							carbohydrate += (2 * foods2[30].carbohydrate); 
-							protein += (2 * foods2[30].protein); 
-							fat += (2 * foods2[30].fat); 
-							calories += (2 * foods2[30].calories);
-			
-							foods2[30].quantity = (3 * foods2[30].quantity);
-							foods2[30].carbohydrate = (3 * foods2[30].carbohydrate);
-							foods2[30].protein = (3 * foods2[30].protein);
-							foods2[30].fat = (3 * foods2[30].fat);
-							foods2[30].calories = (3 * foods2[30].calories);
-				}
-	}	
-	
-
-	
-	if(keepMuscleMass.checked === true){                      //Caso o usuário deseje manter a sua massa muscular
-		if(calories <= 3514.61 && input[0].checked === true){
-			carbohydrate += foods2[0].carbohydrate; 
-			protein += foods2[0].protein; 
-			fat += foods2[0].fat; 
-			calories += foods2[0].calories;
-
-			foods2[0].quantity = (2 * foods2[0].quantity);
-			foods2[0].carbohydrate = (2 * foods2[0].carbohydrate);
-			foods2[0].protein = (2 * foods2[0].protein);
-			foods2[0].fat = (2 * foods2[0].fat);
-			foods2[0].calories = (2 * foods2[0].calories);
-		} else if(calories < 2514.61 && input[1].checked === true){
 					carbohydrate += foods2[1].carbohydrate; 
 					protein += foods2[1].protein; 
 					fat += foods2[1].fat;
@@ -275,8 +122,10 @@ console.log(foodsCheckeds)
 					foods2[1].fat = (2 * foods2[1].fat);
 					foods2[1].calories = (2 * foods2[1].calories);
 				}
-
-		if(calories <= 3514.61 && input[3].checked === true){
+			}
+			
+	
+		if(calories <= 2520 && input[3].checked === true){
 			carbohydrate += (2 * foods2[3].carbohydrate); 
 			protein += (2 * foods2[3].protein); 
 			fat += (2 * foods2[3].fat); 
@@ -288,8 +137,9 @@ console.log(foodsCheckeds)
 			foods2[3].fat = (3 * foods2[3].fat);
 			foods2[3].calories = (3 * foods2[3].calories);
 		}
-
-		if(calories <= 3514.61 && input[6].checked === true){
+		
+	
+		if(calories <= 2520 && input[6].checked === true){
 			carbohydrate += foods2[6].carbohydrate; 
 			protein += foods2[6].protein; 
 			fat += foods2[6].fat; 
@@ -300,107 +150,128 @@ console.log(foodsCheckeds)
 			foods2[6].protein = (2 * foods2[6].protein);
 			foods2[6].fat = (2 * foods2[6].fat);
 			foods2[6].calories = (2 * foods2[6].calories);
-		}
+		}		
 
-		if(calories <= 3514.61 && input[8].checked === true){
-			carbohydrate += foods2[8].carbohydrate; 
-			protein += foods2[8].protein; 
-			fat += foods2[8].fat; 
-			calories += foods2[8].calories;
-		
-			foods2[8].quantity = (2 * foods2[8].quantity);
-			foods2[8].carbohydrate = (2 * foods2[8].carbohydrate);
-			foods2[8].protein = (2 * foods2[8].protein);
-			foods2[8].fat = (2 * foods2[8].fat);
-			foods2[8].calories = (2 * foods2[8].calories);
-		}
-
-		if(calories <=3514.61  && input[11].checked === true){
-			carbohydrate += foods2[11].carbohydrate; 
-			protein += foods2[11].protein; 
-			fat += foods2[11].fat; 
-			calories += foods2[11].calories;
-		
-			foods2[11].quantity = (2 * foods2[11].quantity);
-			foods2[11].carbohydrate = (2 * foods2[11].carbohydrate);
-			foods2[11].protein = (2 * foods2[11].protein);
-			foods2[11].fat = (2 * foods2[11].fat);
-			foods2[11].calories = (2 * foods2[11].calories);
-		}
-
-		if(calories <= 3514.61 && input[12].checked === true){
-			carbohydrate += foods2[12].carbohydrate; 
-			protein += foods2[12].protein; 
-			fat += foods2[12].fat; 
-			calories += foods2[12].calories;
-		
-			foods2[12].quantity = (2 * foods2[12].quantity);
-			foods2[12].carbohydrate = (2 * foods2[12].carbohydrate);
-			foods2[12].protein = (2 * foods2[12].protein);
-			foods2[12].fat = (2 * foods2[12].fat);
-			foods2[12].calories = (2 * foods2[12].calories);
-		}
-
-		if(calories <= 3514.61  && input[15].checked === true){
+		if(calories <= 2520 && input[15].checked === true){
 			carbohydrate += foods2[15].carbohydrate; 
 			protein += foods2[15].protein; 
 			fat += foods2[15].fat; 
 			calories += foods2[15].calories;
-	
+
 			foods2[15].quantity = (2 * foods2[15].quantity);
 			foods2[15].carbohydrate = (2 * foods2[15].carbohydrate);
 			foods2[15].protein = (2 * foods2[15].protein);
 			foods2[15].fat = (2 * foods2[15].fat);
 			foods2[15].calories = (2 * foods2[15].calories);
-		} else if(calories < 3514.61  && input[16].checked === true){
+		} else if(calories <= 2520 && input[16].checked === true){
 					carbohydrate += (2 * foods2[16].carbohydrate); 
 					protein += (2 * foods2[16].protein); 
 					fat += (2 * foods2[16].fat); 
 					calories += (2 * foods2[16].calories);
-	
+
 					foods2[16].quantity = (3 * foods2[16].quantity);
 					foods2[16].carbohydrate = (3 * foods2[16].carbohydrate);
 					foods2[16].protein = (3 * foods2[16].protein);
 					foods2[16].fat = (3 * foods2[16].fat);
 					foods2[16].calories = (3 * foods2[16].calories);
-				} else if(calories < 3514.61  && input[17].checked === true){
+	
+				} else if(calories <= 2520 && input[17].checked === true){
 							carbohydrate += foods2[17].carbohydrate; 
 							protein += foods2[17].protein; 
 							fat += foods2[17].fat; 
 							calories += foods2[17].calories;
-			
+	
 							foods2[17].quantity = (2 * foods2[17].quantity);
 							foods2[17].carbohydrate = (2 * foods2[17].carbohydrate);
 							foods2[17].protein = (2 * foods2[17].protein);
 							foods2[17].fat = (2 * foods2[17].fat);
 							foods2[17].calories = (2 * foods2[17].calories);
 						}
+		if(calories <= 2520 && input[22].checked === true){
+    		carbohydrate += foods2[22].carbohydrate; 
+    		protein += foods2[22].protein; 
+    		fat += foods2[22].fat; 
+   		 	calories += foods2[22].calories;
 
-		if(calories < 3514.61  && input[27].checked === true){
-			carbohydrate += foods2[27].carbohydrate; 
-			protein += foods2[27].protein; 
-			fat += foods2[27].fat; 
-			calories += foods2[27].calories;
+    		foods2[22].quantity = (2 * foods2[22].quantity);
+    		foods2[22].carbohydrate = (2 * foods2[22].carbohydrate);
+    		foods2[22].protein = (2 * foods2[22].protein);
+    		foods2[22].fat = (2 * foods2[22].fat);
+    		foods2[22].calories = (2 * foods2[22].calories);
+		} else if(calories <= 2520 && input[23].checked === true){
+					carbohydrate += foods2[23].carbohydrate; 
+					protein += foods2[23].protein; 
+					fat += foods2[23].fat; 
+					calories += foods2[23].calories;
+		
+					foods2[23].quantity = (2 * foods2[23].quantity);
+					foods2[23].carbohydrate = (2 * foods2[23].carbohydrate);
+					foods2[23].protein = (2 * foods2[23].protein);
+					foods2[23].fat = (2 * foods2[23].fat);
+					foods2[23].calories = (2 * foods2[23].calories);
+				}
+		if(calories <= 2520 && input[24].checked === true){
+    		carbohydrate += foods2[24].carbohydrate; 
+    		protein += foods2[24].protein; 
+    		fat += foods2[24].fat; 
+    		calories += foods2[24].calories;
+
+    		foods2[24].quantity = (2 * foods2[24].quantity);
+    		foods2[24].carbohydrate = (2 * foods2[24].carbohydrate);
+    		foods2[24].protein = (2 * foods2[24].protein);
+    		foods2[24].fat = (2 * foods2[24].fat);
+    		foods2[24].calories = (2 * foods2[24].calories);
+		} else if(calories <= 2520 && input[25].checked === true){
+					carbohydrate += (2 * foods2[25].carbohydrate); 
+					protein += (2 * foods2[25].protein); 
+					fat += (2 * foods2[25].fat); 
+					calories += (2 * foods2[25].calories);
+		
+					foods2[25].quantity = (3 * foods2[25].quantity);
+					foods2[25].carbohydrate = (3 * foods2[25].carbohydrate);
+					foods2[25].protein = (3 * foods2[25].protein);
+					foods2[25].fat = (3 * foods2[25].fat);
+					foods2[25].calories = (3 * foods2[25].calories);
+		} else if(calories <= 2620 && input[26].checked === true){
+					carbohydrate += (2 * foods2[26].carbohydrate); 
+					protein += (2 * foods2[26].protein); 
+					fat += (2 * foods2[26].fat); 
+					calories += (2 * foods2[26].calories);
+		
+					foods2[26].quantity = (3 * foods2[26].quantity);
+					foods2[26].carbohydrate = (3 * foods2[26].carbohydrate);
+					foods2[26].protein = (3 * foods2[26].protein);
+					foods2[26].fat = (3 * foods2[26].fat);
+					foods2[26].calories = (3 * foods2[26].calories);
+				}
 	
-			foods2[27].quantity = (2 * foods2[27].quantity);
-			foods2[27].carbohydrate = (2 * foods2[27].carbohydrate);
-			foods2[27].protein = (2 * foods2[27].protein);
-			foods2[27].fat = (2 * foods2[27].fat);
-			foods2[27].calories = (2 * foods2[27].calories);
-		}
+	
+//Para uma pessoa que possue uma necessidade energética maior que 2.618 kcal( homem com 1,73cm, 84kg e extremamente ativo).
+		if(calories <= 5000 && input[27].checked === true){
+    		carbohydrate +=  foods2[27].carbohydrate; 
+    		protein += foods2[27].protein; 
+    		fat += foods2[27].fat; 
+    		calories += foods2[27].calories;
 
-		if(calories < 3514.61  && input[28].checked === true){
+    		foods2[27].quantity = (2 * foods2[27].quantity);
+    		foods2[27].carbohydrate = (2 * foods2[27].carbohydrate);
+    		foods2[27].protein = (2 * foods2[27].protein);
+    		foods2[27].fat = (2 * foods2[27].fat);
+    		foods2[27].calories = (2 * foods2[27].calories);
+		}
+	
+		if(calories <= 5000 && input[28].checked === true){
 			carbohydrate += foods2[28].carbohydrate; 
 			protein += foods2[28].protein; 
 			fat += foods2[28].fat; 
-			calories += foods2[28].calories;
+			calories +=foods2[28].calories;
 	
-			foods2[28].quantity = (2 * foods2[28].quantity);
-			foods2[28].carbohydrate = (2 * foods2[28].carbohydrate);
-			foods2[28].protein = (2 * foods2[28].protein);
-			foods2[28].fat = (2 * foods2[28].fat);
-			foods2[28].calories = (2 * foods2[28].calories);
-		} else if(calories < 3514.61  && input[29].checked === true){
+			foods2[28].quantity = foods2[28].quantity;
+			foods2[28].carbohydrate = foods2[28].carbohydrate;
+			foods2[28].protein = foods2[28].protein;
+			foods2[28].fat = foods2[28].fat;
+			foods2[28].calories = foods2[28].calories;
+		} else if(calories <= 5000 && input[29].checked === true){
 					carbohydrate += (2 * foods2[29].carbohydrate); 
 					protein += (2 * foods2[29].protein); 
 					fat += (2 * foods2[29].fat); 
@@ -411,7 +282,7 @@ console.log(foodsCheckeds)
 					foods2[29].protein = (3 * foods2[29].protein);
 					foods2[29].fat = (3 * foods2[29].fat);
 					foods2[29].calories = (3 * foods2[29].calories);
-				}else if(calories < 3514.61  && input[30].checked === true){
+				}else if(calories <= 5000 && input[30].checked === true){
 							carbohydrate += (2 * foods2[30].carbohydrate); 
 							protein += (2 * foods2[30].protein); 
 							fat += (2 * foods2[30].fat); 
@@ -422,50 +293,44 @@ console.log(foodsCheckeds)
 							foods2[30].protein = (3 * foods2[30].protein);
 							foods2[30].fat = (3 * foods2[30].fat);
 							foods2[30].calories = (3 * foods2[30].calories);
-				}
-	}
+						}
 
-	//calorias adicionais para pessoas altas ou extremamente ativas
-
-	if(calories <= 4285.18 && input[0].checked === true){   
-		carbohydrate += foods2[0].carbohydrate; 
-		protein += foods2[0].protein; 
-		fat += foods2[0].fat; 
-		calories += foods2[0].calories;
-
-		foods2[0].quantity = (2 * foods2[0].quantity);
-		foods2[0].carbohydrate = (2 * foods2[0].carbohydrate);
-		foods2[0].protein = (2 * foods2[0].protein);
-		foods2[0].fat = (2 * foods2[0].fat);
-		foods2[0].calories = (2 * foods2[0].calories);
-	} else if(calories <= 4285.18 && input[1].checked === true){
-				carbohydrate += foods2[1].carbohydrate; 
-				protein += foods2[1].protein; 
-				fat += foods2[1].fat;
-				calories += foods2[1].calories;
-
-				foods2[1].quantity = (2 * foods2[1].quantity);
-				foods2[1].carbohydrate = (2 * foods2[1].carbohydrate);
-				foods2[1].protein = (2 * foods2[1].protein);
-				foods2[1].fat = (2 * foods2[1].fat);
-				foods2[1].calories = (2 * foods2[1].calories);
-				}
-							
-											
+				/*
+		if(calories <= 2520 && input[35].checked === true){
+			carbohydrate += (2 * foods2[35].carbohydrate); 
+			protein += (2 * foods2[35].protein); 
+			fat += (2 * foods2[35].fat); 
+			calories += (2 * foods2[35].calories);
+		
+			foods2[35].quantity = (2 * foods2[35].quantity);
+			foods2[35].carbohydrate = (2 * foods2[35].carbohydrate);
+			foods2[35].protein = (2 * foods2[35].protein);
+			foods2[35].fat = (2 * foods2[35].fat);
+			foods2[35].calories = (2 * foods2[35].calories);
+		}
+		*/
 
 
 
 
+						/*
+		if(calories <= 2520 && input[27].checked === true){
+    		carbohydrate += (2 * foods2[27].carbohydrate); 
+    		protein += (2 * foods2[27].protein); 
+    		fat += (2 * foods2[27].fat); 
+    		calories += (2 * foods2[27].calories);
+
+    		foods2[27].quantity = (2 * foods2[27].quantity);
+    		foods2[27].carbohydrate = (2 * foods2[27].carbohydrate);
+    		foods2[27].protein = (2 * foods2[27].protein);
+    		foods2[27].fat = (2 * foods2[27].fat);
+    		foods2[27].calories = (2 * foods2[27].calories);
+		}
+*/
 
 
-	console.log(calories)
 	
-
-
-
-
-
-	if(gainMuscleMass.checked === true){
+	if(keepMuscleMass.checked === true){ //Caso o usuário deseje manter a sua massa muscular
 		if(calories <= 2520 && input[0].checked === true){
 			carbohydrate += foods2[0].carbohydrate; 
 			protein += foods2[0].protein; 
@@ -477,7 +342,7 @@ console.log(foodsCheckeds)
 			foods2[0].protein = (2 * foods2[0].protein);
 			foods2[0].fat = (2 * foods2[0].fat);
 			foods2[0].calories = (2 * foods2[0].calories);
-		} else if(calories < 2514.61 && input[1].checked === true){
+		} else if(calories <= 2520 && input[1].checked === true){
 					carbohydrate += foods2[1].carbohydrate; 
 					protein += foods2[1].protein; 
 					fat += foods2[1].fat;
@@ -489,7 +354,9 @@ console.log(foodsCheckeds)
 					foods2[1].fat = (2 * foods2[1].fat);
 					foods2[1].calories = (2 * foods2[1].calories);
 				}
-
+			}
+			
+	
 		if(calories <= 2520 && input[3].checked === true){
 			carbohydrate += (2 * foods2[3].carbohydrate); 
 			protein += (2 * foods2[3].protein); 
@@ -502,106 +369,141 @@ console.log(foodsCheckeds)
 			foods2[3].fat = (3 * foods2[3].fat);
 			foods2[3].calories = (3 * foods2[3].calories);
 		}
-
-		if(calories <= 2520 && input[7].checked === true){
-			carbohydrate += (3 * foods2[7].carbohydrate); 
-			protein += (3 * foods2[7].protein); 
-			fat += (3 * foods2[7].fat); 
-			calories += (3 * foods2[7].calories);
-
-			foods2[7].quantity = (4 * foods2[7].quantity);
-			foods2[7].carbohydrate = (4 * foods2[7].carbohydrate);
-			foods2[7].protein = (4 * foods2[7].protein);
-			foods2[7].fat = (4 * foods2[7].fat);
-			foods2[7].calories = (4 * foods2[7].calories);
-		}
-
-		if(calories <= 2520 && input[13].checked === true){
-			carbohydrate += (3 * foods2[13].carbohydrate); 
-			protein += (3 * foods2[13].protein); 
-			fat += (3 * foods2[13].fat); 
-			calories += (3 * foods2[13].calories);
-
-			foods2[13].quantity = (4 * foods2[13].quantity);
-			foods2[13].carbohydrate = (4 * foods2[13].carbohydrate);
-			foods2[13].protein = (4 * foods2[13].protein);
-			foods2[13].fat = (4 * foods2[13].fat);
-			foods2[13].calories = (4 * foods2[13].calories);
-		}
+		
+	
+		if(calories <= 2520 && input[6].checked === true){
+			carbohydrate += foods2[6].carbohydrate; 
+			protein += foods2[6].protein; 
+			fat += foods2[6].fat; 
+			calories += foods2[6].calories;
+		
+			foods2[6].quantity = (2 * foods2[6].quantity);
+			foods2[6].carbohydrate = (2 * foods2[6].carbohydrate);
+			foods2[6].protein = (2 * foods2[6].protein);
+			foods2[6].fat = (2 * foods2[6].fat);
+			foods2[6].calories = (2 * foods2[6].calories);
+		}		
 
 		if(calories <= 2520 && input[15].checked === true){
 			carbohydrate += foods2[15].carbohydrate; 
 			protein += foods2[15].protein; 
 			fat += foods2[15].fat; 
 			calories += foods2[15].calories;
-	
+
 			foods2[15].quantity = (2 * foods2[15].quantity);
 			foods2[15].carbohydrate = (2 * foods2[15].carbohydrate);
 			foods2[15].protein = (2 * foods2[15].protein);
 			foods2[15].fat = (2 * foods2[15].fat);
 			foods2[15].calories = (2 * foods2[15].calories);
-		} else if(calories < 2514.61 && input[16].checked === true){
+		} else if(calories <= 2520 && input[16].checked === true){
 					carbohydrate += (2 * foods2[16].carbohydrate); 
 					protein += (2 * foods2[16].protein); 
 					fat += (2 * foods2[16].fat); 
 					calories += (2 * foods2[16].calories);
-	
+
 					foods2[16].quantity = (3 * foods2[16].quantity);
 					foods2[16].carbohydrate = (3 * foods2[16].carbohydrate);
 					foods2[16].protein = (3 * foods2[16].protein);
 					foods2[16].fat = (3 * foods2[16].fat);
 					foods2[16].calories = (3 * foods2[16].calories);
-				} else if(calories < 2514.61 && input[17].checked === true){
+	
+				} else if(calories <= 2520 && input[17].checked === true){
 							carbohydrate += foods2[17].carbohydrate; 
 							protein += foods2[17].protein; 
 							fat += foods2[17].fat; 
 							calories += foods2[17].calories;
-			
+	
 							foods2[17].quantity = (2 * foods2[17].quantity);
 							foods2[17].carbohydrate = (2 * foods2[17].carbohydrate);
 							foods2[17].protein = (2 * foods2[17].protein);
 							foods2[17].fat = (2 * foods2[17].fat);
 							foods2[17].calories = (2 * foods2[17].calories);
 						}
-	
-		if(calories <= 2520 && input[18].checked === true){
-				carbohydrate += (3 * foods2[18].carbohydrate); 
-				protein += (3 * foods2[18].protein); 
-				fat += (3 * foods2[18].fat); 
-				calories += (3 * foods2[18].calories);
-	
-				foods2[18].quantity = (4 * foods2[18].quantity);
-				foods2[18].carbohydrate = (4 * foods2[18].carbohydrate);
-				foods2[18].protein = (4 * foods2[18].protein);
-				foods2[18].fat = (4 * foods2[18].fat);
-				foods2[18].calories = (4 * foods2[18].calories);
-		}
+		if(calories <= 2520 && input[22].checked === true){
+    		carbohydrate += foods2[22].carbohydrate; 
+    		protein += foods2[22].protein; 
+    		fat += foods2[22].fat; 
+   		 	calories += foods2[22].calories;
 
-		if(calories < 2514.61 && input[27].checked === true){
-			carbohydrate += foods2[27].carbohydrate; 
-			protein += foods2[27].protein; 
-			fat += foods2[27].fat; 
-			calories += foods2[27].calories;
-	
-			foods2[27].quantity = (2 * foods2[27].quantity);
-			foods2[27].carbohydrate = (2 * foods2[27].carbohydrate);
-			foods2[27].protein = (2 * foods2[27].protein);
-			foods2[27].fat = (2 * foods2[27].fat);
-			foods2[27].calories = (2 * foods2[27].calories);
-		}
+    		foods2[22].quantity = (2 * foods2[22].quantity);
+    		foods2[22].carbohydrate = (2 * foods2[22].carbohydrate);
+    		foods2[22].protein = (2 * foods2[22].protein);
+    		foods2[22].fat = (2 * foods2[22].fat);
+    		foods2[22].calories = (2 * foods2[22].calories);
+		} else if(calories <= 2520 && input[23].checked === true){
+					carbohydrate += foods2[23].carbohydrate; 
+					protein += foods2[23].protein; 
+					fat += foods2[23].fat; 
+					calories += foods2[23].calories;
+		
+					foods2[23].quantity = (2 * foods2[23].quantity);
+					foods2[23].carbohydrate = (2 * foods2[23].carbohydrate);
+					foods2[23].protein = (2 * foods2[23].protein);
+					foods2[23].fat = (2 * foods2[23].fat);
+					foods2[23].calories = (2 * foods2[23].calories);
+				}
+		if(calories <= 2520 && input[24].checked === true){
+    		carbohydrate += foods2[24].carbohydrate; 
+    		protein += foods2[24].protein; 
+    		fat += foods2[24].fat; 
+    		calories += foods2[24].calories;
 
-		if(calories < 2514.61 && input[28].checked === true){
+    		foods2[24].quantity = (2 * foods2[24].quantity);
+    		foods2[24].carbohydrate = (2 * foods2[24].carbohydrate);
+    		foods2[24].protein = (2 * foods2[24].protein);
+    		foods2[24].fat = (2 * foods2[24].fat);
+    		foods2[24].calories = (2 * foods2[24].calories);
+		} else if(calories <= 2520 && input[25].checked === true){
+					carbohydrate += (2 * foods2[25].carbohydrate); 
+					protein += (2 * foods2[25].protein); 
+					fat += (2 * foods2[25].fat); 
+					calories += (2 * foods2[25].calories);
+		
+					foods2[25].quantity = (3 * foods2[25].quantity);
+					foods2[25].carbohydrate = (3 * foods2[25].carbohydrate);
+					foods2[25].protein = (3 * foods2[25].protein);
+					foods2[25].fat = (3 * foods2[25].fat);
+					foods2[25].calories = (3 * foods2[25].calories);
+		} else if(calories <= 2620 && input[26].checked === true){
+					carbohydrate += (2 * foods2[26].carbohydrate); 
+					protein += (2 * foods2[26].protein); 
+					fat += (2 * foods2[26].fat); 
+					calories += (2 * foods2[26].calories);
+		
+					foods2[26].quantity = (3 * foods2[26].quantity);
+					foods2[26].carbohydrate = (3 * foods2[26].carbohydrate);
+					foods2[26].protein = (3 * foods2[26].protein);
+					foods2[26].fat = (3 * foods2[26].fat);
+					foods2[26].calories = (3 * foods2[26].calories);
+				}
+	
+	
+//Para uma pessoa que possue uma necessidade energética maior que 2.618 kcal( homem com 1,73cm, 84kg e extremamente ativo).
+		if(calories <= 5000 && input[27].checked === true){
+    		carbohydrate +=  foods2[27].carbohydrate; 
+    		protein += foods2[27].protein; 
+    		fat += foods2[27].fat; 
+    		calories += foods2[27].calories;
+
+    		foods2[27].quantity = (2 * foods2[27].quantity);
+    		foods2[27].carbohydrate = (2 * foods2[27].carbohydrate);
+    		foods2[27].protein = (2 * foods2[27].protein);
+    		foods2[27].fat = (2 * foods2[27].fat);
+    		foods2[27].calories = (2 * foods2[27].calories);
+		}
+	
+		if(calories <= 5000 && input[28].checked === true){
 			carbohydrate += foods2[28].carbohydrate; 
 			protein += foods2[28].protein; 
 			fat += foods2[28].fat; 
-			calories += foods2[28].calories;
+			calories +=foods2[28].calories;
 	
-			foods2[28].quantity = (2 * foods2[28].quantity);
-			foods2[28].carbohydrate = (2 * foods2[28].carbohydrate);
-			foods2[28].protein = (2 * foods2[28].protein);
-			foods2[28].fat = (2 * foods2[28].fat);
-			foods2[28].calories = (2 * foods2[28].calories);
-		} else if(calories < 2514.61 && input[29].checked === true){
+			foods2[28].quantity = foods2[28].quantity;
+			foods2[28].carbohydrate = foods2[28].carbohydrate;
+			foods2[28].protein = foods2[28].protein;
+			foods2[28].fat = foods2[28].fat;
+			foods2[28].calories = foods2[28].calories;
+		} else if(calories <= 5000 && input[29].checked === true){
 					carbohydrate += (2 * foods2[29].carbohydrate); 
 					protein += (2 * foods2[29].protein); 
 					fat += (2 * foods2[29].fat); 
@@ -612,7 +514,7 @@ console.log(foodsCheckeds)
 					foods2[29].protein = (3 * foods2[29].protein);
 					foods2[29].fat = (3 * foods2[29].fat);
 					foods2[29].calories = (3 * foods2[29].calories);
-				}else if(calories < 2514.61 && input[30].checked === true){
+				}else if(calories <= 5000 && input[30].checked === true){
 							carbohydrate += (2 * foods2[30].carbohydrate); 
 							protein += (2 * foods2[30].protein); 
 							fat += (2 * foods2[30].fat); 
@@ -623,32 +525,48 @@ console.log(foodsCheckeds)
 							foods2[30].protein = (3 * foods2[30].protein);
 							foods2[30].fat = (3 * foods2[30].fat);
 							foods2[30].calories = (3 * foods2[30].calories);
-				}
-	}		
+						}
+	}
 
-
-
-	console.log(foods2[0])
-
-
-
-
-
-console.log(calories)
-console.log(foodsCheckeds)
-
-
-
-
-
-
-
-
+				/*
+		if(calories <= 2520 && input[35].checked === true){
+			carbohydrate += (2 * foods2[35].carbohydrate); 
+			protein += (2 * foods2[35].protein); 
+			fat += (2 * foods2[35].fat); 
+			calories += (2 * foods2[35].calories);
+		
+			foods2[35].quantity = (2 * foods2[35].quantity);
+			foods2[35].carbohydrate = (2 * foods2[35].carbohydrate);
+			foods2[35].protein = (2 * foods2[35].protein);
+			foods2[35].fat = (2 * foods2[35].fat);
+			foods2[35].calories = (2 * foods2[35].calories);
+		}
+		*/
 
 
 
 
+						/*
+		if(calories <= 2520 && input[27].checked === true){
+    		carbohydrate += (2 * foods2[27].carbohydrate); 
+    		protein += (2 * foods2[27].protein); 
+    		fat += (2 * foods2[27].fat); 
+    		calories += (2 * foods2[27].calories);
 
+    		foods2[27].quantity = (2 * foods2[27].quantity);
+    		foods2[27].carbohydrate = (2 * foods2[27].carbohydrate);
+    		foods2[27].protein = (2 * foods2[27].protein);
+    		foods2[27].fat = (2 * foods2[27].fat);
+    		foods2[27].calories = (2 * foods2[27].calories);
+		}
+*/
+
+	
+
+
+
+	if(gainMuscleMass.checked === true){
+	}
 
 
 
@@ -686,7 +604,7 @@ console.log(foodsCheckeds)
 	
 
 }
-
+/*
 
 let div = document.getElementById("div")
 let p = document.getElementById("p")
