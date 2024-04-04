@@ -7,13 +7,13 @@ const foods = [
 	{typeMeal: "Café da manhã", name: "Ovo", quantity: 1, unitOfMeasure: "Unidade(s)", carbohydrate: 0.38, protein: 6.29, fat: 4.97, calories: 74},
 	{typeMeal: "Café da manhã", name: "Queijo ricota", quantity: 30, unitOfMeasure: "g", carbohydrate: 11.23, protein: 0.40, fat: 0.61, calories: 11}, 
 	{typeMeal: "Café da manhã", name: "Leite desnatado", quantity: 100, unitOfMeasure: "ml", carbohydrate: 10, protein: 6, fat: 0.7, calories: 7},
-	{typeMeal: "Lanche da manhã", name: "Banana nanica", quantity: 100, unitOfMeasure: "g", carbohydrate: 23.8, protein: 1.4, fat: 0.1, calories: 92},
+	{typeMeal: "Lanche da manhã", name: "Banana nanica", quantity: 200, unitOfMeasure: "g", carbohydrate: 47.6, protein: 2.8, fat: 0.2, calories: 184},
 	{typeMeal: "Lanche da manhã", name: "Aveia", quantity: 4, unitOfMeasure: "Colher(es) de sopa", carbohydrate: 34.2, protein: 8.72, fat: 4.72, calories: 212},
 	{typeMeal: "Lanche da manhã", name: "Pasta de amendoim", quantity: 2, unitOfMeasure: "Colher(es) de sopa", carbohydrate: 5.98, protein: 7.34, fat: 14.96, calories: 176},
 	{typeMeal: "Lanche da manhã", name: "Yakult", quantity: 80, unitOfMeasure: "ml", carbohydrate: 11, protein: 1.6, fat: 0, calories: 51},
 	{typeMeal: "Lanche da manhã", name: "Iogurte natural", quantity: 150, unitOfMeasure: "g", carbohydrate: 10, protein: 6.8, fat: 3.6, calories: 88},
-	{typeMeal: "Pré-treino", name: "Batata doce", quantity: 100, unitOfMeasure: "g", carbohydrate: 25.88, protein: 2.48, fat: 0.13, calories: 112},
-	{typeMeal: "Pós-treino", name: "Whey concentrado", quantity: 30, unitOfMeasure: "g", carbohydrate: 5, protein: 24, fat: 0, calories: 116},
+	{typeMeal: "Pré-treino", name: "Batata doce", quantity: 300, unitOfMeasure: "g", carbohydrate: 77.64, protein: 7.44, fat: 0.39, calories: 336},
+	{typeMeal: "Pós-treino", name: "Whey concentrado", quantity: 60, unitOfMeasure: "g", carbohydrate: 10, protein: 48, fat: 0, calories: 232},
 	{typeMeal: "Almoço", name: "Arroz integral", quantity: 4, unitOfMeasure: "Colher(es) de sopa", carbohydrate: 6.88, protein: 0.68, fat: 0.24, calories: 33},
 	{typeMeal: "Almoço", name: "Mandioca", quantity: 100, unitOfMeasure: "g", carbohydrate: 37.46, protein: 1.34, fat: 2.04, calories: 173},
 	{typeMeal: "Almoço", name: "Filé de frango", quantity: 100, unitOfMeasure: "g", carbohydrate: 0, protein: 31.02, fat: 3.57, calories: 165},
@@ -135,20 +135,6 @@ console.log(foodsCheckeds)
 			foods2[3].calories = (3 * foods2[3].calories);
 		}
 		
-	
-		if(calories <= 2520 && input[6].checked === true){
-			carbohydrate += foods2[6].carbohydrate; 
-			protein += foods2[6].protein; 
-			fat += foods2[6].fat; 
-			calories += foods2[6].calories;
-		
-			foods2[6].quantity = (2 * foods2[6].quantity);
-			foods2[6].carbohydrate = (2 * foods2[6].carbohydrate);
-			foods2[6].protein = (2 * foods2[6].protein);
-			foods2[6].fat = (2 * foods2[6].fat);
-			foods2[6].calories = (2 * foods2[6].calories);
-		}		
-
 		if(calories <= 2520 && input[15].checked === true){
 			carbohydrate += foods2[15].carbohydrate; 
 			protein += foods2[15].protein; 
@@ -184,6 +170,7 @@ console.log(foodsCheckeds)
 							foods2[17].fat = (2 * foods2[17].fat);
 							foods2[17].calories = (2 * foods2[17].calories);
 						}
+
 		if(calories <= 2520 && input[22].checked === true){
     		carbohydrate += foods2[22].carbohydrate; 
     		protein += foods2[22].protein; 
@@ -244,7 +231,7 @@ console.log(foodsCheckeds)
 				
 	
 	
-//Para uma pessoa que possue uma necessidade energética maior que 2.620 kcal( homem com 1,73cm, 84kg e extremamente ativo).
+//Para uma pessoa que possue uma necessidade energética maior que 2.568 kcal( homem com 1,73cm, 84kg e extremamente ativo).
 
 		if(calories <= 5000 && input[27].checked === true){
     		carbohydrate +=  foods2[27].carbohydrate; 
@@ -260,7 +247,7 @@ console.log(foodsCheckeds)
 		}
 
 	
-//2.732 kcal
+//2.880 kcal
 		if(calories <= 5000 && input[28].checked === true){
 			carbohydrate += foods2[28].carbohydrate; 
 			protein += foods2[28].protein; 
@@ -296,7 +283,7 @@ console.log(foodsCheckeds)
 							foods2[30].calories = (3 * foods2[30].calories);
 						}
 					
-//2.984 kcal
+//3.132 kcal
 		if(calories <= 5000 && input[35].checked === true){
 			carbohydrate += foods2[35].carbohydrate; 
 			protein += foods2[35].protein; 
@@ -309,38 +296,158 @@ console.log(foodsCheckeds)
 			foods2[35].fat = (2 * foods2[35].fat);
 			foods2[35].calories = (2 * foods2[35].calories);
 		}
-//3.144 kcal
-    	if(calories <= 5000 && input[11].checked === true){
-   			 carbohydrate += (2 * foods2[11].carbohydrate); 
-    		protein += (2 * foods2[11].protein); 
-    		fat += (2 * foods2[11].fat); 
-    		calories += (2 * foods2[11].calories);
+//3.292 kcal
+		if(calories <= 5000 && input[3].checked === true){
+				carbohydrate += 0.76; 
+				protein += 12.58; 
+				fat += 9.94; 
+				calories += 148;
 
-    		foods2[11].quantity = (3 * foods2[11].quantity);
-    		foods2[11].carbohydrate = (3 * foods2[11].carbohydrate);
-    		foods2[11].protein = (3 * foods2[11].protein);
-    		foods2[11].fat = (3 * foods2[11].fat);
-    		foods2[11].calories = (3 * foods2[11].calories);
+				foods2[3].quantity = 5;
+				foods2[3].carbohydrate = 1.9;
+				foods2[3].protein = 31.45;
+				foods2[3].fat = 24.85;
+				foods2[3].calories = 370;
 		}
-//3.368 kcal
-		if(calories <= 5000 && input[12].checked === true){
-    		carbohydrate +=  foods2[12].carbohydrate; 
-    		protein += foods2[12].protein; 
-    		fat += foods2[12].fat; 
-    		calories += foods2[12].calories;
 
-    		foods2[12].quantity = (2 * foods2[12].quantity);
-    		foods2[12].carbohydrate = (2 * foods2[12].carbohydrate);
-   			 foods2[12].protein = (2 * foods2[12].protein);
-    		foods2[12].fat = (2 * foods2[12].fat);
-    		foods2[12].calories = (2 * foods2[12].calories);
-		} 
+		if(calories <= 5000 && input[13].checked === true){
+			carbohydrate += foods2[13].carbohydrate; 
+			protein += foods2[13].protein; 
+			fat += foods2[13].fat; 
+			calories += foods2[13].calories;
 		
-//3.484 kcal
+			foods2[13].quantity = (2 * foods2[13].quantity);
+			foods2[13].carbohydrate = (2 * foods2[13].carbohydrate);
+			foods2[13].protein = (2 * foods2[13].protein);
+			foods2[13].fat = (2 * foods2[13].fat);
+			foods2[13].calories = (2 * foods2[13].calories);
+		}
 
+		if(calories <= 5000 && input[18].checked === true){
+			carbohydrate += foods2[18].carbohydrate; 
+			protein += foods2[18].protein; 
+			fat += foods2[18].fat; 
+			calories += foods2[18].calories;
+		
+			foods2[18].quantity = (2 * foods2[18].quantity);
+			foods2[18].carbohydrate = (2 * foods2[18].carbohydrate);
+			foods2[18].protein = (2 * foods2[18].protein);
+			foods2[18].fat = (2 * foods2[18].fat);
+			foods2[18].calories = (2 * foods2[18].calories);
+		}
+ //3.573 kcal
+ 		if(calories <= 5000 && input[15].checked === true){
+    		carbohydrate += 0; 
+    		protein += 31.02; 
+    		fat += 3.57; 
+    		calories += 165;
+
+    		foods2[15].quantity = 300;
+    		foods2[15].carbohydrate = 0;
+    		foods2[15].protein = 93.06;
+    		foods2[15].fat = 10.71;
+    		foods2[15].calories = 495;
+		} else if(calories <= 5000 && input[16].checked === true){
+					carbohydrate += 0; 
+					protein += 20.08; 
+					fat += 1.7; 
+					calories += 96;
+		
+					foods2[16].quantity = 400;
+					foods2[16].carbohydrate = 0;
+					foods2[16].protein = 80.32;
+					foods2[16].fat = 6.8;
+					foods2[16].calories = 384;
+			} else if(calories <= 5000 && input[17].checked === true){
+						carbohydrate += 0; 
+						protein += 24; 
+						fat += 5.4; 
+						calories += 146;
+			
+						foods2[17].quantity = 300;	
+						foods2[17].carbohydrate = 0;
+						foods2[17].protein = 72;
+						foods2[17].fat = 16.2;
+						foods2[17].calories = 438;
+					}
+//3.738 kcal
+		if(calories <= 5000 && input[27].checked === true){
+			carbohydrate += 46.44; 
+			protein += 7.58; 
+			fat += 0.32; 
+			calories += 224;
+					
+			foods2[27].quantity = 400;
+			foods2[27].carbohydrate = 92.88;
+			foods2[27].protein = 15.16;
+			foods2[27].fat = 0.64;
+			foods2[27].calories = 448;
+		}
+//3.962 kcal
+		if(calories <= 5000 && input[28].checked === true){
+    		carbohydrate += 0; 
+    		protein += 27.29; 
+    		fat += 15.01; 
+    		calories += 252;
+
+   			foods2[28].quantity = 300;
+    		foods2[28].carbohydrate = 0;
+    		foods2[28].protein = 81.87;
+    		foods2[28].fat = 45.03;
+    		foods2[28].calories = 756;
+		} else if(calories <= 5000 && input[29].checked === true){
+					carbohydrate += 0.87; 
+					protein += 24.46; 
+					fat += 6.51; 
+					calories += 167;
+		
+					foods2[29].quantity = 400;
+					foods2[29].carbohydrate = 3.48;
+					foods2[29].protein = 97.84;
+					foods2[29].fat = 26.04;
+					foods2[29].calories = 668;
+				} else if(calories <= 5000 && input[30].checked === true){
+							carbohydrate += 0; 
+							protein += 22.65; 
+							fat += 10.53; 
+							calories += 191;
+				
+							foods2[30].quantity = 4;
+							foods2[30].carbohydrate = 0;
+							foods2[30].protein = 90.6;
+							foods2[30].fat = 42.12;
+							foods2[30].calories = 764;
+						}
+//4.214 kcal
+		if(calories <= 5000 && input[34].checked === true){
+    		carbohydrate += 0; 
+    		protein += 22.65; 
+    		fat += 27; 
+    		calories += 238;
+
+    		foods2[34].quantity = 4;
+    		foods2[34].carbohydrate = 0;
+    		foods2[34].protein = 0;
+   			 foods2[34].fat = 54;
+    		foods2[34].calories = 476;
+		}
+
+		if(calories <= 5000 && input[35].checked === true){
+			carbohydrate += 8.53; 
+			protein += 2; 
+			fat += 14.66; 
+			calories += 160;
+		
+			foods2[35].quantity = 300;
+			foods2[35].carbohydrate = 25.59;
+			foods2[35].protein = 6;
+			foods2[35].fat = 43.98;
+			foods2[35].calories = 480;
+		}
+//4.612 kcal
 
 		console.log(calories)
-		console.log(foods2[11])
+		console.log(foods2[35])
 		
 	
 	for( i = 0; i < input.length; i++){
@@ -377,3 +484,5 @@ console.log(foodsCheckeds)
 }
 	
 
+import somar from "./diet1.js";
+console.log(somar(2,2))
