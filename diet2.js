@@ -483,4 +483,6 @@ console.log(foodsCheckeds)
 	}
 }
 	
-
+import {soma} from "./su.js"
+let value = soma(3, 5)
+console.log(value)

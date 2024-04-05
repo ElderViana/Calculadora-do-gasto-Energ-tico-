@@ -10,7 +10,7 @@ console.log(input.id)
 const tDEEresult = document.getElementById("tDEEresult");
 
 
-const calculateTDEE = () => { //(TDEE) Total Daily Energy Expenditure 
+ const calculateTDEE = () => { //(TDEE) Total Daily Energy Expenditure 
 
 	let bMR = ""; //(bMR) basal Metabolic Rate
 	let tDEE = "";
@@ -44,6 +44,7 @@ const calculateTDEE = () => { //(TDEE) Total Daily Energy Expenditure
 	}
 	
 	tDEEresult.textContent = `A sua taxa metabólica basal é de ${bMR.toFixed(2)} kcal e O seu gasto energético é de ${tDEE.toFixed(2)} kcal.`
+	return tDEE;
 }
 
 
