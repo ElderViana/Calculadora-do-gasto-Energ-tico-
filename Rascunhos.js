@@ -472,3 +472,6 @@ foods2.forEach(input => {
 })
 
 */
+let numero = 2;
+export default numero
+

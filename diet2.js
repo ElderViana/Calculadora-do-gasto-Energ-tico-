@@ -484,5 +484,3 @@ console.log(foodsCheckeds)
 }
 	
 
-import somar from "./diet1.js";
-console.log(somar(2,2))
