@@ -6,14 +6,13 @@ const age = document.getElementById("age");
 const tall = document.getElementById("tall");
 const weight = document.getElementById("weight");
 const input = document.querySelectorAll("[input]")
-console.log(input.id)
 const tDEEresult = document.getElementById("tDEEresult");
 
 
- const calculateTDEE = () => { //(TDEE) Total Daily Energy Expenditure 
+const calculateTDEE = () => {
 
-	let bMR = ""; //(bMR) basal Metabolic Rate
-	let tDEE = "";
+	let bMR = 0; //(bMR) basal Metabolic Rate
+	let tDEE = 0;
 	
 	if(male.checked === true){
 		bMR = 66 + (13.7 * (parseFloat(weight.value))) + (5 * (parseFloat(tall.value))) - (6.8 * (parseInt(age.value)));
@@ -42,9 +41,11 @@ const tDEEresult = document.getElementById("tDEEresult");
 	if(input[4].checked === true){
 		tDEE = (bMR * 1.9); //extremelyActive
 	}
-	
+
+
 	tDEEresult.textContent = `A sua taxa metabólica basal é de ${bMR.toFixed(2)} kcal e O seu gasto energético é de ${tDEE.toFixed(2)} kcal.`
-	return tDEE;
+
+	localStorage.setItem("tDEE", JSON.stringify(tDEE))
 }
 
 
@@ -55,17 +56,6 @@ const unSelectInput = (input) => {
 	if(input === female){
 		maleGender.checked = false;
 	}
-}
-
-male.addEventListener("click", () => {
-	unSelectInput(male);
-});
-female.addEventListener("click", () => {
-	unSelectInput(female);
-});
-
-const unSelectInput2 = (input) => {
-
 	if(input === sedentary){
 		slightlyActive.checked = false;
 		moderatelyActive.checked = false;
@@ -97,24 +87,27 @@ const unSelectInput2 = (input) => {
 		moderatelyActive.checked = false;
 		highlyActive.checked =false;	
 	}
-	
 }
 
-
+male.addEventListener("click", () => {
+	unSelectInput(male);
+});
+female.addEventListener("click", () => {
+	unSelectInput(female);
+});
 sedentary.addEventListener("click", () => {
-	unSelectInput2(sedentary);
+	unSelectInput(sedentary);
 });
 slightlyActive.addEventListener("click", () => {
-	unSelectInput2(slightlyActive);
+	unSelectInput(slightlyActive);
 });
 moderatelyActive.addEventListener("click", () => {
-	unSelectInput2(moderatelyActive);
+	unSelectInput(moderatelyActive);
 });
 highlyActive.addEventListener("click", () => {
-	unSelectInput2(highlyActive);
+	unSelectInput(highlyActive);
 });
 extremelyActive.addEventListener("click", () => {
-	unSelectInput2(extremelyActive);
+	unSelectInput(extremelyActive);
 });
-
 
