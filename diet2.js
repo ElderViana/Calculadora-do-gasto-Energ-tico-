@@ -87,18 +87,6 @@ const chooseMenu = () => {
 	let fat = 0;
 	let calories = 0;
 
-	
-	
-
-	
-
-
-	input.forEach(ipt => {
-		if(ipt.checked === true){
-			foodsCheckeds.push(ipt.checked);
-		}
-	});
-
 	for (i = 0; i < foods2.length; i++){
 		if(loseWeight.checked || keepMuscleMass.checked || gainMuscleMass.checked === true){  
 			if(input[i].checked === true){
