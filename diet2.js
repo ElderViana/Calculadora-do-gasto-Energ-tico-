@@ -506,6 +506,179 @@ const chooseMenu = () => {
 			})
 		}
 	}
+
+	totalCarbohydrate.textContent = `${carbohydrate}g`;
+	totalProtein.textContent = `${protein}g`;
+	totalFat.textContent = `${fat}g`;
+	totalCalories.textContent = `${calories}kcal`;
 }
+
 	
+const unSelectInput = (input) => {
+
+	//Un select lose Weight, keep muscle mass and gain muscle mass.
+	if(input === loseWeight){
+		keepMuscleMass.checked = false;
+		gainMuscleMass.checked = false;
+	}
+	if(input === keepMuscleMass){
+		loseWeight.checked = false;
+		gainMuscleMass.checked = false;
+	}
+	if(input === gainMuscleMass){
+		loseWeight.checked = false;
+		keepMuscleMass.checked = false;
+	}
+
+	//Un select whole meal bread and tapioca.
+	if(input === wholemealBread){
+		tapioca.checked = false;
+	}
+	if(input === tapioca){
+		wholemealBread.checked = false;
+	}
+
+	//Un select yakult and natural Yogurt.
+	if(input === yakult){
+		naturalYogurt.checked = false;
+	}
+	if(input === naturalYogurt){
+		yakult.checked = false;
+	}
+
+	//Un select whole grain rice and cassava.
+	if(input === wholegrainRice){
+		cassava.checked = false;
+	}
+	if(input === cassava){
+		wholegrainRice.checked = false;
+	}
+
+	//Un select chicken fillet, tilapia fillet and pork chop.
+	if(input === chickenFillet){
+		tilapiaFillet.checked = false;
+		porkChop.checked = false;
+	}
+	if(input === tilapiaFillet){
+		chickenFillet.checked = false;
+		porkChop.checked = false;
+	}
+	if(input === porkChop){
+		chickenFillet.checked = false;
+		tilapiaFillet.checked = false;
+	}
+
+	//Un select apple and sleeve.
+	if(input === apple){
+		sleeve.checked = false;
+	}
+	if(input === sleeve){
+		apple.checked = false;
+	}
+
+	//un select persimmon, starFruit and orange
+	if(input === persimmon){
+		starFruit.checked = false;
+		orange.checked = false;
+	}
+	if(input === starFruit){
+		persimmon.checked = false;
+		orange.checked = false;
+	}
+	if(input === orange){
+		persimmon.checked = false;
+		starFruit.checked = false;
+	}
+
+	//un select beef steak, chicken liver and canned sardine
+	if(input === beefSteak){
+		chickenLiver.checked = false;
+		cannedSardine.checked = false;
+	}
+	if(input === chickenLiver){
+		beefSteak.checked = false;
+		cannedSardine.checked = false;
+	}
+	if(input === cannedSardine){
+		beefSteak.checked = false;
+		chickenLiver.checked = false;
+	}
+	
+	
+}
+//Un select lose Weight, keep muscle mass and gain muscle mass.
+loseWeight.addEventListener("click", () => {
+	unSelectInput(loseWeight);
+});
+keepMuscleMass.addEventListener("click", () => {
+	unSelectInput(keepMuscleMass);
+});
+gainMuscleMass.addEventListener("click", () => {
+	unSelectInput(gainMuscleMass);
+});
+
+//Un select whole meal bread and tapioca.
+wholemealBread.addEventListener("click", () => {
+	unSelectInput(wholemealBread);
+});
+tapioca.addEventListener("click", () => {
+	unSelectInput(tapioca);
+});
+
+//Un select yakult and natural Yogurt.
+yakult.addEventListener("click", () => {
+	unSelectInput(yakult);
+});
+naturalYogurt.addEventListener("click", () => {
+	unSelectInput(naturalYogurt);
+});
+
+//Un select whole grain rice and cassava.
+wholegrainRice.addEventListener("click", () => {
+	unSelectInput(wholegrainRice);
+});
+cassava.addEventListener("click", () => {
+	unSelectInput(cassava);
+});
+
+//un select chicken fillet, tilapia fillet and pork chop.
+chickenFillet.addEventListener("click", () => {
+	unSelectInput(chickenFillet);
+});
+tilapiaFillet.addEventListener("click", () => {
+	unSelectInput(tilapiaFillet);
+});
+porkChop.addEventListener("click", () => {
+	unSelectInput(porkChop);
+});
+
+//Un select apple and sleeve.
+apple.addEventListener("click", () => {
+	unSelectInput(apple);
+});
+sleeve.addEventListener("click", () => {
+	unSelectInput(sleeve);
+});
+
+//un select persimmon, starFruit and orange
+persimmon.addEventListener("click", () => {
+	unSelectInput(persimmon);
+});
+starFruit.addEventListener("click", () => {
+	unSelectInput(starFruit);
+});
+orange.addEventListener("click", () => {
+	unSelectInput(orange);
+});
+
+//un select beef steak, chicken liver and canned sardine
+beefSteak.addEventListener("click", () => {
+	unSelectInput(beefSteak);
+});
+chickenLiver.addEventListener("click", () => {
+	unSelectInput(chickenLiver);
+});
+cannedSardine.addEventListener("click", () => {
+	unSelectInput(cannedSardine);
+});
 

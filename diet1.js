@@ -110,6 +110,3 @@ highlyActive.addEventListener("click", () => {
 extremelyActive.addEventListener("click", () => {
 	unSelectInput(extremelyActive);
 });
-
-let u = 2
-export default u;
