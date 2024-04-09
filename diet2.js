@@ -482,5 +482,5 @@ console.log(foodsCheckeds)
 		}
 	}
 }
-	
 
+import u from "/"

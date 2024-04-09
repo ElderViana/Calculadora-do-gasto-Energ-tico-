@@ -117,3 +117,5 @@ extremelyActive.addEventListener("click", () => {
 });
 
 
+let u = 2
+export default u;
