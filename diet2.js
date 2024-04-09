@@ -38,37 +38,61 @@ const foods = [
 	{typeMeal: "Jantar", name: "Azeite", quantity: 2, unitOfMeasure: "Colher(es) de sopa", carbohydrate: 0, protein: 0, fat: 27, calories: 238},
 	{typeMeal: "Ceia", name: "Abacate", quantity: 100, unitOfMeasure: "g", carbohydrate: 8.53, protein: 2, fat: 14.66, calories: 160}
 ];
-console.log(foods)
+
 const foods2 = structuredClone(foods);
 
-
-
 const input = document.querySelectorAll("[input]");
-const loseWeight = document.getElementById("loseWeight")
-const keepMuscleMass = document.getElementById("keepMuscleMass")
-const gainMuscleMass = document.getElementById("gainMuscleMass")
+const loseWeight = document.getElementById("loseWeight");
+const keepMuscleMass = document.getElementById("keepMuscleMass");
+const gainMuscleMass = document.getElementById("gainMuscleMass");
 
-let y = true
-let p = true
+const wholemealBread = document.getElementById("wholemealBread");
+const tapioca = document.getElementById("tapioca");
 
-if(y && p ===  true){
-	console.log(true)
-}
+const yakult = document.getElementById("yakult");
+const naturalYogurt = document.getElementById("naturalYogurt");
+
+const wholegrainRice = document.getElementById("wholegrainRice");
+const cassava = document.getElementById("cassava");
+
+const chickenFillet = document.getElementById("chickenFillet");
+const tilapiaFillet = document.getElementById("tilapiaFillet");
+const porkChop = document.getElementById("porkChop");
+
+const apple = document.getElementById("apple");
+const sleeve = document.getElementById("sleeve");
+
+const persimmon = document.getElementById("persimmon");
+const starFruit = document.getElementById("starFruit");
+const orange = document.getElementById("orange");
+
+const beefSteak = document.getElementById("beefSteak");
+const chickenLiver = document.getElementById("chickenLiver");
+const cannedSardine = document.getElementById("cannedSardine");
+
+
+let totalCarbohydrate = document.getElementById("carbohydrate");
+let totalProtein = document.getElementById("protein");
+let totalFat = document.getElementById("fat");
+let totalCalories = document.getElementById("calories");
+
+let tDEE = JSON.parse(localStorage.getItem("tDEE"));
 
 
 
 const chooseMenu = () => {
-	let tDEE = 0;
-	let foodsCheckeds = [];
+
 	let carbohydrate = 0;
 	let protein = 0;
 	let fat = 0;
 	let calories = 0;
+
+	
 	
 
 	
 
-console.log(foodsCheckeds)
+
 	input.forEach(ipt => {
 		if(ipt.checked === true){
 			foodsCheckeds.push(ipt.checked);
@@ -88,15 +112,18 @@ console.log(foodsCheckeds)
 
 	if(loseWeight.checked === true){
 		tDEE -= 500;
+		console.log(tDEE)
 	} else if(keepMuscleMass.checked === true){
 		    	tDEE += 500;
+				console.log(tDEE)
 	}else if(gainMuscleMass.checked === true){
 				tDEE += 1000;
+				console.log(tDEE)
 	}
 	
 //Caso o usuário deseje perder peso;
 	if(loseWeight.checked || keepMuscleMass.checked || gainMuscleMass.checked === true){
-		if(calories <= 2520 && input[0].checked === true){
+		if(calories <= tDEE && input[0].checked === true){
 			carbohydrate += foods2[0].carbohydrate; 
 			protein += foods2[0].protein; 
 			fat += foods2[0].fat; 
@@ -107,7 +134,7 @@ console.log(foodsCheckeds)
 			foods2[0].protein = (2 * foods2[0].protein);
 			foods2[0].fat = (2 * foods2[0].fat);
 			foods2[0].calories = (2 * foods2[0].calories);
-		} else if(calories <= 2520 && input[1].checked === true){
+		} else if(calories <= tDEE && input[1].checked === true){
 					carbohydrate += foods2[1].carbohydrate; 
 					protein += foods2[1].protein; 
 					fat += foods2[1].fat;
@@ -122,7 +149,7 @@ console.log(foodsCheckeds)
 			}
 			
 	
-		if(calories <= 2520 && input[3].checked === true){
+		if(calories <= tDEE && input[3].checked === true){
 			carbohydrate += (2 * foods2[3].carbohydrate); 
 			protein += (2 * foods2[3].protein); 
 			fat += (2 * foods2[3].fat); 
@@ -135,7 +162,7 @@ console.log(foodsCheckeds)
 			foods2[3].calories = (3 * foods2[3].calories);
 		}
 		
-		if(calories <= 2520 && input[15].checked === true){
+		if(calories <= tDEE && input[15].checked === true){
 			carbohydrate += foods2[15].carbohydrate; 
 			protein += foods2[15].protein; 
 			fat += foods2[15].fat; 
@@ -146,7 +173,7 @@ console.log(foodsCheckeds)
 			foods2[15].protein = (2 * foods2[15].protein);
 			foods2[15].fat = (2 * foods2[15].fat);
 			foods2[15].calories = (2 * foods2[15].calories);
-		} else if(calories <= 2520 && input[16].checked === true){
+		} else if(calories <= tDEE && input[16].checked === true){
 					carbohydrate += (2 * foods2[16].carbohydrate); 
 					protein += (2 * foods2[16].protein); 
 					fat += (2 * foods2[16].fat); 
@@ -158,7 +185,7 @@ console.log(foodsCheckeds)
 					foods2[16].fat = (3 * foods2[16].fat);
 					foods2[16].calories = (3 * foods2[16].calories);
 	
-				} else if(calories <= 2520 && input[17].checked === true){
+				} else if(calories <= tDEE && input[17].checked === true){
 							carbohydrate += foods2[17].carbohydrate; 
 							protein += foods2[17].protein; 
 							fat += foods2[17].fat; 
@@ -171,7 +198,7 @@ console.log(foodsCheckeds)
 							foods2[17].calories = (2 * foods2[17].calories);
 						}
 
-		if(calories <= 2520 && input[22].checked === true){
+		if(calories <= tDEE && input[22].checked === true){
     		carbohydrate += foods2[22].carbohydrate; 
     		protein += foods2[22].protein; 
     		fat += foods2[22].fat; 
@@ -182,7 +209,7 @@ console.log(foodsCheckeds)
     		foods2[22].protein = (2 * foods2[22].protein);
     		foods2[22].fat = (2 * foods2[22].fat);
     		foods2[22].calories = (2 * foods2[22].calories);
-		} else if(calories <= 2520 && input[23].checked === true){
+		} else if(calories <= tDEE && input[23].checked === true){
 					carbohydrate += foods2[23].carbohydrate; 
 					protein += foods2[23].protein; 
 					fat += foods2[23].fat; 
@@ -194,7 +221,7 @@ console.log(foodsCheckeds)
 					foods2[23].fat = (2 * foods2[23].fat);
 					foods2[23].calories = (2 * foods2[23].calories);
 				}
-		if(calories <= 2520 && input[24].checked === true){
+		if(calories <= tDEE && input[24].checked === true){
     		carbohydrate += foods2[24].carbohydrate; 
     		protein += foods2[24].protein; 
     		fat += foods2[24].fat; 
@@ -205,7 +232,7 @@ console.log(foodsCheckeds)
     		foods2[24].protein = (2 * foods2[24].protein);
     		foods2[24].fat = (2 * foods2[24].fat);
     		foods2[24].calories = (2 * foods2[24].calories);
-		} else if(calories <= 2520 && input[25].checked === true){
+		} else if(calories <= tDEE && input[25].checked === true){
 					carbohydrate += (2 * foods2[25].carbohydrate); 
 					protein += (2 * foods2[25].protein); 
 					fat += (2 * foods2[25].fat); 
@@ -216,7 +243,7 @@ console.log(foodsCheckeds)
 					foods2[25].protein = (3 * foods2[25].protein);
 					foods2[25].fat = (3 * foods2[25].fat);
 					foods2[25].calories = (3 * foods2[25].calories);
-		} else if(calories <= 2620 && input[26].checked === true){
+		} else if(calories <= tDEE && input[26].checked === true){
 					carbohydrate += (2 * foods2[26].carbohydrate); 
 					protein += (2 * foods2[26].protein); 
 					fat += (2 * foods2[26].fat); 
@@ -231,9 +258,9 @@ console.log(foodsCheckeds)
 				
 	
 	
-//Para uma pessoa que possue uma necessidade energética maior que 2.568 kcal( homem com 1,73cm, 84kg e extremamente ativo).
+//Para uma pessoa que possue uma necessidade energética maior que 2.568 kcal.
 
-		if(calories <= 5000 && input[27].checked === true){
+		if(calories <= tDEE && input[27].checked === true){
     		carbohydrate +=  foods2[27].carbohydrate; 
     		protein += foods2[27].protein; 
     		fat += foods2[27].fat; 
@@ -248,7 +275,7 @@ console.log(foodsCheckeds)
 
 	
 //2.880 kcal
-		if(calories <= 5000 && input[28].checked === true){
+		if(calories <= tDEE && input[28].checked === true){
 			carbohydrate += foods2[28].carbohydrate; 
 			protein += foods2[28].protein; 
 			fat += foods2[28].fat; 
@@ -259,7 +286,7 @@ console.log(foodsCheckeds)
 			foods2[28].protein = (2 * foods2[28].protein);
 			foods2[28].fat = (2 * foods2[28].fat);
 			foods2[28].calories = (2 * foods2[28].calories);
-		} else if(calories <= 5000 && input[29].checked === true){
+		} else if(calories <= tDEE && input[29].checked === true){
 					carbohydrate += (2 * foods2[29].carbohydrate); 
 					protein += (2 * foods2[29].protein); 
 					fat += (2 * foods2[29].fat); 
@@ -270,7 +297,7 @@ console.log(foodsCheckeds)
 					foods2[29].protein = (3 * foods2[29].protein);
 					foods2[29].fat = (3 * foods2[29].fat);
 					foods2[29].calories = (3 * foods2[29].calories);
-				}else if(calories <= 5000 && input[30].checked === true){
+				}else if(calories <= tDEE && input[30].checked === true){
 							carbohydrate += (2 * foods2[30].carbohydrate); 
 							protein += (2 * foods2[30].protein); 
 							fat += (2 * foods2[30].fat); 
@@ -284,7 +311,7 @@ console.log(foodsCheckeds)
 						}
 					
 //3.132 kcal
-		if(calories <= 5000 && input[35].checked === true){
+		if(calories <= tDEE && input[35].checked === true){
 			carbohydrate += foods2[35].carbohydrate; 
 			protein += foods2[35].protein; 
 			fat += foods2[35].fat; 
@@ -297,7 +324,7 @@ console.log(foodsCheckeds)
 			foods2[35].calories = (2 * foods2[35].calories);
 		}
 //3.292 kcal
-		if(calories <= 5000 && input[3].checked === true){
+		if(calories <= tDEE && input[3].checked === true){
 				carbohydrate += 0.76; 
 				protein += 12.58; 
 				fat += 9.94; 
@@ -310,7 +337,7 @@ console.log(foodsCheckeds)
 				foods2[3].calories = 370;
 		}
 
-		if(calories <= 5000 && input[13].checked === true){
+		if(calories <= tDEE && input[13].checked === true){
 			carbohydrate += foods2[13].carbohydrate; 
 			protein += foods2[13].protein; 
 			fat += foods2[13].fat; 
@@ -323,7 +350,7 @@ console.log(foodsCheckeds)
 			foods2[13].calories = (2 * foods2[13].calories);
 		}
 
-		if(calories <= 5000 && input[18].checked === true){
+		if(calories <= tDEE && input[18].checked === true){
 			carbohydrate += foods2[18].carbohydrate; 
 			protein += foods2[18].protein; 
 			fat += foods2[18].fat; 
@@ -336,7 +363,7 @@ console.log(foodsCheckeds)
 			foods2[18].calories = (2 * foods2[18].calories);
 		}
  //3.573 kcal
- 		if(calories <= 5000 && input[15].checked === true){
+ 		if(calories <= tDEE && input[15].checked === true){
     		carbohydrate += 0; 
     		protein += 31.02; 
     		fat += 3.57; 
@@ -347,7 +374,7 @@ console.log(foodsCheckeds)
     		foods2[15].protein = 93.06;
     		foods2[15].fat = 10.71;
     		foods2[15].calories = 495;
-		} else if(calories <= 5000 && input[16].checked === true){
+		} else if(calories <= tDEE && input[16].checked === true){
 					carbohydrate += 0; 
 					protein += 20.08; 
 					fat += 1.7; 
@@ -358,7 +385,7 @@ console.log(foodsCheckeds)
 					foods2[16].protein = 80.32;
 					foods2[16].fat = 6.8;
 					foods2[16].calories = 384;
-			} else if(calories <= 5000 && input[17].checked === true){
+			} else if(calories <= tDEE && input[17].checked === true){
 						carbohydrate += 0; 
 						protein += 24; 
 						fat += 5.4; 
@@ -371,7 +398,7 @@ console.log(foodsCheckeds)
 						foods2[17].calories = 438;
 					}
 //3.738 kcal
-		if(calories <= 5000 && input[27].checked === true){
+		if(calories <= tDEE && input[27].checked === true){
 			carbohydrate += 46.44; 
 			protein += 7.58; 
 			fat += 0.32; 
@@ -384,7 +411,7 @@ console.log(foodsCheckeds)
 			foods2[27].calories = 448;
 		}
 //3.962 kcal
-		if(calories <= 5000 && input[28].checked === true){
+		if(calories <= tDEE && input[28].checked === true){
     		carbohydrate += 0; 
     		protein += 27.29; 
     		fat += 15.01; 
@@ -395,7 +422,7 @@ console.log(foodsCheckeds)
     		foods2[28].protein = 81.87;
     		foods2[28].fat = 45.03;
     		foods2[28].calories = 756;
-		} else if(calories <= 5000 && input[29].checked === true){
+		} else if(calories <= tDEE && input[29].checked === true){
 					carbohydrate += 0.87; 
 					protein += 24.46; 
 					fat += 6.51; 
@@ -406,7 +433,7 @@ console.log(foodsCheckeds)
 					foods2[29].protein = 97.84;
 					foods2[29].fat = 26.04;
 					foods2[29].calories = 668;
-				} else if(calories <= 5000 && input[30].checked === true){
+				} else if(calories <= tDEE && input[30].checked === true){
 							carbohydrate += 0; 
 							protein += 22.65; 
 							fat += 10.53; 
@@ -419,7 +446,7 @@ console.log(foodsCheckeds)
 							foods2[30].calories = 764;
 						}
 //4.214 kcal
-		if(calories <= 5000 && input[34].checked === true){
+		if(calories <= tDEE && input[34].checked === true){
     		carbohydrate += 0; 
     		protein += 22.65; 
     		fat += 27; 
@@ -432,7 +459,7 @@ console.log(foodsCheckeds)
     		foods2[34].calories = 476;
 		}
 
-		if(calories <= 5000 && input[35].checked === true){
+		if(calories <= tDEE && input[35].checked === true){
 			carbohydrate += 8.53; 
 			protein += 2; 
 			fat += 14.66; 
@@ -446,16 +473,14 @@ console.log(foodsCheckeds)
 		}
 //4.612 kcal
 
-		console.log(calories)
-		console.log(foods2[35])
-		
+	
 	
 	for( i = 0; i < input.length; i++){
 
 		let tb = document.getElementById("tbDiet");
 		let numberOfLines = tb.rows.length;
 
-		if(loseWeight.checked === true){
+		if(loseWeight.checked || keepMuscleMass.cheked || gainMuscleMass.checked === true){
 			input.forEach(ipt => {
 				if(ipt.checked === true){
 					if(ipt.name === foods2[i].name){
@@ -482,5 +507,5 @@ console.log(foodsCheckeds)
 		}
 	}
 }
+	
 
-import u from "/"
