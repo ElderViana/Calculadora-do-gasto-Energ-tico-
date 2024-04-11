@@ -76,7 +76,7 @@ let totalProtein = document.getElementById("protein");
 let totalFat = document.getElementById("fat");
 let totalCalories = document.getElementById("calories");
 
-let tDEE = JSON.parse(localStorage.getItem("tDEE"));
+let tDEE = JSON.parse(localStorage.getItem("a"));
 
 
 
@@ -459,10 +459,12 @@ const chooseMenu = () => {
 			foods2[35].fat = 43.98;
 			foods2[35].calories = 480;
 		}
+		const foods3 = [];
 //4.612 kcal
-
+console.log(foods3)
+localStorage.setItem("i", JSON.stringify(foods2))
 	
-	
+	console.log(foods2)
 	for( i = 0; i < foods2.length; i++){
 
 		let tb = document.getElementById("tbDiet");
@@ -500,6 +502,9 @@ const chooseMenu = () => {
 	totalFat.textContent = `${fat}g`;
 	totalCalories.textContent = `${calories}kcal`;
 }
+let u = JSON.parse(localStorage.getItem("i"));
+console.log(u)
+
 
 	
 const unSelectInput = (input) => {
@@ -669,5 +674,6 @@ chickenLiver.addEventListener("click", () => {
 cannedSardine.addEventListener("click", () => {
 	unSelectInput(cannedSardine);
 });
+
 
 

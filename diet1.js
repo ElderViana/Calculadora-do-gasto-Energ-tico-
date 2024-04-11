@@ -13,6 +13,7 @@ const calculateTDEE = () => {
 
 	let bMR = 0; //(bMR) basal Metabolic Rate
 	let tDEE = 0;
+console.log(name.value)
 	
 	if(male.checked === true){
 		bMR = 66 + (13.7 * (parseFloat(weight.value))) + (5 * (parseFloat(tall.value))) - (6.8 * (parseInt(age.value)));
@@ -43,9 +44,9 @@ const calculateTDEE = () => {
 	}
 
 
-	tDEEresult.textContent = `A sua taxa metabólica basal é de ${bMR.toFixed(2)} kcal e O seu gasto energético é de ${tDEE.toFixed(2)} kcal.`
+	tDEEresult.textContent = `Olá, ${name.value}! A sua taxa metabólica basal é de ${bMR.toFixed(2)} kcal e o seu gasto energético é de ${tDEE.toFixed(2)} kcal.`
 
-	localStorage.setItem("tDEE", JSON.stringify(tDEE))
+	localStorage.setItem("a", JSON.stringify(tDEE))
 }
 
 
