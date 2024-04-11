@@ -2,7 +2,7 @@
 
 const foods = [
 	{typeMeal: "Café da manhã", name: "Pão integral", quantity: 2, unitOfMeasure: "Fatia(as)", carbohydrate: 24.54, protein: 4.74, fat: 2.14, calories: 136},
-	{typeMeal: "Café da manhã", name: "Tapioca", quantity: 30, quantity: 1, unitOfMeasure: "g", carbohydrate: 27.93, protein: 0, fat: 0, calories: 114},
+	{typeMeal: "Café da manhã", name: "Tapioca", quantity: 30, unitOfMeasure: "g", carbohydrate: 27.93, protein: 0, fat: 0, calories: 114},
 	{typeMeal: "Café da manhã", name: "Açúcar", quantity: 1, unitOfMeasure: "Colher(es) de sopa", carbohydrate: 4.2, protein: 0, fat: 0, calories: 16},
 	{typeMeal: "Café da manhã", name: "Ovo", quantity: 1, unitOfMeasure: "Unidade(s)", carbohydrate: 0.38, protein: 6.29, fat: 4.97, calories: 74},
 	{typeMeal: "Café da manhã", name: "Queijo ricota", quantity: 30, unitOfMeasure: "g", carbohydrate: 11.23, protein: 0.40, fat: 0.61, calories: 11}, 
@@ -463,12 +463,12 @@ const chooseMenu = () => {
 
 	
 	
-	for( i = 0; i < input.length; i++){
+	for( i = 0; i < foods2.length; i++){
 
 		let tb = document.getElementById("tbDiet");
 		let numberOfLines = tb.rows.length;
 
-		if(loseWeight.checked || keepMuscleMass.cheked || gainMuscleMass.checked === true){
+	
 			input.forEach(ipt => {
 				if(ipt.checked === true){
 					if(ipt.name === foods2[i].name){
@@ -492,7 +492,7 @@ const chooseMenu = () => {
 					
 				}
 			})
-		}
+		
 	}
 
 	totalCarbohydrate.textContent = `${carbohydrate}g`;
