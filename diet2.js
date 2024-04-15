@@ -470,7 +470,6 @@ localStorage.setItem("i", JSON.stringify(foods2))
 		let tb = document.getElementById("tbDiet");
 		let numberOfLines = tb.rows.length;
 
-
 	
 			input.forEach(ipt => {
 				if(ipt.checked === true){
@@ -496,7 +495,7 @@ localStorage.setItem("i", JSON.stringify(foods2))
 				}
 			})
 		
-	
+	}
 
 	totalCarbohydrate.textContent = `${carbohydrate}g`;
 	totalProtein.textContent = `${protein}g`;
