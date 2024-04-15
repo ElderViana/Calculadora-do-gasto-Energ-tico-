@@ -468,7 +468,7 @@ const chooseMenu = () => {
 		let tb = document.getElementById("tbDiet");
 		let numberOfLines = tb.rows.length;
 
-		if(loseWeight.checked || keepMuscleMass.cheked || gainMuscleMass.checked === true){
+		if(loseWeight.checked || keepMuscleMass.checked || gainMuscleMass.checked === true){
 			input.forEach(ipt => {
 				if(ipt.checked === true){
 					if(ipt.name === foods2[i].name){
