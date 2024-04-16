@@ -46,7 +46,7 @@ console.log(name.value)
 
 	tDEEresult.textContent = `Olá, ${name.value}! A sua taxa metabólica basal é de ${bMR.toFixed(2)} kcal e o seu gasto energético é de ${tDEE.toFixed(2)} kcal.`
 
-	localStorage.setItem("a", JSON.stringify(tDEE))
+	localStorage.setItem("tDEE", JSON.stringify(tDEE))
 }
 
 

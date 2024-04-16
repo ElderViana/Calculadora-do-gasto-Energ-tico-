@@ -76,7 +76,7 @@ let totalProtein = document.getElementById("protein");
 let totalFat = document.getElementById("fat");
 let totalCalories = document.getElementById("calories");
 
-let tDEE = JSON.parse(localStorage.getItem("a"));
+let tDEE = JSON.parse(localStorage.getItem("tDEE"));
 
 
 
@@ -461,8 +461,7 @@ const chooseMenu = () => {
 		}
 		const foods3 = [];
 //4.612 kcal
-console.log(foods3)
-localStorage.setItem("i", JSON.stringify(foods2))
+
 	
 	console.log(foods2)
 	for( i = 0; i < foods2.length; i++){
@@ -502,8 +501,6 @@ localStorage.setItem("i", JSON.stringify(foods2))
 	totalFat.textContent = `${fat}g`;
 	totalCalories.textContent = `${calories}kcal`;
 }
-let u = JSON.parse(localStorage.getItem("i"));
-console.log(u)
 
 
 	
