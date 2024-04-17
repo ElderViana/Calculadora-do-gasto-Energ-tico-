@@ -49,6 +49,9 @@ console.log(name.value)
 	localStorage.setItem("tDEE", JSON.stringify(tDEE))
 }
 
+const clean = () => {
+	window.location.reload()
+}
 
 const unSelectInput = (input) => {
 	if(input === male){
