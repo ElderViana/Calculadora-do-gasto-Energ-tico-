@@ -67,4 +67,17 @@ p {
     border-style: groove;
     
 }
+.total {
+    text-align: center;
+}
+h2, span {
+    display: inline;
+    /*
+    border: 1px solid black;
+    */
+}
+ span {
+   padding: 7px 5px 2px 5px;
+   width:50px;
 
+ }
