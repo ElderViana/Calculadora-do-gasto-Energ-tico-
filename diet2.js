@@ -678,3 +678,4 @@ cannedSardine.addEventListener("click", () => {
 const clean = () => {
 	window.location.reload()
 }
+"e"
