@@ -459,7 +459,6 @@ const chooseMenu = () => {
 			foods2[35].fat = 43.98;
 			foods2[35].calories = 480;
 		}
-		const foods3 = [];
 //4.612 kcal
 
 	
