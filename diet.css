@@ -81,3 +81,7 @@ h2, span {
    width:50px;
 
  }
+#tDEEresult {
+    font-size: 22px;
+    border-style: groove;  
+}
