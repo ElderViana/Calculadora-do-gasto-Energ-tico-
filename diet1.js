@@ -50,7 +50,7 @@ console.log(name.value)
 }
 
 const clean = () => {
-	window.location.reload()
+	window.location.reload();
 }
 
 const unSelectInput = (input) => {
