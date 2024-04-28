@@ -19,12 +19,12 @@
         <main>
             <div class="div-form">
                 <p>O gasto energético total (GET), é a quantidade de calorias que o nosso corpo gasta durante 24h. Ele é o resultado da multiplicação da taxa metabólica basal (TMB) que é a 
-                    quantidade de energia necessária que o nosso organismo precisa para poder manter as funções vitais pelo  a nossa taxa de atividade.
-                <br>
-                    Insira as informações solicitadas abaixo para podermos calcular o seu GET:
+                    quantidade de energia necessária que o nosso organismo precisa para poder manter as funções vitais pelo  a nossa taxa de atividade. 
                 </p>
+                <p> Insira as informações solicitadas abaixo para podermos calcular o seu GET:</p>
             </div>
-            <div class="div-form">
+            <div id="calculator">
+                <p style="font-weight: bold; font-size: 30px; text-align: center">Calculadora</p>
                 <input type="text" placeholder="Nome" id="name" class="placeholder">
                 <br>
                 <input type="number" placeholder="Idade" id="age" class="placeholder">
@@ -36,12 +36,9 @@
                 <p>Selecione o seu gênero:</p>
                 <input type="checkbox" id="male">Masculino <input type="checkbox" id="female">Feminino
                 <br>
-            </div>
-            <div class="div-form">
-                <p>Selecione a sua taxa de aividade:</p>
-            </div>
-            <div id="level" class="div-form">  
-                <input type="checkbox" id="sedentary"  input class="input" class="input">Sedentário (Não faz nenhuma atividade física)
+                <p>Selecione a sua taxa de aividade:</p> 
+                <input type="checkbox" id="sedentary"  input class="input" class="input">Sedentário 
+                <p class="sedentary">(Não faz nenhuma atividade física)</p>
                 <br>
                 <input type="checkbox" id="slightlyActive" input class="input">Levemente ativo (Treina de um a três dias na semana e faz exercícios leves)
                 <br>
@@ -51,11 +48,8 @@
                 <br>
                 <input type="Checkbox" id="extremelyActive" input class="input">Extremamente ativo (Treina muito pesado durante a semana, podendo treinar duas vezes no mesmo dia)
                 <br>
-            <div class="div-form">
                 <button onclick="calculateTDEE()" class="button">Calcular</button>
                 <button onclick="clean()" class="button">Limpar</button>
-            </div>
-            <div class="div-form">
                 <p id="tDEEresult"></p>
                 <br>
             </div>
