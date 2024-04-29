@@ -10,21 +10,20 @@
         <header>
             <div>
                 <h1>Cálculo do gasto energético total</h1>
-                <h3>Descubra quantas calorias você gasta por dia</h3>
             </div>
             <div id="div-links">
                 <a href="diet2.html" class="link">Dieta</a>
             </div>
         </header>
         <main>
-            <div class="div-form">
+            <div class="information">
                 <p>O gasto energético total (GET), é a quantidade de calorias que o nosso corpo gasta durante 24h. Ele é o resultado da multiplicação da taxa metabólica basal (TMB) que é a 
                     quantidade de energia necessária que o nosso organismo precisa para poder manter as funções vitais pelo  a nossa taxa de atividade. 
                 </p>
                 <p> Insira as informações solicitadas abaixo para podermos calcular o seu GET:</p>
             </div>
             <div id="calculator">
-                <p style="font-weight: bold; font-size: 30px; text-align: center">Calculadora</p>
+                <p id="pName">Calculadora</p>
                 <input type="text" placeholder="Nome" id="name" class="placeholder">
                 <br>
                 <input type="number" placeholder="Idade" id="age" class="placeholder">
@@ -36,7 +35,7 @@
                 <p class="calculatorp">Selecione o seu gênero:</p>
                 <input type="checkbox" id="male" class="calculatorp">Masculino <input type="checkbox" id="female">Feminino
                 <br>
-                <p>Selecione a sua taxa de aividade:</p> 
+                <p class="calculatorp">Selecione a sua taxa de aividade:</p> 
                 <input type="checkbox" id="sedentary" class="calculatorp" input class="input" class="input">Sedentário<abbr title="Não faz nenhuma atividade física">(?)</abbr>
                 <br>
                 <input type="checkbox" id="slightlyActive" class="calculatorp" input class="input">Levemente ativo<abbr title="Treina de um a três dias na semana e faz exercícios leves">(?)</abbr>
@@ -46,14 +45,14 @@
                 <input type="checkbox" id="highlyActive" class="calculatorp" input class="input">Altamente ativo<abbr title="Treina pesado de cinco a seis dias">(?)</abbr>
                 <br>
                 <input type="Checkbox" id="extremelyActive" class="calculatorp" input class="input">Extremamente ativo<abbr title="Treina muito pesado durante a semana, podendo treinar duas vezes no mesmo dia">(?)</abbr>
-                <br>
-                <button onclick="calculateTDEE()" class="button">Calcular</button>
-                <button onclick="clean()" class="button">Limpar</button>
+                <br><br>
+                <button onclick="calculateTDEE()" class="button" >Calcular</button>
+                <button onclick="clean()" class="button" id="buttonClean">Limpar</button>
                 <p id="tDEEresult"></p>
                 <br>
             </div>
             
-            <div class="div-form">
+            <div class="information">
                 <p>O resultado do seu gasto energético total foi calculado e agora você pode usá-lo para poder criar a sua dieta para a hipertrofia muscular. 
                     Se você está com sobrepeso, o recomendado é que a sua ingestão de calorias diárias seja menor que o seu GET, ou seja, tem que 
                     está em déficit calórico. Mas, se o seu percentual de gordura corporal está ideal e o seu desejo é manter ou ganhar  massa magra, o 
@@ -69,5 +68,4 @@
              <script src="./diet1.js"></script> 
         </main>   
     </body>
-    <p>teste</p>
 </html> 
