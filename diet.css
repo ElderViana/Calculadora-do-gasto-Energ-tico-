@@ -1,6 +1,4 @@
-*{
-    background-color: lightgreen;
-}
+
 
 h1 {
     background: rgb(111, 230, 111);
@@ -33,6 +31,25 @@ p {
     max-width: 800px;
 }
 
+#calculator {
+    font-size: 18px;
+    background: white;
+    width: 30%;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+       
+    
+}
+
+.placeholder {
+    border-radius: 10px;
+    font-size: 16px;
+    margin-left: 20px;
+  
+}
+
+sedentary
 
 .placeholder:hover {
     background-color: white;
