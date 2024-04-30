@@ -137,18 +137,48 @@ table, th, td {
     border: 1px solid black;
 }
 
-.melsFather{
-    
-    background: white;
 
+.melsGrandpa{
+    /*
+    display: flex;
+    flex-wrap: wrap;
+ */
 
 }
+
 .mealsChild {
-    background: white;
     width: 20%;
     height: 200px;
-    border: 1px solid black;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgb(64, 145, 64), 0 6px 20px 0 rgb(2, 97, 2);
 
+    
    
 }
+.pmealsChild {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.melsFather1 {
+    background-color: white;
+    display: flex;
+    
+}
+.melsFather2 {
+    background-color: white;
+    display: flex;
+}
+.melsFather3 {
+    background-color: white;
+    display: flex;
+}
+
+.melsFather4 {
+    background-color: white;
+    display: flex;
+}
+
 
