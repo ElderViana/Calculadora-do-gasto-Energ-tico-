@@ -8,10 +8,7 @@
 <body>
     <section class="section" id="first-section"></section>
         <header>
-            <div class="div-form">
-                <h1>Criando cardápio saudável</h1>
-                <h3>Crie uma tabela com as refeições diárias, selecionando os alimentos de seu interesse</h3>
-            </div>
+                <h1 class="h1-diet">Criando cardápio saudável</h1>
             <div class="div-form">
                 <a href="diet1.html" class="link">Início</a>
             </div>
@@ -21,17 +18,21 @@
 
 
     <section class="section" id="second-section">
-    <div class="div-form" >
-        <p>Qual é o seu objetivo?</p>
+    <div class="objective" >
+        <p class="pobjective">Qual é o seu objetivo?</p>
         <input type="checkbox" id="loseWeight">Perder peso
         <input type="checkbox" id="keepMuscleMass">Manter massa muscular
         <input type="checkbox" id="gainMuscleMass">Ganhar massa muscular
     </div>
-        <p>Selecione os alimentos que você gostaria de incluir na sua dieta:</p>
-    <div id="meals" class="melsGrandpa">
-        <div class="melsFather1">
+      
+    <div id="meals" class="mealsGrandpa">
+        <p class="pdiet">Selecione os alimentos que você gostaria de incluir na sua dieta:</p>
+        <div class="mealsFather1">
             <div class="mealsChild">
                 <p class="pmealsChild">Café da manhã:</p>
+                <input type="checkbox" id="selectAllBreakfast" class="select"><strong>Selecionar todos</strong>
+                <input type="checkbox" id="unSelectAllBreakfast" class="select"><strong>Desmarcar todos</strong>
+                <br>
                 <input type="checkbox" id="wholemealBread" input class="input" name="Pão integral">Pão integral
                 <input type="checkbox" id="tapioca" input class="input" name="Tapioca">Tapioca
                 <br>
@@ -45,6 +46,9 @@
             </div>
             <div class="mealsChild">
                 <p class="pmealsChild">Lanche da manhã:</p>
+                <input type="checkbox" id="selectAllMorningSnack" class="select"><strong>Selecionar todos</strong>
+                <input type="checkbox" id="unSelectAllMorningSnack" class="select"><strong>Desmarcar todos</strong>
+                <br>
                 <input type="checkbox" id="banana" input class="input" name="Banana nanica">Banana nanica
                 <br>
                 <input type="checkbox" id="oat" input class="input" name="Aveia">Aveia
@@ -55,7 +59,7 @@
                 <input type="checkbox" id="naturalYogurt" input class="input" name="Iogurte natural">Iogurte natural
             </div>
         </div>
-        <div class="melsFather2">
+        <div class="mealsFather2">
             <div class="mealsChild">
                 <p class="pmealsChild">Pré-treino:</p>
                 <input type="checkbox" id="sweetPotato" input class="input" name="Batata doce">Batata doce
@@ -66,9 +70,12 @@
                 <input type="checkbox" id="whey" input class="input" name="Whey concentrado">Whey concentrado
             </div>
         </div>
-        <div class="melsFather3">
+        <div class="mealsFather3">
             <div class="mealsChild">
                 <p class="pmealsChild">Almoço:</p>
+                <input type="checkbox" id="selectAllLunch" class="select"><strong>Selecionar todos</strong>
+                <input type="checkbox" id="unSelectAllLunch" class="select"><strong>Desmarcar todos</strong>
+                <br>
                 <input type="checkbox" id="wholegrainRice" input class="input" name="Arroz integral">Arroz integral
                 <input type="checkbox" id="cassava" input class="input" name="Mandioca">Mandioca
                 <br>
@@ -83,21 +90,26 @@
                 <input type="checkbox" id="cabbage" input class="input" name="Repolho">Repolho
                 <br>
                 <input type="checkbox" id="carrot" input class="input" name="Cenoura">Cenoura
-        
             </div>
             <div class="mealsChild">
                 <p class="pmealsChild">Lanche da tarde:</p>
+                <input type="checkbox" id="selectAllAfternoonSnack" class="select"><strong>Selecionar todos</strong>
+                <input type="checkbox" id="unSelectAllAfternoonSnack" class="select"><strong>Desmarcar todos</strong>
+                <br>
                 <input type="checkbox" id="apple" input class="input" name="Maçã">Maçã
                 <input type="checkbox" id="sleeve" input class="input" name="Manga palmer">Manga palmer
                 <br>
                 <input type="checkbox" id="persimmon" input class="input" name="Caqui">Caqui
                 <input type="checkbox" id="starFruit" input class="input" name="Carambola" >Carambola
                 <input type="checkbox" id="orange" input class="input" name="Laranja pêra">Laranja Pêra
-            
             </div>
-        <div class="melsFather4">
+        </div>
+        <div class="mealsFather4">
             <div class="mealsChild">
                 <p class="pmealsChild">Jantar:</p>
+                <input type="checkbox" id="selectAllDinner" input class="select"><strong>Selecionar todos</strong>
+                <input type="checkbox" id="unSelectAllDinner" class="select"><strong>Desmarcar todos</strong>
+                <br>
                 <input type="checkbox" id="couscous" input class="input" name="Cuscuz">Cuscuz
                 <br>
                 <input type="checkbox" id="beefSteak" input class="input" name="Bife bovino">Bife bovino
@@ -111,7 +123,6 @@
                 <input type="checkbox" id="beet" input class="input" name="Beterraba">Beterraba
                 <br>
                 <input type="checkbox" id="oliveOil" input class="input" name="Azeite">Azeite
-        
             </div>
             <div class="mealsChild">
                 <p class="pmealsChild">Ceia:</p>
@@ -121,12 +132,12 @@
     </div>
 
     <div class="div-form">
-        <button onclick="chooseMenu()"  class="button">Criar</button>
-        <button onclick="clean()" class="button">Limpar</button>
+        <button onclick="chooseMenu()"  class="button" id="button-create">Criar</button>
+        <button onclick="clean()" class="button" id="button-clean">Limpar</button>
     </div>
     </section>
     <div class="div-form">
-        <p>Tabela com as quantidades de caboidratos, proteínas, lipídios e calorias:</p>
+        <p class="ptable">Tabela com as quantidades de caboidratos, proteínas, lipídios e calorias:</p>
     </div>
 
 
@@ -136,7 +147,7 @@
     <section class="section" id="third-section">
    
         <div class="div-table">
-            <table id="tbDiet" style="width:100%">
+            <table id="tbDiet">
                 <thead>
                     <tr>
                         <th>Tipo de Refeição</th> 

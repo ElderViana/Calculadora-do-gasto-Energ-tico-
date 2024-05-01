@@ -46,11 +46,32 @@ const loseWeight = document.getElementById("loseWeight");
 const keepMuscleMass = document.getElementById("keepMuscleMass");
 const gainMuscleMass = document.getElementById("gainMuscleMass");
 
+//Café da manhã
+const selectAllBreakfast = document.getElementById("selectAllBreakfast");
+const unSelectAllBreakfast = document.getElementById("unSelectAllBreakfast");
+
 const wholemealBread = document.getElementById("wholemealBread");
 const tapioca = document.getElementById("tapioca");
 
+const sugar = document.getElementById("sugar");
+const egg = document.getElementById("egg");
+const ricotaCheese = document.getElementById("ricotaCheese");
+const skimedMilk = document.getElementById("skimedMilk");
+
+//Lanche da manhã
+const selectAllMorningSnack = document.getElementById("selectAllMorningSnack");
+const unSelectAllMorningSnack = document.getElementById("unSelectAllMorningSnack");
+
+const banana = document.getElementById("banana");
+const oat = document.getElementById("oat");
+const peanutButter = document.getElementById("peanutButter");
+
 const yakult = document.getElementById("yakult");
 const naturalYogurt = document.getElementById("naturalYogurt");
+
+//Almoço
+const selectAllLunch = document.getElementById("selectAllLunch");
+const unSelectAllLunch = document.getElementById("unSelectAllLunch");
 
 const wholegrainRice = document.getElementById("wholegrainRice");
 const cassava = document.getElementById("cassava");
@@ -59,6 +80,15 @@ const chickenFillet = document.getElementById("chickenFillet");
 const tilapiaFillet = document.getElementById("tilapiaFillet");
 const porkChop = document.getElementById("porkChop");
 
+const bean = document.getElementById("bean");
+const tomato = document.getElementById("tomato");
+const cabbage = document.getElementById("cabbage");
+const carrot = document.getElementById("carrot");
+
+//Lanche da tarde
+const selectAllAfternoonSnack = document.getElementById("selectAllAfternoonSnack");
+const unSelectAllAfternoonSnack = document.getElementById("unSelectAllAfternoonSnack");
+
 const apple = document.getElementById("apple");
 const sleeve = document.getElementById("sleeve");
 
@@ -66,9 +96,20 @@ const persimmon = document.getElementById("persimmon");
 const starFruit = document.getElementById("starFruit");
 const orange = document.getElementById("orange");
 
+//Jantar
+const selectAllDinner = document.getElementById("selectAllDinner");
+const unSelectAllDinner = document.getElementById("unSelectAllDinner");
+
+const couscous = document.getElementById("couscous");
+
 const beefSteak = document.getElementById("beefSteak");
 const chickenLiver = document.getElementById("chickenLiver");
 const cannedSardine = document.getElementById("cannedSardine");
+
+const lettuce = document.getElementById("lettuce");
+const cucumber = document.getElementById("cucumber");
+const beet = document.getElementById("beet");
+const oliveOil = document.getElementById("oliveOil");
 
 
 let totalCarbohydrate = document.getElementById("carbohydrate");
@@ -495,9 +536,9 @@ const chooseMenu = () => {
 		
 	}
 
-	totalCarbohydrate.textContent = `${carbohydrate}g`;
-	totalProtein.textContent = `${protein}g`;
-	totalFat.textContent = `${fat}g`;
+	totalCarbohydrate.textContent = `${carbohydrate.toFixed(2)}g`;
+	totalProtein.textContent = `${protein.toFixed(2)}g`;
+	totalFat.textContent = `${fat.toFixed(2)}g`;
 	totalCalories.textContent = `${calories}kcal`;
 }
 
@@ -592,6 +633,117 @@ const unSelectInput = (input) => {
 		beefSteak.checked = false;
 		chickenLiver.checked = false;
 	}
+	//Select all breakfast
+	if(input === selectAllBreakfast){
+		wholemealBread.checked = true; 
+		sugar.checked = true;  
+		egg.checked = true;  
+		ricotaCheese.checked = true; 
+		skimedMilk.checked = true;
+		selectAllBreakfast.checked = false;
+	}
+	//Un select all breakfast
+	if(input === unSelectAllBreakfast){
+		wholemealBread.checked = false; 
+		sugar.checked = false;  
+		egg.checked = false;  
+		ricotaCheese.checked = false; 
+		skimedMilk.checked = false;
+		unSelectAllBreakfast.checked = false;
+		tapioca.checked = false;
+	}
+
+	//Select all morning snack
+	if(input === selectAllMorningSnack){																
+		banana.checked = true; 
+		oat.checked = true; 
+		peanutButter.checked = true;  
+		yakult.checked = true;
+		selectAllMorningSnack.checked = false;  
+	
+	}
+
+	//Un select all morning snack
+	if(input === unSelectAllMorningSnack){
+		banana.checked = false; 
+		oat.checked = false; 
+		peanutButter.checked = false;  
+		yakult.checked = false;  
+		naturalYogurt.checked = false; 
+		unSelectAllMorningSnack.checked = false;
+	
+	}
+
+	//Select all lunch
+	if(input === selectAllLunch){
+		wholegrainRice.checked = true; 
+		chickenFillet.checked = true; 
+		bean.checked = true;  
+		tomato.checked = true;  
+		cabbage.checked = true; 
+		carrot.checked = true;
+		selectAllLunch.checked = false;
+	}
+	//Un select all lunch
+	if(input === unSelectAllLunch){
+		wholegrainRice.checked = false; 
+		cassava.checked = false; 
+		chickenFillet.checked = false;  
+		tilapiaFillet.checked = false;  
+		porkChop.checked = false; 
+		bean.checked = false;
+		tomato.checked = false;
+		cabbage.checked = false;
+		carrot.checked = false;
+		unSelectAllLunch.checked = false;
+		
+	}
+	
+	//Select all afternoon snack
+	if(input === selectAllAfternoonSnack){
+		apple.checked = true; 
+		persimmon.checked = true; 
+		selectAllAfternoonSnack.checked = false;
+	}
+	//Un select all afternoon snack
+	if(input === unSelectAllAfternoonSnack){
+		apple.checked = false; 
+		sleeve.checked = false; 
+		persimmon.checked = false;  
+		starFruit.checked = false;  
+		orange.checked = false; 
+		unSelectAllAfternoonSnack.checked = false;
+	}
+	//Select all dinner
+	if(input === selectAllDinner){
+		couscous.checked = true; 
+		beefSteak.checked = true; 
+		lettuce.checked = true;  
+		cucumber.checked = true;  
+		beet.checked = true; 
+		oliveOil.checked = true;
+		selectAllDinner.checked = false;
+	} 
+	//Un select all dinner
+	if(input === unSelectAllDinner){
+		couscous.checked = false; 
+		beefSteak.checked = false; 
+		chickenLiver.checked = false;  
+		cannedSardine.checked = false;  
+		lettuce.checked = false; 
+		cucumber.checked = false;
+		beet.checked = false;
+		oliveOil.checked = false;
+		unSelectAllDinner.checked = false;
+		
+	} 
+
+
+
+
+
+
+
 	
 	
 }
@@ -670,6 +822,61 @@ chickenLiver.addEventListener("click", () => {
 cannedSardine.addEventListener("click", () => {
 	unSelectInput(cannedSardine);
 });
+
+cannedSardine.addEventListener("click", () => {
+	unSelectInput(cannedSardine);
+});
+//select all breakfast
+selectAllBreakfast.addEventListener("click", () => {
+	unSelectInput(selectAllBreakfast);
+});
+// Un select all breakfast
+unSelectAllBreakfast.addEventListener("click", () => {
+	unSelectInput(unSelectAllBreakfast);
+});
+
+//Select all morning snack
+selectAllMorningSnack.addEventListener("click", () => {
+	unSelectInput(selectAllMorningSnack);
+});
+
+//Un select all morning snack
+unSelectAllMorningSnack.addEventListener("click", () => {
+	unSelectInput(unSelectAllMorningSnack);
+});
+
+//Select all lunch
+selectAllLunch.addEventListener("click", () => {
+	unSelectInput(selectAllLunch);
+});
+
+//Un select all lunch
+unSelectAllLunch.addEventListener("click", () => {
+	unSelectInput(unSelectAllLunch);
+});
+
+//Select all afternoon snack
+selectAllAfternoonSnack.addEventListener("click", () => {
+	unSelectInput(selectAllAfternoonSnack);
+});
+
+//Un select all afternoon snack
+unSelectAllAfternoonSnack.addEventListener("click", () => {
+	unSelectInput(unSelectAllAfternoonSnack);
+});
+
+//Select all dinner
+selectAllDinner.addEventListener("click", () => {
+	unSelectInput(selectAllDinner);
+});
+
+//Un select all dinner
+unSelectAllDinner.addEventListener("click", () => {
+	unSelectInput(unSelectAllDinner);
+});
+
+
+
 
 
 
