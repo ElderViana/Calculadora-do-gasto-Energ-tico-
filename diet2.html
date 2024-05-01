@@ -6,18 +6,17 @@
     <link rel="stylesheet" href="diet.css">
 </head>
 <body>
-    <section class="section" id="first-section"></section>
-        <header>
-                <h1 class="h1-diet">Criando cardápio saudável</h1>
-            <div class="div-form">
-                <a href="diet1.html" class="link">Início</a>
-            </div>
-        </header>
-    </section>
+    <header>
+        <h1 class="h1-diet">Criando cardápio saudável</h1>
+    </header>
+    <a href="diet1.html" class="link" id="link-diet">Início</a>
+    <input type="checkbox" id="dark">
+    <label class="label" id="label-diet" for="dark">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <div class="ball"></div>
+    </label>
 
-
-
-    <section class="section" id="second-section">
     <div class="objective" >
         <p class="pobjective">Qual é o seu objetivo?</p>
         <input type="checkbox" id="loseWeight">Perder peso
@@ -131,22 +130,11 @@
         </div>
     </div>
 
-    <div class="div-form">
         <button onclick="chooseMenu()"  class="button" id="button-create">Criar</button>
         <button onclick="clean()" class="button" id="button-clean">Limpar</button>
-    </div>
-    </section>
-    <div class="div-form">
+  
         <p class="ptable">Tabela com as quantidades de caboidratos, proteínas, lipídios e calorias:</p>
-    </div>
 
-
-
-
-
-    <section class="section" id="third-section">
-   
-        <div class="div-table">
             <table id="tbDiet">
                 <thead>
                     <tr>
@@ -160,7 +148,6 @@
                     </tr>
                 </thead>
             </table>
-        </div>
         <br>
         <div class="total">
             <h2 class="h">Total carboidratos:</h2>
@@ -172,18 +159,8 @@
             <h2 class="h">Total calorias:</h2>
             <span id="calories" class="span">0</span>
         </div>
-    </section>   
-</div>
 
-<div class="div-form" id="div"></div>
-<p id="p"></p>
-
-
-
-
-
-
-<script  src="./diet2.js"></script>  
-</main>
 </body>
+<script  src="./diet2.js"></script>
+<script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>  
 </html>

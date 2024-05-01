@@ -1,37 +1,204 @@
-
-* {
-    background: lightgreen;
+body {
     
+    background: rgb(94, 207, 245);
+    
+ 
+    transition: background 0.2s linear;
+    .fa-moon {
+        color: rgb(242, 245, 62);
+        background: rgb(94, 207, 245);
+    }
+    .fa-sun {
+        color:orange;
+        background: rgb(94, 207, 245);
+    
+
+  
+ 
+
+    }
 }
+    
+
+body.dark  {
+    background: black;
+    color: white;
+    #calculator, .objective, .mealsChild   {
+        background-color: rgba(199, 190, 190, 0.24);
+        box-shadow: 0 4px 8px 0 rgb(129, 133, 129), 0 6px 20px 0 rgb(66, 68, 66);
+    }
+    .link {
+        color: white;
+        background-color: rgba(240, 233, 233, 0.24);
+        box-shadow: 0 2px 4px 0 rgb(127, 131, 127), 0 3px 10px 0 rgb(88, 92, 88);
+    }
+    .link:hover {
+        background: #03c2fc;
+        color: black;
+    }
+    .placeholder {
+        background: rgb(206, 198, 198);
+        
+    }
+    .placeholder:hover{
+        background: #03c2fc;
+    }
+    #pName {
+        text-shadow: 3px 3px 5px  #03c2fc;
+    }
+
+    #tDEEresult {
+ 
+        border-color: rgb(94, 105, 94);
+    
+    }
+    .button {
+        color: white;
+        border-color: rgb(101, 107, 101);
+        background-color: rgb(71, 70, 70);
+      
+       
+    }
+    #buttonClean{
+        margin-left: 0;
+    }
+    .button:hover {
+        font-size: 16px;
+        background: #03c2fc;
+        color: black;
+        cursor: pointer;
+    
+        border-style: groove;
+        
+    }
+    table, td {
+        border: 1px solid white;
+        background-color: rgb(99, 98, 98);
+       
+    }
+    th {
+        color: rgb(245, 242, 93);
+        border: 1px solid white;
+        background-color: rgb(41, 40, 40);
+       
+    }
+    .fa-moon {
+        color: rgb(241, 241, 101);
+        background-color: black;
+    }
+    .fa-sun {
+        color:orange;
+        background-color: black;
+    }
+    .label {
+        background-color: black;
+        border: 1px solid white;
+    }
+    h2 {
+        color: rgb(245, 242, 93);
+    }
+
+    
+
+  
+ 
+
+    }
+
+    
+
+
+  
+     
+
+
+#dark {
+    opacity: 0;
+    position: absolute;
+    left: 100px;
+}
+
+.label {
+    background: rgb(94, 207, 245);
+    
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 0px 3px 3px;
+    width: 43px;
+    position: relative;
+    transform: scale(1.5);
+    margin-left: 100px;
+    border: 1px solid black;
+}
+
+#label-diet {
+    margin-left: 100px;
+}
+
+.label .ball {
+    
+    background-color: white;
+    
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+#dark:checked + .label .ball {
+    transform: translateX(24px)
+}
+.fa-moon {
+    color: rgb(242, 245, 62);
+    background-color: black;
+}
+.fa-sun {
+    color:orange;
+    background-color: black;
+    margin-right: 4px;
+}
+
 
 h1 {
     font-size: 40px;
     margin-top: 100px;
-    margin-left: 100px;
+    margin-left: 50px;
+    height: 26px;
 
    
 }
 
-h3 {
-    margin-left: 150px;
-    font-size: 20px;
-    border: 1px solid black;
-}
-
 .link {
     font-size: 20px;
-    text-decoration: none;
+    
     color: black;
-    border: 4px double green;
-    border-radius: 40px;
+    border-radius: 10px;
     padding: 1px 10px 1px 10px;
-    margin-left: 800px;
+    margin-left: 780px;
+    position: sticky;
+    top: 0;
+    text-shadow: 2px 2px 5px blue;
+    text-decoration: none;
+    box-shadow: 0 2px 4px 0 rgb(98, 154, 173), 0 3px 10px 0 rgb(28, 106, 133);
+
     
 
 }
+#link-diet {
+    margin-left: 950px;
+}
+
 .link:hover {
     font-size: 22px;
-    background-color: #03fc5a;
+    background: rgb(130, 207, 233);
     text-decoration: none;
 }
 
@@ -44,10 +211,10 @@ h3 {
 
 #calculator {
     font-size: 18px;
-    background: lightgreen;
+    background: rgb(94, 207, 245);
     width: 25%;
     height: auto;
-    box-shadow: 0 4px 8px 0 rgb(64, 145, 64), 0 6px 20px 0 rgb(2, 97, 2);
+    box-shadow: 0 2px 4px 0 rgb(75, 150, 175), 0 3px 10px 0 rgb(3, 103, 136);
     border-radius: 30px;
     margin-left: 200px;
     margin-top: 100px;
@@ -62,11 +229,8 @@ h3 {
     text-align: center; 
     padding-top: 20px;
     border-radius: 30px;
-    text-shadow: 3px 3px 5px green;
+    text-shadow: 3px 3px 5px blue;
     
-}
-abbr {
-    margin-left: 5px;
 }
 
 .placeholder {
@@ -88,14 +252,15 @@ abbr {
 .button {
     font-size: 15px;
     font-weight: bold;
-    text-transform: uppercase;
+  
     padding: 1px 5px 1px 5px;
     border-radius:40px;
     border-bottom: ridge;
     border-bottom-width:10px;
     border-right-width: 10px;
-    border-color: rgb(3, 48, 3);
+    border-color: rgb(20, 154, 199);
     margin-left: 60px;
+    background-color: rgb(94, 207, 245);
    
 }
 #buttonClean{
@@ -103,7 +268,7 @@ abbr {
 }
 .button:hover {
     font-size: 16px;
-    background: #03fc5a;
+    background: rgb(128, 210, 238);
     cursor: pointer;
 
     border-style: groove;
@@ -111,12 +276,13 @@ abbr {
 }
 
 
+
 #tDEEresult {
     font-size: 20px;
     text-align: center;
     border-style: groove;  
     border-radius: 20px;
-    border-color: rgb(38, 167, 38);
+    border-color: rgb(20, 154, 199);
 
 }
 
@@ -140,7 +306,7 @@ abbr {
     margin-left: 300px;
    width: 600px;
    text-align: center;
-    box-shadow: 0 4px 8px 0 rgb(64, 145, 64), 0 6px 20px 0 rgb(2, 97, 2);
+   box-shadow: 0 2px 4px 0 rgb(46, 149, 184), 0 3px 10px 0 rgb(2, 67, 88);
     border-radius: 20px;
     height: 130px;
     font-size: 20px;
@@ -178,7 +344,7 @@ abbr {
     height: 300px;
     margin: 20px;
     border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgb(64, 145, 64), 0 6px 20px 0 rgb(2, 97, 2);
+    box-shadow: 0 2px 4px 0 rgb(46, 149, 184), 0 3px 10px 0 rgb(2, 67, 88);
    
     
    
@@ -230,11 +396,13 @@ table{
     box-shadow: 0 4px 8px 0 rgb(64, 145, 64), 0 6px 20px 0 rgb(2, 97, 2);
     */
     margin-left: 100px;
+    background-color: white;
 }
 
 th {
     border: 1px solid black;
     font-size: 20px;
+    background-color: rgb(223, 212, 212);
 
    
 }

@@ -7,6 +7,9 @@ const tall = document.getElementById("tall");
 const weight = document.getElementById("weight");
 const input = document.querySelectorAll("[input]")
 const tDEEresult = document.getElementById("tDEEresult");
+const dark = document.getElementById("dark");
+
+
 
 
 const calculateTDEE = () => {
@@ -115,3 +118,7 @@ extremelyActive.addEventListener("click", () => {
 	unSelectInput(extremelyActive);
 });
 
+
+dark.addEventListener("change", () => {
+	document.body.classList.toggle("dark");
+});

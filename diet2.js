@@ -38,7 +38,7 @@ const foods = [
 	{typeMeal: "Jantar", name: "Azeite", quantity: 2, unitOfMeasure: "Colher(es) de sopa", carbohydrate: 0, protein: 0, fat: 27, calories: 238},
 	{typeMeal: "Ceia", name: "Abacate", quantity: 100, unitOfMeasure: "g", carbohydrate: 8.53, protein: 2, fat: 14.66, calories: 160}
 ];
-
+const dark = document.getElementById("dark");
 const foods2 = structuredClone(foods);
 
 const input = document.querySelectorAll("[input]");
@@ -876,7 +876,9 @@ unSelectAllDinner.addEventListener("click", () => {
 });
 
 
-
+dark.addEventListener("change", () => {
+	document.body.classList.toggle("dark");
+});
 
 
 
