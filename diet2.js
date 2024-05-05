@@ -85,7 +85,7 @@ const tomato = document.getElementById("tomato");
 const cabbage = document.getElementById("cabbage");
 const carrot = document.getElementById("carrot");
 
-//Lanche da tarde
+
 const selectAllAfternoonSnack = document.getElementById("selectAllAfternoonSnack");
 const unSelectAllAfternoonSnack = document.getElementById("unSelectAllAfternoonSnack");
 
@@ -96,7 +96,7 @@ const persimmon = document.getElementById("persimmon");
 const starFruit = document.getElementById("starFruit");
 const orange = document.getElementById("orange");
 
-//Jantar
+
 const selectAllDinner = document.getElementById("selectAllDinner");
 const unSelectAllDinner = document.getElementById("unSelectAllDinner");
 
@@ -152,6 +152,7 @@ const chooseMenu = () => {
 	
 
 	if(loseWeight.checked || keepMuscleMass.checked || gainMuscleMass.checked === true){
+	
 		if(calories <= tDEE && input[0].checked === true){
 			carbohydrate += foods2[0].carbohydrate; 
 			protein += foods2[0].protein; 
@@ -175,7 +176,7 @@ const chooseMenu = () => {
 					foods2[1].fat = (2 * foods2[1].fat);
 					foods2[1].calories = (2 * foods2[1].calories);
 				}
-			}
+			
 			
 	
 		if(calories <= tDEE && input[3].checked === true){
@@ -499,40 +500,45 @@ const chooseMenu = () => {
 			foods2[35].protein = 6;
 			foods2[35].fat = 43.98;
 			foods2[35].calories = 480;
-		}
+		} 
 //4.612 kcal
 
-	
-	console.log(foods2)
+	}
+	if(loseWeight.checked || keepMuscleMass.checked || gainMuscleMass.checked === true){
 	for( i = 0; i < foods2.length; i++){
-
-		let tb = document.getElementById("tbDiet");
-		let numberOfLines = tb.rows.length;
-
+		
 	
-			input.forEach(ipt => {
-				if(ipt.checked === true){
-					if(ipt.name === foods2[i].name){
-						let line = tb.insertRow(numberOfLines);
-						let cellTypeMeal = line.insertCell(0);
-						let cellFood = line.insertCell(1);
-						let cellQuantity = line.insertCell(2);
-						let cellCarbohydrate = line.insertCell(3);
-						let cellProtein = line.insertCell(4);
-						let cellFat = line.insertCell(5);
-						let cellCalories = line.insertCell(6);
-						cellTypeMeal.innerHTML = foods2[i].typeMeal;
-						cellFood.innerHTML = foods2[i].name;
-						cellQuantity.innerHTML = `${foods2[i].quantity} ${foods2[i].unitOfMeasure}`;
-						cellCarbohydrate.innerHTML = foods2[i].carbohydrate.toFixed(2);
-						cellProtein.innerHTML = foods2[i].protein.toFixed(2);
-						cellFat.innerHTML = foods2[i].fat.toFixed(2);
-						cellCalories.innerHTML = foods2[i].calories.toFixed(2);
 
+			let tb = document.getElementById("tbDiet");
+			let numberOfLines = tb.rows.length;
+
+		
+				input.forEach(ipt => {
+					if(ipt.checked === true){
+						if(ipt.name === foods2[i].name){
+							let line = tb.insertRow(numberOfLines);
+							let cellTypeMeal = line.insertCell(0);
+							let cellFood = line.insertCell(1);
+							let cellQuantity = line.insertCell(2);
+							let cellCarbohydrate = line.insertCell(3);
+							let cellProtein = line.insertCell(4);
+							let cellFat = line.insertCell(5);
+							let cellCalories = line.insertCell(6);
+							cellTypeMeal.innerHTML = foods2[i].typeMeal;
+							cellFood.innerHTML = foods2[i].name;
+							cellQuantity.innerHTML = `${foods2[i].quantity} ${foods2[i].unitOfMeasure}`;
+							cellCarbohydrate.innerHTML = foods2[i].carbohydrate.toFixed(2);
+							cellProtein.innerHTML = foods2[i].protein.toFixed(2);
+							cellFat.innerHTML = foods2[i].fat.toFixed(2);
+							cellCalories.innerHTML = foods2[i].calories.toFixed(2);
+
+						}
+						
 					}
-					
-				}
-			})
+				})
+		}
+		}else {
+			alert("Por favor selecione um objetivo!")
 		
 	}
 

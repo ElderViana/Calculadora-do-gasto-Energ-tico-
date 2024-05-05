@@ -401,6 +401,7 @@ body.dark  {
         }
         
         .link, #link-diet {
+            margin-top: 50px;
             margin-left: 250px;
         }
         .label {
@@ -412,6 +413,56 @@ body.dark  {
         }
         .placeholder, .calculatorp {
             margin-left: 50px;
+        }
+        .objective, .ptable {
+            margin-left: 5px;
+            width: 340px;
+           
+        
+        }
+
+        .mealsGrandpa, .pdiet {
+            margin-left: 5px;
+
+        }
+
+
+        .pdiet {
+            font-size: 20px;
+            width: 345px;
+        }
+
+        .mealsFather1, .mealsFather2, .mealsFather3, .mealsFather4 {
+ 
+            flex-direction: column;
+            margin-left: 5px;
+        }
+        .mealsChild {
+            width: 320px;
+            margin-left: 5px;
+            height: 290px;
+        }
+        #button-create {
+            margin-left: 50px;
+        }
+     
+        table{
+        
+            margin-left: 5px;
+        }
+        
+        th, td {
+            font-size: 9px;
+           
+        }
+        
+        .total {
+            font-size: 15px;
+            width: 155px;
+            margin-left: 80px;
+        }
+        h2 {
+            display: block;
         }
    
 
