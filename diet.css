@@ -106,11 +106,16 @@ h1 {
     text-decoration: none;
 }
 
-.information {
+.information, .description {
     width: 50%;
     margin-left: 100px;
     font-size: 20px;
 
+}
+.description { 
+    visibility: hidden;
+    position: relative;
+    top: 200px;
 }
 
 #calculator {
@@ -122,7 +127,10 @@ h1 {
     border-radius: 30px;
     margin-left: 200px;
     margin-top: 100px;
-    margin-bottom: 100px;
+  
+    
+
+
   
        
     
@@ -143,6 +151,7 @@ h1 {
     margin-left: 60px;
     text-align: center;
     margin-bottom: 3px;
+
   
 }
 
@@ -151,11 +160,14 @@ h1 {
     background-color: white;
 }
 .calculatorp {
-    margin-left: 60px;
+    margin-left: 40px;
+
 }
 #sedentary {
     margin-bottom: 3px;
+   
 }
+
 
 .button {
     font-size: 15px;
@@ -393,6 +405,16 @@ body.dark  {
 
     }
 
+
+    .pse {
+   float: top;
+   margin-bottom: 2px;
+
+        
+    }
+
+
+
     @media only screen and (max-width: 600px){
 
         h1, .h1diet {
@@ -407,7 +429,7 @@ body.dark  {
         .label {
             margin-left: 10px;
         }
-        .information,  #calculator   {
+        .information,  #calculator, .description   {
             margin-left: 10px;
             width: 330px;
         }
@@ -419,6 +441,11 @@ body.dark  {
             width: 340px;
            
         
+        }
+        .description { 
+            visibility: visible;
+            position: static;
+           
         }
 
         .mealsGrandpa, .pdiet {
