@@ -20,98 +20,6 @@ body {
 }
     
 
-body.dark  {
-    background: black;
-    color: white;
-    #calculator, .objective, .mealsChild   {
-        background-color: rgba(199, 190, 190, 0.24);
-        box-shadow: 0 4px 8px 0 rgb(129, 133, 129), 0 6px 20px 0 rgb(66, 68, 66);
-    }
-    .link {
-        color: white;
-        background-color: rgba(240, 233, 233, 0.24);
-        box-shadow: 0 2px 4px 0 rgb(127, 131, 127), 0 3px 10px 0 rgb(88, 92, 88);
-    }
-    .link:hover {
-        background: #03c2fc;
-        color: black;
-    }
-    .placeholder {
-        background: rgb(206, 198, 198);
-        
-    }
-    .placeholder:hover{
-        background: #03c2fc;
-    }
-    #pName {
-        text-shadow: 3px 3px 5px  #03c2fc;
-    }
-
-    #tDEEresult {
- 
-        border-color: rgb(94, 105, 94);
-    
-    }
-    .button {
-        color: white;
-        border-color: rgb(101, 107, 101);
-        background-color: rgb(71, 70, 70);
-      
-       
-    }
-    #buttonClean{
-        margin-left: 0;
-    }
-    .button:hover {
-        font-size: 16px;
-        background: #03c2fc;
-        color: black;
-        cursor: pointer;
-    
-        border-style: groove;
-        
-    }
-    table, td {
-        border: 1px solid white;
-        background-color: rgb(156, 152, 152);
-       
-    }
-    th {
-        color: rgb(245, 242, 93);
-        border: 1px solid white;
-        background-color: rgb(41, 40, 40);
-       
-    }
-    .fa-moon {
-        color: rgb(241, 241, 101);
-        background-color: black;
-    }
-    .fa-sun {
-        color:orange;
-        background-color: black;
-    }
-    .label {
-        background-color: black;
-        border: 1px solid white;
-    }
-    h2 {
-        color: rgb(245, 242, 93);
-    }
-
-    
-
-  
- 
-
-    }
-
-    
-
-
-  
-     
-
-
 #dark {
     opacity: 0;
     position: absolute;
@@ -132,10 +40,6 @@ body.dark  {
     transform: scale(1.5);
     margin-left: 100px;
     border: 1px solid black;
-}
-
-#label-diet {
-    margin-left: 100px;
 }
 
 .label .ball {
@@ -238,6 +142,7 @@ h1 {
     font-size: 16px;
     margin-left: 60px;
     text-align: center;
+    margin-bottom: 3px;
   
 }
 
@@ -247,6 +152,9 @@ h1 {
 }
 .calculatorp {
     margin-left: 60px;
+}
+#sedentary {
+    margin-bottom: 3px;
 }
 
 .button {
@@ -288,7 +196,7 @@ h1 {
 
 
 
-.h1-diet {
+.h1diet {
     margin-left: 350px;
 }
 .pdiet {
@@ -296,11 +204,7 @@ h1 {
     margin-left: 200px;
     font-size: 22px;
     font-weight: bold;
-    /*
-    box-shadow: 0 4px 8px 0 rgb(64, 145, 64), 0 6px 20px 0 rgb(2, 97, 2);
-    */
-
-
+ 
 }
 .objective {
     margin-left: 300px;
@@ -319,15 +223,9 @@ h1 {
 .mealsGrandpa{
     margin-left: 80px;
    height: auto;
-    
 
-   
- 
 
 }
-
-
-
 
 .mealsFather1, .mealsFather2, .mealsFather3, .mealsFather4 {
  
@@ -345,16 +243,15 @@ h1 {
     margin: 20px;
     border-radius: 20px;
     box-shadow: 0 2px 4px 0 rgb(46, 149, 184), 0 3px 10px 0 rgb(2, 67, 88);
-   
-    
-   
 }
+
 .pmealsChild, .pobjective {
     font-size: 20px;
     text-align: center;
     font-weight: bold;
     border-radius: 20px;
 }
+
 #selectAllLunch {
     color: blue;
 }
@@ -374,10 +271,6 @@ h1 {
     margin-left: 255px;
     font-size: 22px;
     font-weight: bold;
-    /*
-    box-shadow: 0 4px 8px 0 rgb(64, 145, 64), 0 6px 20px 0 rgb(2, 97, 2);
-    */
-
 }
 
 
@@ -392,9 +285,6 @@ table{
     border: 1px solid black;
     font-size: 20px;
     width: 80%;
-    /*
-    box-shadow: 0 4px 8px 0 rgb(64, 145, 64), 0 6px 20px 0 rgb(2, 97, 2);
-    */
     margin-left: 100px;
     background-color: white;
 }
@@ -409,9 +299,6 @@ th {
 
 .total {
     text-align: center;
-    /*
-    box-shadow: 0 4px 8px 0 rgb(64, 145, 64), 0 6px 20px 0 rgb(2, 97, 2);
-    */
     width: 1000px;
     margin-left: 120px;
 }
@@ -424,3 +311,116 @@ h2, span {
    width:50px;
 
  }
+
+ 
+body.dark  {
+    
+    background: black;
+    color: white;
+    #calculator, .objective, .mealsChild   {
+        background-color: rgba(199, 190, 190, 0.24);
+        box-shadow: 0 4px 8px 0 rgb(129, 133, 129), 0 6px 20px 0 rgb(66, 68, 66);
+    }
+    h1, h2, .pobjective, .pdiet, .pmealsChild, .ptable, th {
+        color:#03c2fc;
+    }
+    .link {
+        color: white;
+        background-color: rgba(240, 233, 233, 0.24);
+        box-shadow: 0 2px 4px 0 rgb(127, 131, 127), 0 3px 10px 0 rgb(88, 92, 88);
+    }
+    .link:hover {
+        background: #03c2fc;
+        color: black;
+    }
+    .placeholder {
+        background: rgb(206, 198, 198);
+        
+    }
+    .placeholder:hover{
+        background: #03c2fc;
+    }
+    #pName {
+        text-shadow: 3px 3px 5px  #03c2fc;
+    }
+
+    #tDEEresult {
+ 
+        border-color: rgb(94, 105, 94);
+    
+    }
+    .button {
+        color: white;
+        border-color: rgb(101, 107, 101);
+        background-color: rgb(71, 70, 70);
+      
+       
+    }
+    #buttonClean{
+        margin-left: 0;
+    }
+    .button:hover {
+        font-size: 16px;
+        background: #03c2fc;
+        color: black;
+        cursor: pointer;
+    
+        border-style: groove;
+        
+    }
+    table, td {
+        border: 1px solid white;
+        background-color: rgb(156, 152, 152);
+       
+    }
+    th {
+        border: 1px solid white;
+        background-color: rgb(41, 40, 40);
+       
+    }
+    .fa-moon {
+        color: rgb(241, 241, 101);
+        background-color: black;
+    }
+    .fa-sun {
+        color:orange;
+        background-color: black;
+    }
+    .label {
+        background-color: black;
+        border: 1px solid white;
+    }
+
+    }
+
+    @media only screen and (max-width: 600px){
+
+        h1, .h1diet {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        
+        .link, #link-diet {
+            margin-left: 250px;
+        }
+        .label {
+            margin-left: 10px;
+        }
+        .information,  #calculator   {
+            margin-left: 10px;
+            width: 330px;
+        }
+        .placeholder, .calculatorp {
+            margin-left: 50px;
+        }
+   
+
+
+    }
+
+    
+
+
+  
+     
+

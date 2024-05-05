@@ -46,7 +46,7 @@ const loseWeight = document.getElementById("loseWeight");
 const keepMuscleMass = document.getElementById("keepMuscleMass");
 const gainMuscleMass = document.getElementById("gainMuscleMass");
 
-//Café da manhã
+
 const selectAllBreakfast = document.getElementById("selectAllBreakfast");
 const unSelectAllBreakfast = document.getElementById("unSelectAllBreakfast");
 
@@ -58,7 +58,7 @@ const egg = document.getElementById("egg");
 const ricotaCheese = document.getElementById("ricotaCheese");
 const skimedMilk = document.getElementById("skimedMilk");
 
-//Lanche da manhã
+
 const selectAllMorningSnack = document.getElementById("selectAllMorningSnack");
 const unSelectAllMorningSnack = document.getElementById("unSelectAllMorningSnack");
 
@@ -69,7 +69,7 @@ const peanutButter = document.getElementById("peanutButter");
 const yakult = document.getElementById("yakult");
 const naturalYogurt = document.getElementById("naturalYogurt");
 
-//Almoço
+
 const selectAllLunch = document.getElementById("selectAllLunch");
 const unSelectAllLunch = document.getElementById("unSelectAllLunch");
 
@@ -150,7 +150,7 @@ const chooseMenu = () => {
 				console.log(tDEE)
 	}
 	
-//Caso o usuário deseje perder peso;
+
 	if(loseWeight.checked || keepMuscleMass.checked || gainMuscleMass.checked === true){
 		if(calories <= tDEE && input[0].checked === true){
 			carbohydrate += foods2[0].carbohydrate; 
@@ -287,7 +287,7 @@ const chooseMenu = () => {
 				
 	
 	
-//Para uma pessoa que possue uma necessidade energética maior que 2.568 kcal.
+
 
 		if(calories <= tDEE && input[27].checked === true){
     		carbohydrate +=  foods2[27].carbohydrate; 
@@ -546,7 +546,7 @@ const chooseMenu = () => {
 	
 const unSelectInput = (input) => {
 
-	//Un select lose Weight, keep muscle mass and gain muscle mass.
+
 	if(input === loseWeight){
 		keepMuscleMass.checked = false;
 		gainMuscleMass.checked = false;
@@ -560,7 +560,6 @@ const unSelectInput = (input) => {
 		keepMuscleMass.checked = false;
 	}
 
-	//Un select whole meal bread and tapioca.
 	if(input === wholemealBread){
 		tapioca.checked = false;
 	}
@@ -568,7 +567,7 @@ const unSelectInput = (input) => {
 		wholemealBread.checked = false;
 	}
 
-	//Un select yakult and natural Yogurt.
+
 	if(input === yakult){
 		naturalYogurt.checked = false;
 	}
@@ -576,7 +575,6 @@ const unSelectInput = (input) => {
 		yakult.checked = false;
 	}
 
-	//Un select whole grain rice and cassava.
 	if(input === wholegrainRice){
 		cassava.checked = false;
 	}
@@ -584,7 +582,6 @@ const unSelectInput = (input) => {
 		wholegrainRice.checked = false;
 	}
 
-	//Un select chicken fillet, tilapia fillet and pork chop.
 	if(input === chickenFillet){
 		tilapiaFillet.checked = false;
 		porkChop.checked = false;
@@ -598,7 +595,7 @@ const unSelectInput = (input) => {
 		tilapiaFillet.checked = false;
 	}
 
-	//Un select apple and sleeve.
+
 	if(input === apple){
 		sleeve.checked = false;
 	}
@@ -606,7 +603,6 @@ const unSelectInput = (input) => {
 		apple.checked = false;
 	}
 
-	//un select persimmon, starFruit and orange
 	if(input === persimmon){
 		starFruit.checked = false;
 		orange.checked = false;
@@ -620,7 +616,6 @@ const unSelectInput = (input) => {
 		starFruit.checked = false;
 	}
 
-	//un select beef steak, chicken liver and canned sardine
 	if(input === beefSteak){
 		chickenLiver.checked = false;
 		cannedSardine.checked = false;
@@ -633,7 +628,7 @@ const unSelectInput = (input) => {
 		beefSteak.checked = false;
 		chickenLiver.checked = false;
 	}
-	//Select all breakfast
+
 	if(input === selectAllBreakfast){
 		wholemealBread.checked = true; 
 		sugar.checked = true;  
@@ -642,7 +637,7 @@ const unSelectInput = (input) => {
 		skimedMilk.checked = true;
 		selectAllBreakfast.checked = false;
 	}
-	//Un select all breakfast
+
 	if(input === unSelectAllBreakfast){
 		wholemealBread.checked = false; 
 		sugar.checked = false;  
@@ -653,7 +648,6 @@ const unSelectInput = (input) => {
 		tapioca.checked = false;
 	}
 
-	//Select all morning snack
 	if(input === selectAllMorningSnack){																
 		banana.checked = true; 
 		oat.checked = true; 
@@ -663,7 +657,7 @@ const unSelectInput = (input) => {
 	
 	}
 
-	//Un select all morning snack
+
 	if(input === unSelectAllMorningSnack){
 		banana.checked = false; 
 		oat.checked = false; 
@@ -674,7 +668,7 @@ const unSelectInput = (input) => {
 	
 	}
 
-	//Select all lunch
+
 	if(input === selectAllLunch){
 		wholegrainRice.checked = true; 
 		chickenFillet.checked = true; 
@@ -684,7 +678,7 @@ const unSelectInput = (input) => {
 		carrot.checked = true;
 		selectAllLunch.checked = false;
 	}
-	//Un select all lunch
+
 	if(input === unSelectAllLunch){
 		wholegrainRice.checked = false; 
 		cassava.checked = false; 
@@ -699,13 +693,13 @@ const unSelectInput = (input) => {
 		
 	}
 	
-	//Select all afternoon snack
+
 	if(input === selectAllAfternoonSnack){
 		apple.checked = true; 
 		persimmon.checked = true; 
 		selectAllAfternoonSnack.checked = false;
 	}
-	//Un select all afternoon snack
+
 	if(input === unSelectAllAfternoonSnack){
 		apple.checked = false; 
 		sleeve.checked = false; 
@@ -714,7 +708,7 @@ const unSelectInput = (input) => {
 		orange.checked = false; 
 		unSelectAllAfternoonSnack.checked = false;
 	}
-	//Select all dinner
+
 	if(input === selectAllDinner){
 		couscous.checked = true; 
 		beefSteak.checked = true; 
@@ -724,7 +718,7 @@ const unSelectInput = (input) => {
 		oliveOil.checked = true;
 		selectAllDinner.checked = false;
 	} 
-	//Un select all dinner
+
 	if(input === unSelectAllDinner){
 		couscous.checked = false; 
 		beefSteak.checked = false; 
@@ -737,17 +731,9 @@ const unSelectInput = (input) => {
 		unSelectAllDinner.checked = false;
 		
 	} 
-
-
-
-
-
-
-
-	
-	
 }
-//Un select lose Weight, keep muscle mass and gain muscle mass.
+
+
 loseWeight.addEventListener("click", () => {
 	unSelectInput(loseWeight);
 });
@@ -758,7 +744,6 @@ gainMuscleMass.addEventListener("click", () => {
 	unSelectInput(gainMuscleMass);
 });
 
-//Un select whole meal bread and tapioca.
 wholemealBread.addEventListener("click", () => {
 	unSelectInput(wholemealBread);
 });
@@ -766,7 +751,6 @@ tapioca.addEventListener("click", () => {
 	unSelectInput(tapioca);
 });
 
-//Un select yakult and natural Yogurt.
 yakult.addEventListener("click", () => {
 	unSelectInput(yakult);
 });
@@ -774,7 +758,6 @@ naturalYogurt.addEventListener("click", () => {
 	unSelectInput(naturalYogurt);
 });
 
-//Un select whole grain rice and cassava.
 wholegrainRice.addEventListener("click", () => {
 	unSelectInput(wholegrainRice);
 });
@@ -782,7 +765,6 @@ cassava.addEventListener("click", () => {
 	unSelectInput(cassava);
 });
 
-//un select chicken fillet, tilapia fillet and pork chop.
 chickenFillet.addEventListener("click", () => {
 	unSelectInput(chickenFillet);
 });
@@ -793,7 +775,6 @@ porkChop.addEventListener("click", () => {
 	unSelectInput(porkChop);
 });
 
-//Un select apple and sleeve.
 apple.addEventListener("click", () => {
 	unSelectInput(apple);
 });
@@ -801,7 +782,6 @@ sleeve.addEventListener("click", () => {
 	unSelectInput(sleeve);
 });
 
-//un select persimmon, starFruit and orange
 persimmon.addEventListener("click", () => {
 	unSelectInput(persimmon);
 });
@@ -812,7 +792,6 @@ orange.addEventListener("click", () => {
 	unSelectInput(orange);
 });
 
-//un select beef steak, chicken liver and canned sardine
 beefSteak.addEventListener("click", () => {
 	unSelectInput(beefSteak);
 });
@@ -826,55 +805,46 @@ cannedSardine.addEventListener("click", () => {
 cannedSardine.addEventListener("click", () => {
 	unSelectInput(cannedSardine);
 });
-//select all breakfast
+
 selectAllBreakfast.addEventListener("click", () => {
 	unSelectInput(selectAllBreakfast);
 });
-// Un select all breakfast
+
 unSelectAllBreakfast.addEventListener("click", () => {
 	unSelectInput(unSelectAllBreakfast);
 });
 
-//Select all morning snack
 selectAllMorningSnack.addEventListener("click", () => {
 	unSelectInput(selectAllMorningSnack);
 });
 
-//Un select all morning snack
 unSelectAllMorningSnack.addEventListener("click", () => {
 	unSelectInput(unSelectAllMorningSnack);
 });
 
-//Select all lunch
 selectAllLunch.addEventListener("click", () => {
 	unSelectInput(selectAllLunch);
 });
 
-//Un select all lunch
 unSelectAllLunch.addEventListener("click", () => {
 	unSelectInput(unSelectAllLunch);
 });
 
-//Select all afternoon snack
 selectAllAfternoonSnack.addEventListener("click", () => {
 	unSelectInput(selectAllAfternoonSnack);
 });
 
-//Un select all afternoon snack
 unSelectAllAfternoonSnack.addEventListener("click", () => {
 	unSelectInput(unSelectAllAfternoonSnack);
 });
 
-//Select all dinner
 selectAllDinner.addEventListener("click", () => {
 	unSelectInput(selectAllDinner);
 });
 
-//Un select all dinner
 unSelectAllDinner.addEventListener("click", () => {
 	unSelectInput(unSelectAllDinner);
 });
-
 
 dark.addEventListener("change", () => {
 	document.body.classList.toggle("dark");
@@ -886,4 +856,3 @@ dark.addEventListener("change", () => {
 const clean = () => {
 	window.location.reload()
 }
-"e"
